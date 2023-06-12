@@ -9,7 +9,7 @@
 
   //
   .playmarket {
-    width: 180px;
+    width: 48.0000vw;
   }
   .footer-bottom__cont {
     flex-direction: column;
@@ -18,65 +18,65 @@
   }
   .copyr {
     order: 3;
-    font-size: 14px;
+    font-size: 3.7333vw;
     line-height: 1.2;
     text-align: center;
     width: 100%;
     p {
-      font-size: 14px;
+      font-size: 3.7333vw;
       line-height: 1.2;
       text-align: center;
       width: 100%;
-      margin-top: 12px;
+      margin-top: 3.2000vw;
     }
   }
   .footer-links {
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 3.2000vw;
     order: 1;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 3.2000vw;
     a {
-      font-size: 14px;
+      font-size: 3.7333vw;
       line-height: 1.2;
 
     }
   }
   .cards-pay {
-    gap: 10px;
+    gap: 2.6667vw;
     order: 2;
     margin: 0;
     .img {
-      height: 40px;
+      height: 10.6667vw;
     }
   }
   .footer-bottom {
-    padding: 14px 0;
+    padding: 3.7333vw 0;
   }
   .footer-column .header-top__socs {
     padding-left: 0;
     padding-right: 0;
-    margin-top: 12px;
+    margin-top: 3.2000vw;
     justify-content: flex-start;
   }
   .footer-column{
     > a.tel {
-      font-size: 14px;
+      font-size: 3.7333vw;
       line-height: 1.2;
-      margin-bottom: 6px;
+      margin-bottom: 1.6000vw;
     }
     > a.lnk {
-      font-size: 16px;
+      font-size: 4.2667vw;
       line-height: 1.2;
-      margin-top: 12px;
+      margin-top: 3.2000vw;
       img {
-        width: 19px;
-        margin-right: 7px;
+        width: 5.0667vw;
+        margin-right: 1.8667vw;
       }
     }
   }
   .footer-column {
-    margin-bottom: 20px;
+    margin-bottom: 5.3333vw;
     &:last-child {
       margin-bottom: 0;
     }
@@ -84,21 +84,21 @@
       width: 100%;
       li {
         width: 100%;
-        margin-bottom: 9px;
+        margin-bottom: 2.4000vw;
         &:last-child {
           margin-bottom: 0;
         }
         a, p {
-          font-size: 14px;
+          font-size: 3.7333vw;
           line-height: 1.2;
         }
       }
     }
   }
   .footer-column>span {
-    font-size: 16px;
+    font-size: 4.2667vw;
     line-height: 1.2;
-    margin-bottom: 14px;
+    margin-bottom: 3.7333vw;
   }
   .footer-top__cont {
     flex-direction: column;
@@ -109,7 +109,7 @@
       width: 35vw;
       height: auto;
       display: flex;
-      margin-bottom: 22px;
+      margin-bottom: 5.8667vw;
 
       a, img {
         width: 100%;
@@ -121,7 +121,7 @@
     width: 100%;
   }
   .footer-top {
-    padding: 30px 0;
+    padding: 8.0000vw 0;
   }
   .subscribe-form form {
     flex-direction: column;
@@ -141,30 +141,30 @@
     }
   }
   .subscribe-form form input {
-    padding: 6px 14px;
-    font-size: 14px;
+    padding: 1.6000vw 3.7333vw;
+    font-size: 3.7333vw;
     line-height: 1.2;
 
     &::placeholder {
-      font-size: 14px;
+      font-size: 3.7333vw;
       line-height: 1.2;
     }
   }
   .subscribe-form form .btn {
-    padding: 6px 14px;
+    padding: 1.6000vw 3.7333vw;
     position: static;
   }
   .subscribe-form form .btn::after {
-    width: 30px;
-    height: 11px;
-    margin-left: 12px;
+    width: 8.0000vw;
+    height: 2.9333vw;
+    margin-left: 3.2000vw;
   }
   .subscribe-form > p {
     max-width: 90%;
-    font-size: 14px;
+    font-size: 3.7333vw;
     line-height: 1.2;
-    margin-top: 7px;
-    margin-bottom: 18px;
+    margin-top: 1.8667vw;
+    margin-bottom: 4.8000vw;
   }
   .subscribe-form form {
     width: 100%;
@@ -174,48 +174,48 @@
     max-width: 100%;
   }
   .subscribe-cont {
-    margin-left: -15px;
-    margin-right: -15px;
-    padding: 20px 15px;
-    width: calc(100% + 30px);
+    margin-left: -4.0000vw;
+    margin-right: -4.0000vw;
+    padding: 5.3333vw 4.0000vw;
+    width: calc(100% + 8.0000vw);
   }
   .control-seo {
-    font-size: 14px;
+    font-size: 3.7333vw;
     line-height: 1.2;
-    margin-top: 12px;
+    margin-top: 3.2000vw;
   }
   .seo-text {
-    max-height: 296px;
+    max-height: 78.9333vw;
 
     h1 {
-      font-size: 18px;
+      font-size: 4.8000vw;
       line-height: 1.2;
-      margin-bottom: 15px;
+      margin-bottom: 4.0000vw;
     }
 
     p, li {
-      font-size: 14px;
+      font-size: 3.7333vw;
       line-height: 1.2;
     }
 
     p {
-      margin-bottom: 10px;
+      margin-bottom: 2.6667vw;
     }
 
     h2, h3, h4, h5, h6 {
-      font-size: 16px;
+      font-size: 4.2667vw;
     }
   }
   .seo-block {
     width: 100%;
     max-width: 100%;
-    margin-top: 35px;
+    margin-top: 9.3333vw;
   }
   .blog-block__list {
-    gap: 12px;
+    gap: 3.2000vw;
   }
   .single-blog-list {
-    padding-bottom: 14px;
+    padding-bottom: 3.7333vw;
     flex-direction: column-reverse;
 
     &:first-child {
@@ -227,7 +227,7 @@
 
       .lft {
         p {
-          font-size: 16px;
+          font-size: 4.2667vw;
           line-height: 1.2;
           max-width: 100%;
         }
@@ -240,24 +240,24 @@
       width: 100%;
 
       p {
-        font-size: 16px;
+        font-size: 4.2667vw;
         line-height: 1.2;
       }
     }
 
     .rght {
       width: 100%;
-      margin-bottom: 10px;
+      margin-bottom: 2.6667vw;
       align-items: flex-start;
 
       .img {
-        height: 93px;
-        margin-top: 10px;
+        height: 24.8000vw;
+        margin-top: 2.6667vw;
         display: none;
       }
 
       span {
-        font-size: 12px;
+        font-size: 3.2000vw;
         line-height: 1.2;
       }
 
@@ -270,10 +270,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 5.3333vw;
 
     > a {
-      font-size: 12px;
+      font-size: 3.2000vw;
       line-height: 1.2;
     }
   }
@@ -281,26 +281,26 @@
     flex-direction: column-reverse;
   }
   .seo-blog {
-    margin: 30px 0;
+    margin: 8.0000vw 0;
   }
   .btn.btn--black {
-    padding: 8px 18px;
+    padding: 2.1333vw 4.8000vw;
 
     &::after {
-      width: 30px;
-      height: 10px;
-      margin-left: 12px;
+      width: 8.0000vw;
+      height: 2.6667vw;
+      margin-left: 3.2000vw;
     }
   }
   .promo-bonus__cont {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 2.6667vw;
 
     .btn {
       width: 100%;
-      margin-top: 12px;
+      margin-top: 3.2000vw;
     }
   }
   .promo-text {
@@ -311,11 +311,11 @@
     justify-content: flex-start;
 
     .img {
-      width: 240px;
+      width: 64.0000vw;
       height: auto;
       display: flex;
       margin-right: 0;
-      margin-bottom: 8px;
+      margin-bottom: 2.1333vw;
     }
 
     .txt {
@@ -325,14 +325,14 @@
 
       span {
         text-align: center;
-        font-size: 16px;
+        font-size: 4.2667vw;
         line-height: 1.2;
-        margin-bottom: 7px;
+        margin-bottom: 1.8667vw;
         max-width: 100%;
       }
 
       p {
-        font-size: 14px;
+        font-size: 3.7333vw;
         line-height: 1.2;
         text-align: center;
       }
@@ -340,18 +340,18 @@
   }
 
   .promo-bonus {
-    padding: 30px 0;
+    padding: 8.0000vw 0;
   }
   .bonus-statuses {
-    padding: 30px 0;
+    padding: 8.0000vw 0;
   }
   .bonus-statuses__cont {
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 3.2000vw;
   }
   .single-status {
-    width: calc(50% - (12px / 2));
-    padding: 10px;
+    width: calc(50% - (3.2000vw / 2));
+    padding: 2.6667vw;
     border-radius: 5px;
     border: 1px solid $text-grey;
     background: #f4f4f4;
@@ -360,23 +360,23 @@
     justify-content: flex-start;
 
     .img {
-      width: 42px;
-      height: 42px;
+      width: 11.2000vw;
+      height: 11.2000vw;
       margin-right: 0;
-      margin-bottom: 7px;
+      margin-bottom: 1.8667vw;
     }
 
     .txt {
       width: 100%;
 
       span {
-        font-size: 14px;
+        font-size: 3.7333vw;
         line-height: 1.2;
-        margin-bottom: 5px;
+        margin-bottom: 1.3333vw;
       }
 
       p {
-        font-size: 12px;
+        font-size: 3.2000vw;
         line-height: 1.2;
       }
     }
@@ -387,56 +387,56 @@
     margin-top: auto;
   }
   .single-card .textual .ic {
-    width: 17px;
+    width: 4.5333vw;
   }
   .single-card .textual > p strong {
-    font-size: 14px;
+    font-size: 3.7333vw;
     line-height: 1.2;
-    margin-right: 5px;
+    margin-right: 1.3333vw;
   }
   .single-card {
-    padding: 4px;
+    padding: 1.0667vw;
     border: 1px solid #f4f4f4;
 
     .textual {
-      margin-top: 10px;
+      margin-top: 2.6667vw;
       flex-grow: 1;
 
       > span {
-        font-size: 12px;
+        font-size: 3.2000vw;
         line-height: 1.2;
-        margin-bottom: 8px;
+        margin-bottom: 2.1333vw;
       }
 
       > a {
-        font-size: 16px;
+        font-size: 4.2667vw;
         line-height: 1.2;
-        margin-bottom: 10px;
+        margin-bottom: 2.6667vw;
 
         strong {
           display: inline-block;
           width: 100%;
-          margin-top: 4px;
+          margin-top:1.0667vw;
         }
       }
 
       > p {
-        font-size: 18px;
+        font-size: 4.8000vw;
         line-height: 1.2;
       }
 
       .sizes {
         > span {
-          font-size: 14px;
+          font-size: 3.7333vw;
           line-height: 1.2;
-          margin-bottom: 4px;
+          margin-bottom: 1.0667vw;
         }
 
         ul {
-          gap: 6px;
+          gap: 1.6000vw;
 
           li {
-            font-size: 16px;
+            font-size: 4.2667vw;
             line-height: 1.2;
           }
         }
@@ -444,7 +444,7 @@
 
       .bot {
         display: none;
-        margin-top: 10px;
+        margin-top: 2.6667vw;
         opacity: 1;
         pointer-events: auto;
         flex-direction: column;
@@ -453,15 +453,15 @@
 
         .btn {
           width: 100%;
-          margin-top: 6px;
+          margin-top: 1.6000vw;
         }
       }
     }
 
     .fav {
-      width: 28px;
-      height: 28px;
-      padding: 5px;
+      width: 7.4667vw;
+      height: 7.4667vw;
+      padding: 1.3333vw;
       top: 0;
       right: 0;
     }
@@ -469,27 +469,27 @@
     .tags {
       top: 0;
       left: 0;
-      gap: 5px;
+      gap:1.3333vw;
 
       .tag {
-        font-size: 10px;
+        font-size: 2.6667vw;
         line-height: 1.2;
-        padding: 3px 5px;
+        padding: 0.8000vw 1.3333vw;
       }
     }
 
   }
   .product-slider__cont {
-    padding: 0 0 15px;
-    margin-bottom: 10px;
+    padding: 0 0 4.0000vw;
+    margin-bottom: 2.6667vw;
   }
   .progress-bar {
-    height: 5px;
-    margin-top: 12px;
-    margin-bottom: 10px;
+    height: 1.3333vw;
+    margin-top: 3.2000vw;
+    margin-bottom: 2.6667vw;
   }
   .product-slider {
-    padding: 30px 0 15px;
+    padding: 8.0000vw 0 4.0000vw;
     .btns {
       display: none;
     }
@@ -498,19 +498,19 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    margin-bottom: 24px;
+    margin-bottom: 6.4000vw;
   }
   .title {
-    font-size: 18px;
+    font-size: 4.8000vw;
     line-height: 1.2;
   }
   .section-block {
-    padding: 15px 0;
+    padding: 4.0000vw 0;
   }
   .section-block__cont {
     overflow-x: auto;
-    gap: 15px;
-    padding: 12px 0;
+    gap: 4.0000vw;
+    padding: 3.2000vw 0;
   }
   .section-item {
     width: calc(36%);
@@ -519,25 +519,25 @@
     .img {
       width: 100%;
       padding-top: 64%;
-      margin-bottom: 10px;
+      margin-bottom: 2.6667vw;
     }
 
-    font-size: 14px;
+    font-size: 3.7333vw;
     line-height: 1.2;
   }
 
   .dots {
     width: 100%;
-    margin: 12px 0;
-    gap: 12px;
+    margin: 3.2000vw 0;
+    gap: 3.2000vw;
     display: flex;
     align-items: center;
     justify-content: center;
 
   }
   .single-dot {
-    width: 16px;
-    height: 16px;
+    width: 4.2667vw;
+    height: 4.2667vw;
     cursor: pointer;
     border-radius: 50%;
     background: #979797;
@@ -547,13 +547,13 @@
     }
   }
   main {
-    padding-top: 15px;
+    padding-top: 4.0000vw;
   }
   .home-banner__cont {
     height: auto;
 
     .swiper {
-      height: 170px;
+      height: 45.3333vw;
     }
 
     .btns {
@@ -566,18 +566,18 @@
 
   }
   .btn {
-    padding: 8px 16px;
-    font-size: 16px;
+    padding: 2.1333vw 4.2667vw;
+    font-size: 4.2667vw;
     line-height: 1;
 
     &::after {
-      width: 20px;
-      height: 9px;
-      margin-left: 12px;
+      width: 5.3333vw;
+      height: 2.4000vw;
+      margin-left: 3.2000vw;
     }
 
     &.btn--white {
-      padding: 8px 16px;
+      padding: 2.1333vw 4.2667vw;
     }
   }
   .menu-block__items {
@@ -586,9 +586,9 @@
 
   }
   .menu-block__menu ul li a {
-    font-size: 16px;
+    font-size: 4.2667vw;
     line-height: 1.2;
-    padding: 6px 15px;
+    padding: 1.6000vw 4.0000vw;
 
   }
   .menu-block__menu > span {
@@ -597,14 +597,14 @@
   .menu-block__menu {
     width: 100%;
     margin: 0;
-    padding: 6px 0;
+    padding: 1.6000vw 0;
 
     .btn {
-      margin-left: 15px;
-      width: calc(100% - 30px);
-      margin-right: 15px;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin-left: 4.0000vw;
+      width: calc(100% - 8.0000vw);
+      margin-right: 4.0000vw;
+      margin-top: 2.6667vw;
+      margin-bottom: 2.6667vw;
     }
   }
   .menu-block {
@@ -628,7 +628,7 @@
   .header-menu > ul > li {
     &.open {
       .menu-block {
-        max-height: 600px;
+        max-height: 160.0000vw;
       }
     }
   }
@@ -638,27 +638,27 @@
 
   .header-lang {
     width: 100%;
-    padding: 10px 15px;
+    padding: 2.6667vw 4.0000vw;
     border-top: 1px solid #F4F4F4;
-    gap: 15px;
+    gap: 4.0000vw;
     justify-content: center;
 
     a, span {
-      font-size: 16px;
+      font-size: 4.2667vw;
       line-height: 1.2;
     }
   }
   .header-top__socs {
     width: 100%;
     display: flex;
-    padding: 10px 15px;
+    padding: 2.6667vw 4.0000vw;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 4.0000vw;
 
     > a {
-      width: 32px;
-      height: 32px;
+      width: 8.5333vw;
+      height: 8.5333vw;
 
       svg {
         path {
@@ -674,18 +674,18 @@
     box-shadow: none;
     border: none;
     width: 100%;
-    padding: 10px 15px;
+    padding: 2.6667vw 4.0000vw;
     border-top: 1px solid #F4F4F4;
 
     a, span {
-      font-size: 14px;
+      font-size: 3.7333vw;
       line-height: 1.2;
     }
 
     p {
-      font-size: 12px;
+      font-size: 3.2000vw;
       line-height: 1.2;
-      margin-bottom: 10px;
+      margin-bottom: 2.6667vw;
     }
   }
   .header-top__menu-block {
@@ -695,7 +695,7 @@
     box-shadow: none;
     border: none;
     width: 100%;
-    padding: 15px 0;
+    padding: 4.0000vw 0;
 
     ul {
       width: 100%;
@@ -705,9 +705,9 @@
 
       li {
         a {
-          font-size: 16px;
+          font-size: 4.2667vw;
           line-height: 1.2;
-          padding: 5px 15px;
+          padding: 1.3333vw 4.0000vw;
         }
       }
     }
@@ -744,10 +744,10 @@
         }
 
         > a {
-          font-size: 16px;
+          font-size: 4.2667vw;
           line-height: 1.2;
           width: 100%;
-          padding: 8px 15px;
+          padding: 2.1333vw 4.0000vw;
         }
 
         &.menu-item-has-children {
@@ -756,13 +756,13 @@
 
             &::after {
 
-              width: 11px;
-              height: 7px;
+              width: 2.9333vw;
+              height: 1.8667vw;
               display: inline-block;
               content: '';
               position: absolute;
               top: 50%;
-              right: 15px;
+              right: 4.0000vw;
               transform: translate(0, -50%);
               background: url("../img/arr-down.svg") no-repeat center / 100%;
             }
@@ -772,7 +772,7 @@
     }
   }
   .header-bot__cont {
-    padding: 8px 0;
+    padding: 2.1333vw 0;
   }
   .header-hidden {
 
@@ -780,13 +780,13 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 10px 0 50px;
+    padding: 2.6667vw 0 13.3333vw;
     position: absolute;
     border-top: 1px solid #d9d9d9;
     top: 100%;
     left: 0;
     right: 0;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 13.3333vw);
     overflow-y: auto;
     background: #fff;
     transition: transform 0.6s ease-in-out;
@@ -806,10 +806,10 @@
   }
   .burger {
     display: flex;
-    width: 24px;
-    height: 16px;
+    width: 6.4000vw;
+    height: 4.2667vw;
     position: relative;
-    margin-left: 10px;
+    margin-left: 2.6667vw;
 
     span {
       width: 100%;
@@ -860,16 +860,16 @@
     }
   }
   .header-controls .search-block, .header-controls > a {
-    width: 34px;
-    height: 34px;
-    padding: 7px;
+    width: 9.0667vw;
+    height: 9.0667vw;
+    padding: 1.8667vw;
   }
   .header-controls .search-block span, .header-controls > a span {
-    top: 2px;
-    right: 2px;
-    width: 15px;
-    height: 15px;
-    font-size: 10px;
+    top: 0.5333vw;
+    right: 0.5333vw;
+    width: 4.0000vw;
+    height: 4.0000vw;
+    font-size: 2.6667vw;
     line-height: 1;
   }
 
@@ -878,7 +878,7 @@
   }
   .container {
     max-width: 100%;
-    padding: 0 15px;
+    padding: 0 4.0000vw;
   }
   .header-bot__cont .logo {
     width: 35vw;
