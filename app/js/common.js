@@ -147,10 +147,30 @@ function startProductSliders() {
             const swiper2 = new Swiper(sldCont, {
                 // Optional parameters
                 loop: false,
+                effect: 'slide',
                 slidesPerView: 2,
                 slidesPerGroup: 1,
                 speed: 700,
                 centeredSlides: false,
+                touchRatio: 1,
+                touchAngle: 45,
+                simulateTouch: !0,
+                shortSwipes: !0,
+                longSwipes: !0,
+                longSwipesRatio: .5,
+                longSwipesMs: 300,
+                followFinger: !0,
+                allowTouchMove: !0,
+                threshold: 0,
+                touchMoveStopPropagation: !1,
+                touchStartPreventDefault: !0,
+                touchStartForcePreventDefault: !1,
+                touchReleaseOnEdges: !1,
+                uniqueNavElements: !0,
+                resistance: !0,
+                resistanceRatio: .85,
+
+
                 navigation: {
                     nextEl: sldNext,
                     prevEl: sldPrev,
