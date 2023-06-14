@@ -57,6 +57,8 @@ function allLozadImg() {
 
 allLozadImg();
 
+
+
 let headerMenu = [...document.querySelectorAll('.header-menu > ul > li')];
 let backDrop = document.querySelector('.backdrop');
 function hoverHeaderMenu() {
@@ -87,7 +89,7 @@ function startHomeBanner() {
 
         homeBanner.forEach((sld) => {
             let sldCont = sld.querySelector('.swiper');
-            let pagin = sld.querySelector('.dots');
+            let pagin = sld.querySelector('.progress-bar');
             let sldNext = sld.querySelector('.slider-btn--next');
             let sldPrev = sld.querySelector('.slider-btn--prev');
 
@@ -98,6 +100,23 @@ function startHomeBanner() {
                 slidesPerGroup: 1,
                 speed: 700,
                 centeredSlides: false,
+                touchRatio: 1,
+                touchAngle: 45,
+                simulateTouch: !0,
+                shortSwipes: !0,
+                longSwipes: !0,
+                longSwipesRatio: .5,
+                longSwipesMs: 300,
+                followFinger: !0,
+                allowTouchMove: !0,
+                threshold: 0,
+                touchMoveStopPropagation: !1,
+                touchStartPreventDefault: !0,
+                touchStartForcePreventDefault: !1,
+                touchReleaseOnEdges: !1,
+                uniqueNavElements: !0,
+                resistance: !0,
+                resistanceRatio: .85,
                 navigation: {
                     nextEl: sldNext,
                     prevEl: sldPrev,
@@ -108,13 +127,7 @@ function startHomeBanner() {
                 spaceBetween: 20,
                 pagination: {
                     el: pagin,
-                    type: 'bullets',
-                    bulletActiveClass: 'active',
-                    bulletClass: 'single-dot',
-                    bulletElement: 'div',
-                    clickable: true,
-                    currentClass: 'current',
-
+                    type: "progressbar",
                 },
 
 
@@ -340,6 +353,22 @@ function burgerControl() {
 }
 
 burgerControl();
+
+//footer control
+
+let footerColumnSpan = [...document.querySelectorAll('.footer-column > span')];
+
+function controlFooterColumn() {
+    if (footerColumnSpan.length) {
+        footerColumnSpan.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                btn.closest('.footer-column').classList.toggle('open');
+            })
+        })
+    }
+}
+controlFooterColumn();
+//footer control
 
 
 //modal windows
