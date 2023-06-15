@@ -19,6 +19,7 @@
       display: none;
     }
     &.header-top__menu--opener {
+      display: flex;
 
       > span {
         display: flex;
@@ -75,9 +76,25 @@
     width: 48.0000vw;
   }
   .footer-bottom__cont {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
+    .logo {
+      width: 37vw;
+      order: 2;
+
+    }
+    .footer-links {
+      width: 100%;
+      order: 1;
+    }
+    .cards-pay {
+      order: 3;
+    }
+    .copyr {
+      order: 4;
+    }
   }
   .copyr {
     order: 3;
@@ -149,10 +166,10 @@
     margin-bottom: 0;
 
     &:first-child {
-      margin-top: 3.5vw;
+      margin-top: 0;
     }
 
-    &:nth-child(2) {
+    &:nth-child(1) {
       margin-bottom: 3.5vw;
     }
 
@@ -240,6 +257,7 @@
       }
     }
   }
+
   .footer-column {
     width: 100%;
 
