@@ -6,6 +6,69 @@
     //display: none;
     border-radius: 0;
   }
+  //
+
+  .header-top__menu {
+    width: 100%;
+    margin: 0 0 4vw;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    > span {
+      display: none;
+    }
+    &.header-top__menu--opener {
+
+      > span {
+        display: flex;
+        font-size: 4.2667vw;
+        line-height: 1.2;
+        width: 100%;
+        padding: 2.1333vw 4vw;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-top: 1px solid #f4f4f4;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        &::after {
+          width: 2.9333vw;
+          height: 1.8667vw;
+          display: inline-block;
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 4vw;
+
+          transform: translate(0,-50%);
+          background: url(../img/arr-down.svg) no-repeat center/100%;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      > .header-top__menu-block {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        transition: max-height .6s ease-in-out;
+      }
+      &.open {
+        > .header-top__menu-block {
+          max-height: 160vw;
+        }
+        > span {
+          background: #e70000;
+          color: #fff;
+          &::after {
+            transform: translate(0,-50%) rotate(180deg);
+            filter: brightness(0) invert(1);
+          }
+
+        }
+      }
+    }
+  }
 
   //
   .playmarket {
@@ -802,10 +865,12 @@
       justify-content: flex-start;
 
       li {
+        width: 100%;
         a {
           font-size: 4.2667vw;
           line-height: 1.2;
-          padding: 1.3333vw 4.0000vw;
+          padding: 1.6vw 4vw;
+          width: 100%;
         }
       }
     }

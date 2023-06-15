@@ -326,6 +326,25 @@ function controlMenu() {
 }
 controlMenu();
 
+let otherMenu = [...document.querySelectorAll('.header-top__menu--opener > span')];
+
+function controlOtherMenu() {
+    if (otherMenu.length) {
+        otherMenu.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                if (window.innerWidth < 768) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    btn.closest('.header-top__menu--opener').classList.toggle('open');
+                }
+
+            })
+        })
+    }
+}
+controlOtherMenu();
+
 var burger = [...document.querySelectorAll('.burger')];
 var header = document.querySelector('.header');
 
