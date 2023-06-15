@@ -188,9 +188,7 @@ function startProductSliders() {
                     nextEl: sldNext,
                     prevEl: sldPrev,
                 },
-                autoplay: {
-                    delay: 4100,
-                },
+                autoplay: false,
                 spaceBetween: 15,
                 breakpoints: {
                     767: {
