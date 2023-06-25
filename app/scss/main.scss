@@ -172,8 +172,8 @@ body {
 
 
 html {
-  height: auto;
-  min-height: 100%;
+  height: auto !important;
+  min-height: 100% !important;
   font-size: 16px;
   display: flex;
 }
@@ -194,7 +194,11 @@ main {
   //background: #fff;
   //transition: padding-top 0.4s ease;
 }
-
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
 
 p, h1, ul, ol, h2, h3, h4, h5, h6 {
   margin: 0;

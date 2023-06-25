@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/css/ocfilter/filter.css" />
+    <link rel="stylesheet" href="./catalog/view/bootstrap/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="./css/main.min.css?=v2">
+</head>
+<body class="home">
+
+//= details/header.html
+<main>
+
+    <section class="product-cat">
+        <div class="container">
+            <div class="breadcrumbs">
+                <ul>
+                    <li><a href="">Главная</a></li>
+                    <li><a href="">Каталог</a></li>
+                    <li><span>ЖЕНСКАЯ ОБУВЬ</span></li>
+                </ul>
+            </div>
+            <div class="title-head">
+                <span class="title">
+                    Результаты поиска «кроссовки»
+                </span>
+            </div>
+
+            <div class="catalog-block">
+                <div class="catalog-head">
+                    <div class="catalog-head__left">
+                        <p>Фильтр</p>
+                        <div class="ocf-btn-mobile-fixed ocf-mobile">
+                            <button type="button" class="ocf-btn ocf-btn-default" data-ocf="mobile" aria-label="Фiльтр">
+                                <span class="ocf-btn-name">Фiльтр</span>
+                                <i class="ocf-icon ocf-icon-16 ocf-brand ocf-sliders"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="catalog-head__right">
+
+
+                        <div class="catalog-sort">
+
+                            <a href="" class="sort-type active">по популярности</a>
+                            <a href="" class="sort-type ">по скидке</a>
+                            <a href="" class="sort-type ">по цене</a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="catalog-cont">
+                    <div class="catalog-filter">
+                        <aside id="column-left" class="col-sm-3 hidden-xs">
+                            <nav class="navbar navbar-default visible-xs" id="ocdepartment-mobile">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ocdepartment-mobile-container" aria-expanded="false" style="padding: 6px 10px;"><i class="fa fa-bars"></i></button>
+                                        <a href="https://demo.ocfilter.com/computers" class="navbar-brand"><i class="fa fa-arrow-left"></i>&nbsp; Комп'ютери</a>
+                                    </div>
+
+                                    <div class="collapse navbar-collapse" id="ocdepartment-mobile-container"></div><!-- /.navbar-collapse -->
+                                </div><!-- /.container-fluid -->
+                            </nav>
+                            <div id="ocdepartment-container">
+                                <div class="panel panel-default module-ocdepartment">
+                                    <div class="panel-heading">
+                                        <a href="https://demo.ocfilter.com/computers"><i class="fa fa-arrow-left"></i>&nbsp; Комп'ютери</a>
+                                    </div>
+                                    <div class="list-group">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="text/javascript"><!--
+                            $(function() {
+
+
+                                $('.ocd-child-carousel').on('slid.bs.carousel', function(e) {
+                                    if ($(e.relatedTarget).index() > 0) {
+                                        var $carousel = $(e.target);
+
+                                        $carousel.find('.ocd-child-collapse').collapse('show').one('hidden.bs.collapse', (e) => $carousel.carousel('prev'));
+                                        $carousel.find('.ocd-child-collapse').find('.list-group-item').fadeBg({ type: 'info' });
+                                    }
+                                });
+
+                                $('#ocdepartment-hidden-categories').on({
+                                    'shown.bs.collapse': (e) => $('[data-target="#ocdepartment-hidden-categories"]').button('hide'),
+                                    'hidden.bs.collapse': (e) => $('[data-target="#ocdepartment-hidden-categories"]').button('show')
+                                });
+
+                                var sticky = true;
+
+                                if (sticky && $('#content').length && $('#column-left:visible, #column-left:visible').length > 0) {
+                                    if ($('#content').outerHeight(true) > $(window).height() && ($('#column-left').height() > $('#content').outerHeight(true) || $('#column-right').height() > $('#content').outerHeight(true))) {
+                                        setTimeout(function() {
+                                            $('#content').css({
+                                                'position': 'sticky',
+                                                'top': -($('#content').outerHeight(true) - $(window).height() + 30) + 'px'
+                                            });
+                                        }, 100);
+                                    }
+                                }
+
+                                // Mobile version
+                                $('.breadcrumb').after($('#ocdepartment-mobile').remove().get(0).outerHTML);
+
+                                var $mobileContainer = $('#ocdepartment-mobile');
+
+                                function toggleMobile(isMobile) {
+                                    if (isMobile) {
+                                        if ($('#ocdepartment-mobile-container').html() == '') {
+                                            $('#ocdepartment-mobile-container').html($('#ocdepartment-container').html());
+
+                                            $('#ocdepartment-container').html('');
+                                        }
+                                    } else {
+                                        if ($('#ocdepartment-container').html() == '') {
+                                            $('#ocdepartment-container').html($('#ocdepartment-mobile-container').html());
+
+                                            $('#ocdepartment-mobile-container').html('');
+                                        }
+                                    }
+                                }
+
+                                var resizeTimer;
+
+                                $(window).on('resize', function() {
+                                    clearTimeout(resizeTimer);
+
+                                    resizeTimer = setTimeout(function() {
+                                        toggleMobile($mobileContainer.is(':visible'))
+                                    }, 250);
+                                }).trigger('resize');
+                            });
+
+                            // Transition Fade backgound-color
+                            // Author: SooR
+                            +function($) {
+                                'use strict';
+
+                                // FADEBG PUBLIC CLASS DEFINITION
+                                // ==============================
+
+                                var FadeBG = function(element, options) {
+                                    this.timer = null;
+
+                                    this.$element = $(element);
+
+                                    this.options = $.extend({}, FadeBG.DEFAULTS, this.$element.data(), options);
+
+                                    if (this.options.delay < 10) {
+                                        this.options.delay = 10;
+                                    }
+
+                                    this.fade();
+                                };
+
+                                FadeBG.DEFAULTS = {
+                                    delay: 250,
+                                    type: 'success'
+                                };
+
+                                FadeBG.prototype.fade = function() {
+                                    clearTimeout(this.timer);
+
+                                    var bgClass;
+
+                                    if (this.$element.hasClass('list-group-item')) {
+                                        bgClass = 'list-group-item-' + this.options.type;
+                                    } else if (this.$element.is('td') || this.$element.is('tr')) {
+                                        bgClass = this.options.type;
+                                    } else {
+                                        bgClass = 'bg-' + this.options.type;
+                                    }
+
+                                    this.timer = setTimeout(function(that) {
+                                        that.$element.addClass('bg-transition');
+                                    }, this.options.delay, this);
+
+                                    this.$element.removeClass(bgClass + ' bg-transition').addClass(bgClass).one('bsTransitionEnd', function(e) {
+                                        $(this).removeClass(bgClass + ' bg-transition');
+                                    });
+                                };
+
+                                // FADEBG PLUGIN DEFINITION
+                                // ========================
+
+                                function Plugin(option) {
+                                    return this.each(function() {
+                                        var $this   = $(this);
+                                        var options = typeof option == 'object' && option;
+
+                                        var data = new FadeBG(this, options);
+
+                                        if (typeof option == 'string') {
+                                            data[option].apply(data, Array.prototype.slice.call(arguments, 1));
+                                        }
+                                    })
+                                }
+
+                                $.fn.fadeBg             = Plugin
+                                $.fn.fadeBg.Constructor = FadeBG
+                            }(jQuery);
+                            //--></script>    <div class="ocf-container ocf-category-6918 ocf-theme-light ocf-mobile-1 ocf-mobile-left ocf-vertical ocf-left" id="ocf-module-1">
+
+
+                            <div class="ocf-content">
+                                <div class="ocf-header">
+                                    <i class="ocf-icon ocf-icon-16 ocf-brand ocf-sliders"></i>
+
+                                    Фiльтр
+
+
+                                    <button type="button" data-ocf="mobile" class="ocf-btn ocf-btn-link ocf-mobile ocf-close-mobile" aria-label="Close filter"><i class="ocf-icon ocf-icon-16 ocf-times"></i></button>
+                                </div>
+
+                                <div class="ocf-body">
+                                    <div class="ocf-filter-list ocf-clearfix">
+                                        <div class="ocf-module-page">
+                                            <div class="ocf-module-page-header">Популярні фільтри</div>
+                                            <ul class="ocf-module-page-list ocf-scroll-y">
+                                                <li>
+                                                    <a href="https://demo.ocfilter.com/computers/laptops/laptop-cpu-amd-ryzen-3">Ноутбуки з процесором AMD Ryzen 3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://demo.ocfilter.com/computers/laptops/laptop-cpu-intel-core-m3">Ноутбуки з процесором Intel Core m3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://demo.ocfilter.com/computers/laptops/laptop-cpu-intel-core-i7">Ноутбуки з процесором Intel Core i7</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://demo.ocfilter.com/computers/laptops/laptop-cpu-intel-core-i3">Ноутбуки з процесором Intel Core i3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://demo.ocfilter.com/computers/laptops/laptop-cpu-intel-core-i5">Ноутбуки з процесором Intel Core i5</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://demo.ocfilter.com/computers/laptops/laptop-cpu-intel-core-i9">Ноутбуки з процесором Intel Core i9</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://demo.ocfilter.com/computers/laptops/laptop-cpu-amd-ryzen-7-pro">Ноутбуки з процесором AMD Ryzen 7 Pro</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://demo.ocfilter.com/computers/laptops/laptop-cpu-amd-ryzen-7">Ноутбуки з процесором AMD Ryzen 7</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://demo.ocfilter.com/computers/laptops/laptop-cpu-amd-ryzen-5-pro">Ноутбуки з процесором AMD Ryzen 5 Pro</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://demo.ocfilter.com/computers/laptops/laptop-cpu-amd-ryzen-5">Ноутбуки з процесором AMD Ryzen 5</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://demo.ocfilter.com/computers/laptops/laptop-cpu-amd-a10">Ноутбуки з процесором AMD A10</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="ocf-filter" id="ocf-filter-4-0-1">
+                                            <div class="ocf-filter-body">
+                                                <div class="ocf-filter-header" data-ocf="expand">
+                                                    <i class="ocf-mobile ocf-icon ocf-arrow-long ocf-arrow-left"></i>
+
+                                                    <span class="ocf-active-label"></span>
+
+
+                                                    <span class="ocf-filter-name">Знижка</span>
+
+                                                    <span class="ocf-filter-header-append">
+
+
+        <span class="ocf-filter-discard ocf-icon ocf-icon-16 ocf-minus-circle" data-ocf-discard="4.0"></span>
+
+        <i class="ocf-mobile ocf-icon ocf-angle ocf-angle-right"></i>
+
+      </span>
+                                                </div><!-- /.ocf-filter-header -->
+
+
+
+
+                                                <div class="ocf-value-list">
+
+                                                    <div class="ocf-value-list-body">
+
+                                                        <button type="button" id="ocf-v-4-0-1-1" class="ocf-value ocf-checkbox" data-filter-key="4.0" data-value-id="1">
+                                                            <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                            <span class="ocf-value-name">Тільки зі знижками</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">128</span>
+  </span>
+                                                        </button>          </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <div class="ocf-filter ocf-slider ocf-has-input" id="ocf-filter-2-0-1">
+                                            <div class="ocf-filter-body">
+                                                <div class="ocf-filter-header" data-ocf="expand">
+                                                    <i class="ocf-mobile ocf-icon ocf-arrow-long ocf-arrow-left"></i>
+
+                                                    <span class="ocf-active-label">
+        $        <span id="ocf-text-min-2-0-1">464</span>
+                - <span id="ocf-text-max-2-0-1">15102</span>
+                      </span>
+
+
+                                                    <span class="ocf-filter-name">Ціна</span>
+
+                                                    <span class="ocf-filter-header-append">
+
+
+        <span class="ocf-filter-discard ocf-icon ocf-icon-16 ocf-minus-circle" data-ocf-discard="2.0"></span>
+
+        <i class="ocf-mobile ocf-icon ocf-angle ocf-angle-right"></i>
+
+      </span>
+                                                </div><!-- /.ocf-filter-header -->
+
+
+                                                <div class="ocf-value-list">
+                                                    <div class="ocf-input-group ocf-slider-input-group">
+                                                        <span class="ocf-input-group-addon">$</span>
+                                                        <input type="number" name="ocf[2-0-1][min]" value="464" class="ocf-form-control" id="ocf-input-min-2-0-1" autocomplete="off" aria-label="Ціна"  />
+                                                        <span class="ocf-input-group-addon">-</span>
+                                                        <input type="number" name="ocf[2-0-1][max]" value="15102" class="ocf-form-control" id="ocf-input-max-2-0-1" autocomplete="off" aria-label="Ціна"  />
+                                                    </div>
+                                                    <div class="ocf-value-slider">
+                                                        <div id="ocf-s-2-0-1" class="ocf-value-scale"
+                                                             data-filter-key="2.0"
+                                                             data-min="464"
+                                                             data-max="15102"
+                                                             data-range="true"
+                                                             data-min-start="464"
+                                                             data-max-start="15102"
+
+                                                             data-input-min="#ocf-input-min-2-0-1"
+                                                             data-input-max="#ocf-input-max-2-0-1"
+
+                                                             data-text-min="#ocf-text-min-2-0-1"
+                                                             data-text-max="#ocf-text-max-2-0-1"
+
+                                                             data-prefix="$"
+                                                             data-suffix=""
+
+                                                        ></div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="ocf-filter ocf-dropdown" id="ocf-filter-1-0-1">
+                                            <div class="ocf-filter-body">
+                                                <div class="ocf-filter-header" data-ocf="expand">
+                                                    <i class="ocf-mobile ocf-icon ocf-arrow-long ocf-arrow-left"></i>
+
+                                                    <span class="ocf-active-label"></span>
+
+
+                                                    <span class="ocf-filter-name">Виробник</span>
+
+                                                    <span class="ocf-filter-header-append">
+
+
+        <span class="ocf-filter-discard ocf-icon ocf-icon-16 ocf-minus-circle" data-ocf-discard="1.0"></span>
+
+        <i class="ocf-mobile ocf-icon ocf-angle ocf-angle-right"></i>
+
+        <i class="ocf-desktop ocf-icon ocf-angle ocf-angle-down"></i>
+
+      </span>
+                                                </div><!-- /.ocf-filter-header -->
+
+
+
+
+                                                <div class="ocf-value-list">
+                                                    <div class="ocf-scroll-y">
+
+                                                        <div class="ocf-value-list-body">
+
+                                                            <button type="button" id="ocf-v-1-0-406-1" class="ocf-value ocf-checkbox" data-filter-key="1.0" data-value-id="406">
+                                                                <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                                <span class="ocf-value-name">MSI</span>
+                                                                <span class="ocf-value-append">
+    <span class="ocf-value-count">499</span>
+  </span>
+                                                            </button>
+                                                            <button type="button" id="ocf-v-1-0-480-1" class="ocf-value ocf-checkbox" data-filter-key="1.0" data-value-id="480">
+                                                                <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                                <span class="ocf-value-name">Xiaomi</span>
+                                                                <span class="ocf-value-append">
+    <span class="ocf-value-count">21</span>
+  </span>
+                                                            </button>
+                                                            <button type="button" id="ocf-v-1-0-58-1" class="ocf-value ocf-checkbox" data-filter-key="1.0" data-value-id="58">
+                                                                <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                                <span class="ocf-value-name">Acer</span>
+                                                                <span class="ocf-value-append">
+    <span class="ocf-value-count">1.6<span class="ocf-num-abbr">k</span></span>
+  </span>
+                                                            </button>
+                                                            <button type="button" id="ocf-v-1-0-59-1" class="ocf-value ocf-checkbox" data-filter-key="1.0" data-value-id="59">
+                                                                <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                                <span class="ocf-value-name">Apple</span>
+                                                                <span class="ocf-value-append">
+    <span class="ocf-value-count">61</span>
+  </span>
+                                                            </button>
+                                                            <button type="button" id="ocf-v-1-0-63-1" class="ocf-value ocf-checkbox" data-filter-key="1.0" data-value-id="63">
+                                                                <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                                <span class="ocf-value-name">ASUS</span>
+                                                                <span class="ocf-value-append">
+    <span class="ocf-value-count">2.2<span class="ocf-num-abbr">k</span></span>
+  </span>
+                                                            </button>
+                                                            <button type="button" id="ocf-v-1-0-64-1" class="ocf-value ocf-checkbox" data-filter-key="1.0" data-value-id="64">
+                                                                <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                                <span class="ocf-value-name">Lenovo</span>
+                                                                <span class="ocf-value-append">
+    <span class="ocf-value-count">2.6<span class="ocf-num-abbr">k</span></span>
+  </span>
+                                                            </button>
+                                                            <button type="button" id="ocf-v-1-0-82-1" class="ocf-value ocf-checkbox" data-filter-key="1.0" data-value-id="82">
+                                                                <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                                <span class="ocf-value-name">Dell</span>
+                                                                <span class="ocf-value-append">
+    <span class="ocf-value-count">1.8<span class="ocf-num-abbr">k</span></span>
+  </span>
+                                                            </button>
+                                                            <button type="button" id="ocf-v-1-0-81-1" class="ocf-value ocf-checkbox" data-filter-key="1.0" data-value-id="81">
+                                                                <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                                <span class="ocf-value-name">HP </span>
+                                                                <span class="ocf-value-append">
+    <span class="ocf-value-count">2.4<span class="ocf-num-abbr">k</span></span>
+  </span>
+                                                            </button>          </div>
+
+                                                        <div class="ocf-collapse ocf-collapse-value" id="ocf-hidden-values-1-0-1" data-ocf-load="values" data-filter-key="1.0">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <button type="button" class="ocf-btn ocf-btn-link ocf-btn-show-values" data-ocf="collapse" data-target="#ocf-hidden-values-1-0-1" data-loading-text="<i class='fa fa-refresh fa-spin'></i> Завантаження.." aria-expanded="false">
+                                                        <span class="ocf-hide-expand-1">Показати ще 1 <i class="ocf-icon ocf-angle ocf-angle-down"></i></span>
+                                                        <span class="ocf-hide-expand-0">Сховати <i class="ocf-icon ocf-angle ocf-angle-up"></i></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <div class="ocf-filter ocf-slider ocf-has-input" id="ocf-filter-10749-2-1">
+                                            <div class="ocf-filter-body">
+                                                <div class="ocf-filter-header" data-ocf="expand">
+                                                    <i class="ocf-mobile ocf-icon ocf-arrow-long ocf-arrow-left"></i>
+
+                                                    <span class="ocf-active-label">
+                <span id="ocf-text-min-10749-2-1">2</span>
+                      </span>
+
+
+                                                    <span class="ocf-filter-name">Оперативна пам'ять</span>
+
+                                                    <span class="ocf-filter-header-append">
+
+
+        <span class="ocf-filter-discard ocf-icon ocf-icon-16 ocf-minus-circle" data-ocf-discard="10749.2"></span>
+
+        <i class="ocf-mobile ocf-icon ocf-angle ocf-angle-right"></i>
+
+      </span>
+                                                </div><!-- /.ocf-filter-header -->
+
+
+                                                <div class="ocf-value-list">
+                                                    <div class="ocf-input-group ocf-slider-input-group">
+                                                        <input type="number" name="ocf[10749-2-1][min]" value="2" class="ocf-form-control" id="ocf-input-min-10749-2-1" autocomplete="off" aria-label="Оперативна пам'ять"  />
+                                                    </div>
+                                                    <div class="ocf-value-slider">
+                                                        <div id="ocf-s-10749-2-1" class="ocf-value-scale"
+                                                             data-filter-key="10749.2"
+                                                             data-min="2"
+                                                             data-max="64"
+                                                             data-range="false"
+                                                             data-min-start="2"
+
+                                                             data-input-min="#ocf-input-min-10749-2-1"
+
+                                                             data-text-min="#ocf-text-min-10749-2-1"
+
+                                                             data-prefix=""
+                                                             data-suffix=""
+
+                                                        ></div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="ocf-filter" id="ocf-filter-10343-2-1">
+                                            <div class="ocf-filter-body">
+                                                <div class="ocf-filter-header" data-ocf="expand">
+                                                    <i class="ocf-mobile ocf-icon ocf-arrow-long ocf-arrow-left"></i>
+
+                                                    <span class="ocf-active-label"></span>
+
+
+                                                    <span class="ocf-filter-name">Колір корпусу</span>
+
+                                                    <span class="ocf-filter-header-append">
+
+
+        <span class="ocf-filter-discard ocf-icon ocf-icon-16 ocf-minus-circle" data-ocf-discard="10343.2"></span>
+
+        <i class="ocf-mobile ocf-icon ocf-angle ocf-angle-right"></i>
+
+      </span>
+                                                </div><!-- /.ocf-filter-header -->
+
+
+
+
+                                                <div class="ocf-value-list">
+
+                                                    <div class="ocf-value-list-body">
+
+                                                        <button type="button" id="ocf-v-10343-2-894569274-1" class="ocf-value ocf-checkbox" data-filter-key="10343.2" data-value-id="894569274">
+                                                            <span class="ocf-value-color" style="background-color: #fff;"></span>
+
+                                                            <span class="ocf-value-name">білий</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">222</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10343-2-1700405960-1" class="ocf-value ocf-checkbox" data-filter-key="10343.2" data-value-id="1700405960">
+                                                            <span class="ocf-value-color" style="background-color: #16bcb4;"></span>
+
+                                                            <span class="ocf-value-name">бірюзовий</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">1</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10343-2-3625521371-1" class="ocf-value ocf-checkbox" data-filter-key="10343.2" data-value-id="3625521371">
+                                                            <span class="ocf-value-color" style="background-color: #00bff3;"></span>
+
+                                                            <span class="ocf-value-name">блакитний</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">50</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10343-2-1107164981-1" class="ocf-value ocf-checkbox" data-filter-key="10343.2" data-value-id="1107164981">
+                                                            <span class="ocf-value-color" style="background-color: #9d0a0f;"></span>
+
+                                                            <span class="ocf-value-name">бордовий</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">8</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10343-2-1233062126-1" class="ocf-value ocf-checkbox" data-filter-key="10343.2" data-value-id="1233062126">
+                                                            <span class="ocf-value-color" style="background-color: #f68e54;"></span>
+
+                                                            <span class="ocf-value-name">бронзовий</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">5</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10343-2-3465632368-1" class="ocf-value ocf-checkbox" data-filter-key="10343.2" data-value-id="3465632368">
+                                                            <span class="ocf-value-color" style="background-color: #a286bd;"></span>
+
+                                                            <span class="ocf-value-name">бузковий</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">11</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10343-2-2338384907-1" class="ocf-value ocf-checkbox" data-filter-key="10343.2" data-value-id="2338384907">
+                                                            <span class="ocf-value-color" style="background-color: #fff100;"></span>
+
+                                                            <span class="ocf-value-name">жовтий</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">1</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10343-2-38581935-1" class="ocf-value ocf-checkbox" data-filter-key="10343.2" data-value-id="38581935">
+                                                            <span class="ocf-value-color" style="background-color: #00a650;"></span>
+
+                                                            <span class="ocf-value-name">зелений</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">13</span>
+  </span>
+                                                        </button>          </div>
+
+                                                    <div class="ocf-collapse ocf-collapse-value" id="ocf-hidden-values-10343-2-1" data-ocf-load="values" data-filter-key="10343.2">
+                                                    </div>
+
+
+                                                    <button type="button" class="ocf-btn ocf-btn-link ocf-btn-show-values" data-ocf="collapse" data-target="#ocf-hidden-values-10343-2-1" data-loading-text="<i class='fa fa-refresh fa-spin'></i> Завантаження.." aria-expanded="false">
+                                                        <span class="ocf-hide-expand-1">Показати ще 19 <i class="ocf-icon ocf-angle ocf-angle-down"></i></span>
+                                                        <span class="ocf-hide-expand-0">Сховати <i class="ocf-icon ocf-angle ocf-angle-up"></i></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="ocf-filter" id="ocf-filter-10552-2-1">
+                                            <div class="ocf-filter-body">
+                                                <div class="ocf-filter-header" data-ocf="expand">
+                                                    <i class="ocf-mobile ocf-icon ocf-arrow-long ocf-arrow-left"></i>
+
+                                                    <span class="ocf-active-label"></span>
+
+
+                                                    <span class="ocf-filter-name">Тип</span>
+
+                                                    <span class="ocf-filter-header-append">
+
+
+        <span class="ocf-filter-discard ocf-icon ocf-icon-16 ocf-minus-circle" data-ocf-discard="10552.2"></span>
+
+        <i class="ocf-mobile ocf-icon ocf-angle ocf-angle-right"></i>
+
+      </span>
+                                                </div><!-- /.ocf-filter-header -->
+
+
+
+
+                                                <div class="ocf-value-list">
+
+                                                    <div class="ocf-value-list-body">
+
+                                                        <button type="button" id="ocf-v-10552-2-2411505945-1" class="ocf-value ocf-checkbox" data-filter-key="10552.2" data-value-id="2411505945">
+                                                            <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                            <span class="ocf-value-name">2-в-1</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">252</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10552-2-4250738599-1" class="ocf-value ocf-checkbox" data-filter-key="10552.2" data-value-id="4250738599">
+                                                            <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                            <span class="ocf-value-name">ігровий</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">2.2<span class="ocf-num-abbr">k</span></span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10552-2-489262224-1" class="ocf-value ocf-checkbox" data-filter-key="10552.2" data-value-id="489262224">
+                                                            <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                            <span class="ocf-value-name">іміджевий</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">80</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10552-2-636888514-1" class="ocf-value ocf-checkbox" data-filter-key="10552.2" data-value-id="636888514">
+                                                            <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                            <span class="ocf-value-name">домашній</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">51</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10552-2-654919945-1" class="ocf-value ocf-checkbox" data-filter-key="10552.2" data-value-id="654919945">
+                                                            <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                            <span class="ocf-value-name">класичний</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">2.7<span class="ocf-num-abbr">k</span></span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10552-2-502148729-1" class="ocf-value ocf-checkbox" data-filter-key="10552.2" data-value-id="502148729">
+                                                            <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                            <span class="ocf-value-name">нетбук</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">12</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10552-2-2951655306-1" class="ocf-value ocf-checkbox" data-filter-key="10552.2" data-value-id="2951655306">
+                                                            <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                            <span class="ocf-value-name">робітник</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">1.3<span class="ocf-num-abbr">k</span></span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10552-2-1834544070-1" class="ocf-value ocf-checkbox" data-filter-key="10552.2" data-value-id="1834544070">
+                                                            <span class="ocf-value-input ocf-value-input-checkbox"></span>
+
+                                                            <span class="ocf-value-name">робоча станція</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">156</span>
+  </span>
+                                                        </button>          </div>
+
+                                                    <div class="ocf-collapse ocf-collapse-value" id="ocf-hidden-values-10552-2-1" data-ocf-load="values" data-filter-key="10552.2">
+                                                    </div>
+
+
+                                                    <button type="button" class="ocf-btn ocf-btn-link ocf-btn-show-values" data-ocf="collapse" data-target="#ocf-hidden-values-10552-2-1" data-loading-text="<i class='fa fa-refresh fa-spin'></i> Завантаження.." aria-expanded="false">
+                                                        <span class="ocf-hide-expand-1">Показати ще 5 <i class="ocf-icon ocf-angle ocf-angle-down"></i></span>
+                                                        <span class="ocf-hide-expand-0">Сховати <i class="ocf-icon ocf-angle ocf-angle-up"></i></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="ocf-filter" id="ocf-filter-10748-2-1">
+                                            <div class="ocf-filter-body">
+                                                <div class="ocf-filter-header" data-ocf="expand">
+                                                    <i class="ocf-mobile ocf-icon ocf-arrow-long ocf-arrow-left"></i>
+
+                                                    <span class="ocf-active-label"></span>
+
+
+                                                    <span class="ocf-filter-name">Тип оперативної пам'яті</span>
+
+                                                    <span class="ocf-filter-header-append">
+
+
+        <span class="ocf-filter-discard ocf-icon ocf-icon-16 ocf-minus-circle" data-ocf-discard="10748.2"></span>
+
+        <i class="ocf-mobile ocf-icon ocf-angle ocf-angle-right"></i>
+
+      </span>
+                                                </div><!-- /.ocf-filter-header -->
+
+
+
+
+                                                <div class="ocf-value-list">
+
+                                                    <div class="ocf-value-list-body">
+
+                                                        <button type="button" id="ocf-v-10748-2-1446377448-1" class="ocf-value ocf-radio" data-filter-key="10748.2" data-value-id="1446377448">
+                                                            <span class="ocf-value-input ocf-value-input-radio"></span>
+
+                                                            <span class="ocf-value-name">DDR3</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">115</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10748-2-948018499-1" class="ocf-value ocf-radio" data-filter-key="10748.2" data-value-id="948018499">
+                                                            <span class="ocf-value-input ocf-value-input-radio"></span>
+
+                                                            <span class="ocf-value-name">DDR3L</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">925</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10748-2-4245682195-1" class="ocf-value ocf-radio" data-filter-key="10748.2" data-value-id="4245682195">
+                                                            <span class="ocf-value-input ocf-value-input-radio"></span>
+
+                                                            <span class="ocf-value-name">DDR3L SO-DIMM</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">1</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10748-2-3360776779-1" class="ocf-value ocf-radio" data-filter-key="10748.2" data-value-id="3360776779">
+                                                            <span class="ocf-value-input ocf-value-input-radio"></span>
+
+                                                            <span class="ocf-value-name">DDR4</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">9.3<span class="ocf-num-abbr">k</span></span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10748-2-632779846-1" class="ocf-value ocf-radio" data-filter-key="10748.2" data-value-id="632779846">
+                                                            <span class="ocf-value-input ocf-value-input-radio"></span>
+
+                                                            <span class="ocf-value-name">DDR4 SO-DIMM</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">10</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10748-2-869049258-1" class="ocf-value ocf-radio" data-filter-key="10748.2" data-value-id="869049258">
+                                                            <span class="ocf-value-input ocf-value-input-radio"></span>
+
+                                                            <span class="ocf-value-name">LPDDR3</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">662</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10748-2-2913482249-1" class="ocf-value ocf-radio" data-filter-key="10748.2" data-value-id="2913482249">
+                                                            <span class="ocf-value-input ocf-value-input-radio"></span>
+
+                                                            <span class="ocf-value-name">LPDDR4</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">53</span>
+  </span>
+                                                        </button>
+                                                        <button type="button" id="ocf-v-10748-2-4121757201-1" class="ocf-value ocf-radio" data-filter-key="10748.2" data-value-id="4121757201">
+                                                            <span class="ocf-value-input ocf-value-input-radio"></span>
+
+                                                            <span class="ocf-value-name">LPDDR4X</span>
+                                                            <span class="ocf-value-append">
+    <span class="ocf-value-count">10</span>
+  </span>
+                                                        </button>          </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ocf-collapse ocf-collapse-filter" id="ocf-hidden-filters-1" data-ocf-load="filters">
+                                            <div class="ocf-filter-list">
+
+                                            </div>
+                                        </div>
+                                        <button type="button" class="ocf-btn ocf-btn-block ocf-btn-show-filters" data-ocf="collapse" data-target="#ocf-hidden-filters-1" data-loading-text="<i class='fa fa-refresh fa-spin'></i> Завантаження.." aria-expanded="false">
+                                            <span class="ocf-hide-expand-1">Показати ще 14 фільтрів <i class="ocf-icon ocf-angle ocf-angle-down"></i></span>
+                                            <span class="ocf-hide-expand-0">Сховати <i class="ocf-icon ocf-angle ocf-angle-up"></i></span>
+                                        </button>
+                                    </div>    </div>
+
+                                <div class="ocf-footer">
+                                    <div class="ocf-between">
+                                        <button type="button" data-ocf-discard="*" class="ocf-btn ocf-btn-link ocf-disabled" disabled="disabled">Скасувати</button>
+
+                                        <button type="button" class="ocf-btn ocf-disabled ocf-btn-block ocf-search-btn-static" data-ocf="button" data-loading-text="<i class='fa fa-refresh fa-spin'></i> Завантаження.." disabled="disabled">Виберіть фільтри</button>
+
+                                    </div>
+                                </div>
+                            </div><!-- /.ocf-content -->
+
+                            <div class="ocf-is-mobile"></div>
+
+                            <div class="ocf-btn-mobile-fixed ocf-mobile">
+                                <button type="button" class="ocf-btn ocf-btn-default" data-ocf="mobile" aria-label="Фiльтр">
+                                    <span class="ocf-btn-name">Фiльтр</span>
+                                    <i class="ocf-icon ocf-icon-16 ocf-brand ocf-sliders"></i>
+                                </button>
+                            </div>
+
+
+                            <div class="ocf-hidden">
+                                <button class="ocf-btn ocf-search-btn-popover" data-ocf="button" data-loading-text="<i class='fa fa-refresh fa-spin'></i> Завантаження..">Виберіть фільтри</button>
+                            </div>
+
+                            <script>
+                                +(function(global) {
+
+                                    var startOCFilter = function() {
+                                        var loadScript = function(url, callback) {
+                                            $.ajax({ url: url, dataType: 'script', success: callback, async: true });
+                                        };
+
+                                        var init = function() {
+                                            $('#ocf-module-1').ocfilter({
+                                                index: '1',
+
+                                                paramsIndex: 'ocf',
+
+                                                urlHost: 'https://demo.ocfilter.com/',
+                                                urlParams: '&index=1&layout=vertical&ocf_path=6546_6918&ocf_route=product/category&seo_url_enabled=1&ocf_layout_id=3',
+
+                                                params: '',
+
+                                                sepFilt: 'F',
+                                                sepFsrc: 'S',
+                                                sepVals: 'V',
+                                                sepSdot: 'D',
+                                                sepSneg: 'N',
+                                                sepSran: 'T',
+
+                                                position: 'left',
+                                                layout: 'vertical',
+                                                numeralLocale: 'uk-ua',
+                                                searchButton: 1,
+                                                showCounter: 1,
+                                                sliderInput: 1,
+                                                sliderPips: 1,
+                                                priceLogarithmic: 0,
+                                                lazyLoadFilters: 1,
+                                                lazyLoadValues: 1,
+
+                                                mobileMaxWidth: 767,
+                                                mobileRememberState: 1,
+
+                                                textLoad: '<i class=\'fa fa-refresh fa-spin\'></i> Завантаження..',
+                                                textSelect: 'Виберіть фільтри'
+                                            });
+                                        };
+
+                                        loadScript('catalog/view/javascript/ocfilter48/ocfilter.js', init);
+
+                                    };
+
+                                    var ready = function(fn) {
+                                        if (global.readyState != 'loading') {
+                                            fn();
+                                        } else {
+                                            global.addEventListener('DOMContentLoaded', fn);
+                                        }
+                                    };
+
+                                    ready(function() { // DOM loaded
+                                        if ('undefined' == typeof jQuery) {
+                                            console.error('OCFilter required jQuery');
+
+                                            return;
+                                        }
+
+                                        $(startOCFilter); // jQuery loaded
+                                    });
+
+                                })(document);
+                            </script>
+                        </div><!-- /.ocf-container -->  </aside>
+                    </div>
+
+                    <div class="catalog-products">
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+                                <div class="tag" style="background-color:#E70000;">
+                                    -25%
+                                </div>
+                            </div>
+                            <div class="fav">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i1.png"
+                                         alt="" loading="lazy">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p><strong>2 159 грн</strong> <small>2 159 грн</small></p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+
+                            </div>
+                            <div class="fav active">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i2.png" loading="lazy"
+                                         alt="">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p>2 159 грн</p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+                                <div class="tag" style="background-color:#E70000;">
+                                    -25%
+                                </div>
+                            </div>
+                            <div class="fav">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i3.png" loading="lazy"
+                                         alt="">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p><strong>2 159 грн</strong> <small>2 159 грн</small></p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+
+                            </div>
+                            <div class="fav active">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i4.png" loading="lazy"
+                                         alt="">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p>2 159 грн</p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+                                <div class="tag" style="background-color:#E70000;">
+                                    -25%
+                                </div>
+                            </div>
+                            <div class="fav">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i1.png" loading="lazy"
+                                         alt="">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p><strong>2 159 грн</strong> <small>2 159 грн</small></p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+
+                            </div>
+                            <div class="fav active">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i2.png" loading="lazy"
+                                         alt="">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p>2 159 грн</p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+                                <div class="tag" style="background-color:#E70000;">
+                                    -25%
+                                </div>
+                            </div>
+                            <div class="fav">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i1.png"
+                                         alt="" loading="lazy">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p><strong>2 159 грн</strong> <small>2 159 грн</small></p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+
+                            </div>
+                            <div class="fav active">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i2.png" loading="lazy"
+                                         alt="">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p>2 159 грн</p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+                                <div class="tag" style="background-color:#E70000;">
+                                    -25%
+                                </div>
+                            </div>
+                            <div class="fav">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i3.png" loading="lazy"
+                                         alt="">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p><strong>2 159 грн</strong> <small>2 159 грн</small></p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+                                <div class="tag" style="background-color:#E70000;">
+                                    -25%
+                                </div>
+                            </div>
+                            <div class="fav">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i1.png"
+                                         alt="" loading="lazy">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p><strong>2 159 грн</strong> <small>2 159 грн</small></p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+
+                            </div>
+                            <div class="fav active">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i2.png" loading="lazy"
+                                         alt="">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p>2 159 грн</p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+                                <div class="tag" style="background-color:#E70000;">
+                                    -25%
+                                </div>
+                            </div>
+                            <div class="fav">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i3.png" loading="lazy"
+                                         alt="">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p><strong>2 159 грн</strong> <small>2 159 грн</small></p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+
+                            </div>
+                            <div class="fav active">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i4.png" loading="lazy"
+                                         alt="">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p>2 159 грн</p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+                                <div class="tag" style="background-color:#E70000;">
+                                    -25%
+                                </div>
+                            </div>
+                            <div class="fav">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i1.png" loading="lazy"
+                                         alt="">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p><strong>2 159 грн</strong> <small>2 159 грн</small></p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+
+                            </div>
+                            <div class="fav active">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i2.png" loading="lazy"
+                                         alt="">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p>2 159 грн</p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+
+                            </div>
+                            <div class="fav active">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i4.png" loading="lazy"
+                                         alt="">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p>2 159 грн</p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+                                <div class="tag" style="background-color:#E70000;">
+                                    -25%
+                                </div>
+                            </div>
+                            <div class="fav">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i1.png" loading="lazy"
+                                         alt="">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p><strong>2 159 грн</strong> <small>2 159 грн</small></p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-card">
+                            <div class="tags">
+                                <div class="tag" style="background-color:#B2CFF0;">
+                                    новинка
+                                </div>
+
+                            </div>
+                            <div class="fav active">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill" fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M15.9682 25.8424C15.9682 25.8424 28.1552 18.7254 28.1552 10.2695C28.1552 6.8841 25.4469 4.17578 22.0615 4.17578C18.6761 4.17578 15.9677 8.23827 15.9677 8.23827C15.9677 8.23827 13.2594 4.17578 9.874 4.17578C6.4886 4.17578 3.78027 6.8841 3.78027 10.2866C3.78027 18.6202 15.9682 25.8424 15.9682 25.8424Z"
+                                    />
+                                    <path class="str"
+                                          d="M15.9682 25.8424L15.5859 26.4876L15.9655 26.7125L16.3464 26.49L15.9682 25.8424ZM15.9677 8.23827L15.3437 8.65429L15.9677 9.59035L16.5918 8.65429L15.9677 8.23827ZM27.4052 10.2695C27.4052 14.1607 24.5755 17.8621 21.5507 20.6779C20.0597 22.0659 18.5654 23.1981 17.4425 23.9837C16.8817 24.376 16.4153 24.6807 16.0905 24.8865C15.9281 24.9894 15.8013 25.0674 15.7159 25.1193C15.6732 25.1452 15.6408 25.1646 15.6196 25.1772C15.609 25.1835 15.6012 25.1882 15.5962 25.1911C15.5937 25.1925 15.5919 25.1936 15.5909 25.1942C15.5904 25.1945 15.5901 25.1947 15.5899 25.1948C15.5898 25.1948 15.5899 25.1948 15.5898 25.1948C15.5899 25.1948 15.59 25.1947 15.9682 25.8424C16.3464 26.49 16.3467 26.4899 16.3469 26.4897C16.3471 26.4897 16.3474 26.4895 16.3477 26.4893C16.3483 26.489 16.349 26.4885 16.35 26.4879C16.3519 26.4868 16.3546 26.4853 16.3579 26.4833C16.3647 26.4793 16.3743 26.4736 16.3868 26.4662C16.4117 26.4514 16.4478 26.4297 16.4943 26.4015C16.5874 26.345 16.7224 26.2619 16.8933 26.1536C17.2349 25.9371 17.7206 25.6198 18.3024 25.2127C19.4645 24.3997 21.017 23.2241 22.5727 21.7758C25.6413 18.9192 28.9052 14.8342 28.9052 10.2695H27.4052ZM22.0615 4.92578C25.0326 4.92578 27.4052 7.29832 27.4052 10.2695H28.9052C28.9052 6.46989 25.8611 3.42578 22.0615 3.42578V4.92578ZM15.9677 8.23827C16.5918 8.65429 16.5917 8.65445 16.5916 8.6546C16.5915 8.65462 16.5915 8.65475 16.5914 8.65481C16.5913 8.65492 16.5913 8.65497 16.5913 8.65496C16.5913 8.65495 16.5915 8.65469 16.5918 8.65419C16.5925 8.6532 16.5938 8.65125 16.5958 8.64839C16.5997 8.64266 16.6061 8.63326 16.615 8.62044C16.6328 8.59478 16.6605 8.55545 16.6976 8.5044C16.7718 8.40224 16.8832 8.25359 17.0279 8.074C17.3181 7.71366 17.7375 7.23473 18.2538 6.75813C19.3125 5.78087 20.6572 4.92578 22.0615 4.92578V3.42578C20.0803 3.42578 18.3782 4.60193 17.2364 5.65592C16.6524 6.19494 16.1831 6.73163 15.8597 7.13301C15.6976 7.33427 15.571 7.50301 15.4838 7.62301C15.4402 7.68304 15.4064 7.73099 15.3829 7.76484C15.3712 7.78177 15.362 7.79519 15.3554 7.80483C15.3522 7.80966 15.3495 7.81354 15.3476 7.81645C15.3466 7.81791 15.3458 7.81912 15.3451 7.82009C15.3448 7.82057 15.3445 7.82099 15.3443 7.82135C15.3442 7.82153 15.344 7.82175 15.344 7.82184C15.3438 7.82205 15.3437 7.82224 15.9677 8.23827ZM9.874 4.92578C11.2783 4.92578 12.623 5.78087 13.6817 6.75813C14.198 7.23473 14.6173 7.71366 14.9076 8.074C15.0523 8.25359 15.1637 8.40224 15.2379 8.5044C15.2749 8.55545 15.3026 8.59478 15.3205 8.62044C15.3294 8.63326 15.3358 8.64266 15.3397 8.64839C15.3416 8.65125 15.3429 8.6532 15.3436 8.65419C15.344 8.65469 15.3441 8.65495 15.3441 8.65496C15.3441 8.65497 15.3441 8.65492 15.344 8.65481C15.344 8.65475 15.3439 8.65462 15.3439 8.6546C15.3438 8.65445 15.3437 8.65429 15.9677 8.23827C16.5918 7.82224 16.5916 7.82205 16.5915 7.82184C16.5914 7.82175 16.5913 7.82153 16.5912 7.82135C16.5909 7.82099 16.5906 7.82057 16.5903 7.82009C16.5897 7.81912 16.5889 7.81791 16.5879 7.81645C16.5859 7.81354 16.5833 7.80966 16.58 7.80483C16.5735 7.79519 16.5643 7.78177 16.5525 7.76485C16.529 7.73099 16.4952 7.68304 16.4516 7.62301C16.3645 7.50301 16.2379 7.33427 16.0757 7.13301C15.7524 6.73163 15.283 6.19494 14.6991 5.65592C13.5573 4.60193 11.8551 3.42578 9.874 3.42578V4.92578ZM4.53027 10.2866C4.53027 7.29694 6.90418 4.92578 9.874 4.92578V3.42578C6.07301 3.42578 3.03027 6.47127 3.03027 10.2866H4.53027ZM15.9682 25.8424C16.3506 25.1971 16.3507 25.1972 16.3508 25.1972C16.3507 25.1972 16.3507 25.1972 16.3507 25.1972C16.3505 25.1971 16.3502 25.1969 16.3496 25.1966C16.3486 25.196 16.3468 25.1949 16.3443 25.1934C16.3393 25.1904 16.3315 25.1857 16.3208 25.1793C16.2996 25.1665 16.2672 25.1468 16.2244 25.1205C16.1389 25.0678 16.0119 24.9887 15.8494 24.8845C15.5244 24.676 15.0577 24.3676 14.4966 23.9711C13.3731 23.1774 11.8781 22.0356 10.3863 20.6416C7.35792 17.8117 4.53027 14.1153 4.53027 10.2866H3.03027C3.03027 14.7915 6.2966 18.8729 9.36219 21.7376C10.9174 23.1908 12.4694 24.3754 13.6311 25.1962C14.2126 25.6071 14.6981 25.928 15.0396 26.1471C15.2104 26.2566 15.3453 26.3407 15.4383 26.398C15.4848 26.4266 15.5209 26.4485 15.5457 26.4635C15.5581 26.471 15.5677 26.4768 15.5745 26.4808C15.5778 26.4828 15.5805 26.4844 15.5824 26.4855C15.5833 26.4861 15.5841 26.4865 15.5847 26.4869C15.585 26.4871 15.5853 26.4872 15.5854 26.4873C15.5857 26.4875 15.5859 26.4876 15.9682 25.8424Z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="img">
+                                <a href="">
+                                    <img class="unhov" src="./img/prod-i2.png" loading="lazy"
+                                         alt="">
+                                    <img class="hov" src="./img/prod-i2.png"
+                                         alt="">
+                                </a>
+                            </div>
+
+                            <div class="textual">
+                                <div class="ic"><img src="./img/ic-yt-prod.svg" alt="">
+                                </div>
+                                <span>BSport</span>
+
+                                <a href="">Кроссовки мужские спортивные BSport <strong>VAL1024-41</strong></a>
+
+                                <p>2 159 грн</p>
+
+                                <div class="bot">
+                                    <div class="sizes">
+                                        <span>Размеры:</span>
+                                        <ul>
+                                            <li>41</li>
+                                            <li>42</li>
+                                            <li class="no-allow">43</li>
+                                            <li>44</li>
+                                            <li class="no-allow">45</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="btn btn--white">Подробнее</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <a href="" class="btn btn--white">Показать еще</a>
+
+                        <ul class="pagination">
+                            <li><span>1</span></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href="">5</a></li>
+                            <li><a href="">6</a></li>
+                            <li><span>...</span></li>
+                            <li><a href="">12</a></li>
+                            <li><a href="">13</a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section class="bonus-statuses">
+        <div class="container">
+            <div class="bonus-statuses__cont">
+                <div class="single-status">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/st1.svg" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>ВОЗВРАТ ТОВАРОВ</span>
+                        <p>в течение 14 дней</p>
+                    </div>
+                </div>
+                <div class="single-status">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/st2.svg" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>ДОСТАВКА ПО ВСЕЙ УКРАИНЕ</span>
+                        <p>от 2 до 7 дней</p>
+                    </div>
+                </div>
+                <div class="single-status">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/st3.svg" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>ГАРАНТИЯ</span>
+                        <p>качества и подлинности</p>
+                    </div>
+                </div>
+                <div class="single-status">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/st4.svg" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>КЛУБНАЯ ПРОГРАММА</span>
+                        <p>получайте до 15% от суммы покупки</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="subscribe-block">
+        <div class="container">
+            <div class="subscribe-cont">
+
+                <div class="subscribe-form">
+                    <span class="title">
+Узнайте о новинках и акциях первыми
+                    </span>
+                    <p>Подписываясь, наши клиенты получают только выгодные предложения от MIDA, узнают о новинках,
+                        акциях и распродажах первыми.</p>
+
+                    <form action="">
+                        <input type="mail" placeholder="ваш email">
+                        <button class="btn btn--black">подписаться</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+
+//= details/footer.html
+<script src="catalog/view/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+//= details/scripts.html
+
+</body>
+</html>

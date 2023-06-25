@@ -40,8 +40,6 @@ function helloConsole() {
 helloConsole();
 
 
-
-
 var allLazyLoad = [...document.querySelectorAll('.lazyload')];
 
 function allLozadImg() {
@@ -58,9 +56,9 @@ function allLozadImg() {
 allLozadImg();
 
 
-
 let headerMenu = [...document.querySelectorAll('.header-menu > ul > li')];
 let backDrop = document.querySelector('.backdrop');
+
 function hoverHeaderMenu() {
     if (headerMenu.length) {
         headerMenu.forEach((btn) => {
@@ -102,7 +100,7 @@ function startHomeBanner() {
                 centeredSlides: false,
                 touchRatio: 1,
                 touchAngle: 180,
-                simulateTouch:true,
+                simulateTouch: true,
 
                 followFinger: true,
                 allowTouchMove: true,
@@ -127,7 +125,6 @@ function startHomeBanner() {
                     el: pagin,
                     type: "progressbar",
                 },
-
 
 
             });
@@ -165,7 +162,7 @@ function startProductSliders() {
                 centeredSlides: false,
                 touchRatio: 1,
                 touchAngle: 180,
-                simulateTouch:true,
+                simulateTouch: true,
 
                 followFinger: true,
                 allowTouchMove: true,
@@ -198,8 +195,6 @@ function startProductSliders() {
                 },
 
 
-
-
             });
 
 
@@ -209,7 +204,6 @@ function startProductSliders() {
 }
 
 startProductSliders();
-
 
 
 //swipers
@@ -248,7 +242,6 @@ seoControl();
 //seo control
 
 
-
 // scroll animations
 var anim = document.querySelectorAll('.anim')
 
@@ -268,18 +261,6 @@ function scrollAnimations() {
                     el.classList.add('done');
                     let txt = el.dataset.txt;
                     observer.unobserve(entry.target);
-                    if (el.classList.contains('tel')) {
-                        codecForTxt2(el, txt);
-                    } else {
-                        if (el.classList.contains('type')) {
-                            codecForTxt3(el, txt);
-                        } else {
-                            codecForTxt(el, txt);
-                        }
-
-                    }
-
-
 
 
                 }
@@ -324,6 +305,7 @@ function controlMenu() {
         })
     }
 }
+
 controlMenu();
 
 let otherMenu = [...document.querySelectorAll('.header-top__menu--opener > span')];
@@ -343,12 +325,11 @@ function controlOtherMenu() {
         })
     }
 }
+
 controlOtherMenu();
 
 var burger = [...document.querySelectorAll('.burger')];
 var header = document.querySelector('.header');
-
-
 
 
 function burgerControl() {
@@ -380,6 +361,7 @@ function controlFooterColumn() {
         })
     }
 }
+
 controlFooterColumn();
 //footer control
 
@@ -431,7 +413,7 @@ function controlModal() {
             btn.addEventListener('click', () => {
                 btn.closest('.modal-window').classList.remove('visible');
                 document.body.classList.remove('no-scroll');
-                if ( btn.closest('.modal-window').classList.contains('video')) {
+                if (btn.closest('.modal-window').classList.contains('video')) {
                     btn.closest('.modal-window').querySelector('.video-cont').classList.remove('playing');
 
                     btn.closest('.modal-window').querySelector('.video-cont').innerHTML = '';
@@ -443,7 +425,7 @@ function controlModal() {
                 btn.closest('.modal-window').classList.remove('visible');
                 document.body.classList.remove('no-scroll');
 
-                if ( btn.closest('.modal-window').classList.contains('video')) {
+                if (btn.closest('.modal-window').classList.contains('video')) {
                     btn.closest('.modal-window').querySelector('.video-cont').classList.remove('playing');
                     btn.closest('.modal-window').querySelector('.video-cont').innerHTML = '';
                 }
@@ -456,7 +438,7 @@ function controlModal() {
                     e.stopPropagation();
                     btn.closest('.modal-window').classList.remove('visible');
                     document.body.classList.remove('no-scroll');
-                    if ( btn.closest('.modal-window').classList.contains('video')) {
+                    if (btn.closest('.modal-window').classList.contains('video')) {
                         btn.closest('.modal-window').querySelector('.video-cont').classList.remove('playing');
 
                         btn.closest('.modal-window').querySelector('.video-cont').innerHTML = '';
@@ -469,3 +451,104 @@ function controlModal() {
 }
 
 controlModal();
+
+
+//telephones
+
+
+let indexNumber = '+38';
+
+function getNewIndexNumber() {
+    console.log(document.documentElement.lang);
+    if (document.documentElement.lang === 'ro-RO') {
+        indexNumber = '+40';
+    } else {
+        indexNumber = '+38';
+    }
+}
+
+getNewIndexNumber();
+// let maskPhone = [...document.querySelectorAll('.phone-mask')];
+let maskPhone2 = [...document.querySelectorAll('.input-wrap.input-tel')];
+
+function getMaskPhone2() {
+    if (maskPhone2.length) {
+        [].forEach.call(document.querySelectorAll('.input-tel input'), function (input) {
+            // console.log(input);
+
+            let keyCode;
+
+            function mask(event) {
+                event.keyCode && (keyCode = event.keyCode);
+                let pos = this.selectionStart;
+                if (pos < 3) event.preventDefault();
+                let matrix = `${indexNumber} (___)-___-__-__`,
+                    i = 0,
+                    def = matrix.replace(/\D/g, ""),
+                    val = this.value.replace(/\D/g, ""),
+                    newValue = matrix.replace(/[_\d]/g, function (a) {
+                        return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+                    });
+                i = newValue.indexOf("_");
+                if (i != -1) {
+                    i < 5 && (i = 3);
+                    newValue = newValue.slice(0, i);
+                }
+                let reg = matrix.substr(0, this.value.length).replace(/_+/g,
+                    function (a) {
+                        return "\\d{1," + a.length + "}";
+                    }).replace(/[+()]/g, "\\$&");
+                reg = new RegExp("^" + reg + "$");
+                if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = newValue;
+                if (event.type == "blur" && this.value.length < 5) this.value = "";
+            }
+
+
+            input.addEventListener("input", mask, false);
+            input.addEventListener("focus", mask, false);
+            input.addEventListener("blur", mask, false);
+            input.addEventListener("keydown", mask, false);
+
+
+        });
+    }
+}
+
+getMaskPhone2();
+
+//telephones
+
+//open cabinet menu
+
+let btnCabOpen = [...document.querySelectorAll('.acc-h-btn')];
+
+function controlCabinetOpen() {
+    if (btnCabOpen.length) {
+        btnCabOpen.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                btn.closest('.personal-account__left').classList.toggle('open');
+            })
+        })
+    }
+}
+
+controlCabinetOpen();
+
+//open cabinet menu
+//open orders list
+
+let btnOrdersList = [...document.querySelectorAll('.personal-opener')];
+
+function controlOrdersOpen() {
+    if (btnOrdersList.length) {
+        btnOrdersList.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                btn.closest('.personal-single').classList.toggle('open');
+            })
+        })
+    }
+}
+
+controlOrdersOpen();
+
+//open cabinet menu
