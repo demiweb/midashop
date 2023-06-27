@@ -1028,26 +1028,32 @@ test@gmail.com</span></li>
             <div class="form">
                 <form action="">
                     <div class="input-wrap">
-                        <input type="text" placeholder="Ваше ім'я *">
+                        <input type="text" placeholder="Ваше имя" required>
                     </div>
-                    <div class="input-wrap">
-                        <input type="text" placeholder="Ваш номер телефону *">
+                    <div class="input-wrap input-tel">
+                        <input type="text" placeholder="Ваш телефон" required>
                     </div>
 
-                    <button class="btn btn--tel">замовити дзвiнок</button>
+                    <button class="btn btn--fill">заказать звонок</button>
                 </form>
             </div>
 
         </div>
     </div>
 </div>
-<div class="modal-window" data-modal="cart" style="display: none">
+<div class="modal-window modal-cart " data-modal="cart">
     <div class="backplate">
 
     </div>
     <div class="modal-container">
         <div class="modal-head">
-            <p>Товар додано до кошика</p>
+            <div class="modal-cart-head">
+                <span>В вашей корзине <strong>(6)</strong></span>
+                <div class="img">
+                    <img src="./img/logom.svg" alt="">
+                </div>
+            </div>
+            <span>Не откладывайте покупки, добавление товаров в корзину не означает их бронирование</span>
             <div class="modal-close">
                 <span></span>
                 <span></span>
@@ -1055,53 +1061,116 @@ test@gmail.com</span></li>
         </div>
 
         <div class="modal-cont">
+            <div class="modal-cart__cont">
+                <div class="modal-cart__left">
 
-            <div class="cart-modal">
-                <div class="cart-modal-item">
-                    <div class="img">
-                        <img src="./img/prod-1.png" alt="">
-                    </div>
-
-                    <div class="text">
-                        <p>Масло моторне ELF 5W-40 Evolution 900 NF 4л ELF0069</p>
-                        <p><small></small></p>
-                        <div class="quantity-field">
-                            <div class="quantity__button quantity__button--minus">
-                                <button>-</button>
+                    <div class="modal-cart__table">
+                        <div class="modal-cart__head">
+                            <div class="modal-cart__item">
+                                <p>Наименование</p>
                             </div>
-                            <div class="quantity">
-                                <label for=""></label>
-                                <input type="number" name="quantity[170]" value="1" min="0" step="1" size="1"
-                                       class="form-control">
+                            <div class="modal-cart__item">
+                                <p>Опции</p>
                             </div>
-                            <div class="quantity__button quantity__button--plus">
-                                <button>+</button>
+                            <div class="modal-cart__item">
+                                <p>Цена</p>
                             </div>
 
                         </div>
-                        <span>1 900 грн.</span>
+                        <div class="modal-cart__list">
+                            <div class="single-modal-item">
+                                <div class="modal-cart__item">
+
+
+                                </div>
+                                <div class="modal-cart__item">
+                                    <span><strong>Размер:</strong> 36</span>
+                                </div>
+                                <div class="modal-cart__item">
+                                    <span>2 159 грн</span>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
+                <div class="modal-cart__right">
+                    <div class="cart-line">
+                        <p>Товаров 7 на сумму:</p>
+                        <span>27 248 грн</span>
+                    </div>
+                    <div class="cart-line">
+                        <p>Скидка:</p>
+                        <span>3 248 грн</span>
+                    </div>
+                    <div class="cart-line">
+                        <p>Итого:</p>
+                        <span>24 000 грн</span>
+                    </div>
 
-                <div class="cart-modal-links">
-                    <a href="" class="to-main">назад до магазину</a>
-                    <a href="" class="to-cart">перейти до кошика</a>
+                    <div class="modal-cart__btns">
+                        <a href="" class="btn btn--fill">Оформить заказ</a>
+                        <a href="">Продолжить покупки</a>
+                    </div>
+
                 </div>
             </div>
-
 
         </div>
     </div>
 </div>
 
-<div class="modal-window" data-modal="order" style="display: none">
+<div class="added-cart">
+    <div class="container">
+        <div class="added-cont">
+            <div class="added-cart__top">
+                <span>Товар добавлен в корзину</span>
+                <div class="single-order">
+                    <a href="" class="img">
+                        <img src="./img/ord1.jpg" alt="">
+                    </a>
+                    <div class="txt">
+                        <a href="">Шлепанцы женские Lam цвет Черный L78012_01-36р.
+                            (0.0)см.</a>
+                        <p><span><strong>4535435435</strong></span></p>
+                        <span>2 159 грн <strong>3 шт</strong></span>
+                    </div>
+                </div>
+
+                <div class="added-bonuses">
+                    <div class="left">
+                        <div class="img">
+                            <img src="./img/podar1.svg" alt="">
+                        </div>
+                        <p>Бонусами</p>
+                    </div>
+                    <p>+ 724</p>
+                </div>
+                <div class="added-total">
+                    <p>Итого</p>
+                    <span>7 248 грн</span>
+                </div>
+
+            </div>
+            <div class="added-cart__bot">
+                <a href="" class="btn btn--fill btn-mod" data-mod="cart">посмотреть мой заказ</a>
+                <a href="">Продолжить покупки</a>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="modal-window" data-modal="comment">
     <div class="backplate">
 
     </div>
     <div class="modal-container">
         <div class="modal-head">
-            <p>Дякуємо Вам за виявлену довіру</p>
+            <p>Оставьте свой комментарии</p>
             <div class="modal-close">
                 <span></span>
                 <span></span>
@@ -1109,16 +1178,49 @@ test@gmail.com</span></li>
         </div>
 
         <div class="modal-cont">
+            <div class="form">
+                <form action="">
+                    <div class="comment-rate">
+                        <p>Оценка:</p>
+                        <div class="rate">
+                            <div class="sg-rate">
+                                <img src="./img/star-clear.svg" alt="">
+                                <img src="./img/star-full.svg" alt="">
+                            </div>
+                            <div class="sg-rate">
+                                <img src="./img/star-clear.svg" alt="">
+                                <img src="./img/star-full.svg" alt="">
+                            </div>
+                            <div class="sg-rate">
+                                <img src="./img/star-clear.svg" alt="">
+                                <img src="./img/star-full.svg" alt="">
+                            </div>
+                            <div class="sg-rate">
+                                <img src="./img/star-clear.svg" alt="">
+                                <img src="./img/star-full.svg" alt="">
+                            </div>
+                            <div class="sg-rate">
+                                <img src="./img/star-clear.svg" alt="">
+                                <img src="./img/star-full.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="cart-modal">
-                <p>Товар буде відправлений найближчим часом.</p>
+                    <div class="input-wrap">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="input-wrap">
+                        <textarea name="" placeholder="Ваш коментарии"></textarea>
+                    </div>
+                    <div class="input-hidden rating-input">
+                        <!--               тут в value идет оценка -->
+                        <input type="text">
 
-                <div class="cart-modal-links">
-                    <a href="" class="to-main">назад до магазину</a>
+                    </div>
 
-                </div>
+                    <button class="btn btn--fill">Оставить отзыв</button>
+                </form>
             </div>
-
 
         </div>
     </div>
@@ -1133,12 +1235,16 @@ test@gmail.com</span></li>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
+<link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
 <script type="text/javascript"  src="./libs/jquery.nice-select.min.js"></script>
 <script type="text/javascript"  src="./libs/jquery.raty.js"></script>
 <script type="text/javascript"  src="./libs/jq.maskedinput.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
-<script type="text/javascript"  src="./libs/nouislider.min.js"></script>
-<script type="text/javascript"  src="./libs/wNumb.min.js"></script>
+
 <script type="text/javascript" class="main-script" src="./js/scripts.min.js"></script>
 
 </body>
