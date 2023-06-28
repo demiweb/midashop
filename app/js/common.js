@@ -264,7 +264,7 @@ function startHomeBanner() {
 startHomeBanner();
 
 
-let productsSlider = [...document.querySelectorAll('.product-slider__cont')];
+let productsSlider = [...document.querySelectorAll('.product-slider .product-slider__cont')];
 
 function startProductSliders() {
     if (!productsSlider.length) {
@@ -330,6 +330,79 @@ function startProductSliders() {
 }
 
 startProductSliders();
+
+
+let productsSliderCart = [...document.querySelectorAll('.modal-cont .product-slider__cont')];
+
+function startProductSlidersCart() {
+    if (!productsSliderCart.length) {
+
+    } else {
+        if (window.innerWidth < 768) {
+
+        } else {
+            productsSliderCart.forEach((sld) => {
+                let sldCont = sld.querySelector('.swiper');
+                let sldNext = sld.querySelector('.slider-btn--next');
+                let sldPrev = sld.querySelector('.slider-btn--prev');
+                let pagin = sld.querySelector('.progress-bar');
+
+                const swiper2 = new Swiper(sldCont, {
+                    // Optional parameters
+                    loop: false,
+                    effect: 'slide',
+                    slidesPerView: 2,
+                    slidesPerGroup: 1,
+                    speed: 700,
+                    centeredSlides: false,
+                    touchRatio: 1,
+                    touchAngle: 180,
+                    simulateTouch: true,
+
+                    followFinger: true,
+                    allowTouchMove: true,
+                    threshold: true,
+                    touchMoveStopPropagation: true,
+                    touchStartPreventDefault: true,
+                    touchStartForcePreventDefault: true,
+                    touchReleaseOnEdges: true,
+
+                    resistance: true,
+                    resistanceRatio: 0.3,
+                    cssMode: true,
+
+
+                    navigation: {
+                        nextEl: sldNext,
+                        prevEl: sldPrev,
+                    },
+                    autoplay: false,
+                    spaceBetween: 15,
+                    breakpoints: {
+                        767: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                        }
+                    },
+                    pagination: {
+                        el: pagin,
+                        type: "progressbar",
+                    },
+
+
+                });
+
+
+            })
+        }
+
+
+
+
+    }
+}
+
+startProductSlidersCart();
 
 
 //swipers
@@ -803,18 +876,164 @@ controlCabinetOpen();
 //open cabinet menu
 //open orders list
 
-let btnOrdersList = [...document.querySelectorAll('.personal-opener')];
+$(document).on('click', '.quantity__button--minus', function (e) {
+    var t=$(this).next().find('input').val();t>1&&$(this).next().find('input').val(+t-1);
 
-function controlOrdersOpen() {
-    if (btnOrdersList.length) {
-        btnOrdersList.forEach((btn) => {
-            btn.addEventListener('click', () => {
-                btn.closest('.personal-single').classList.toggle('open');
+
+    return false;
+});
+$(document).on('click', '.quantity__button--plus', function (e) {
+    var t=$(this).prev().find('input').val();
+    $(this).prev().find('input').val(+t+1);
+
+    return false;
+});
+
+
+
+
+
+//map mag contacts-maps__single
+let allMapsDots = [...document.querySelectorAll('.contacts-maps__single')];
+let addressCoord = [];
+
+let selectedCity = document.querySelector('.contacts-maps__select select option[selected]');
+
+let cordsSelected = [];
+
+function goSelCoords() {
+    if (selectedCity) {
+        cordsSelected[0] = selectedCity.dataset.locationY;
+        cordsSelected[1] = selectedCity.dataset.locationX;
+    }
+}
+goSelCoords();
+
+function ifHaveDots(x = cordsSelected[1] , y = cordsSelected[0],zoom= 10) {
+    if (!allMapsDots.length) {
+
+    } else {
+        addressCoord = [];
+
+        addressCoord=addressCoord2;
+        console.log(addressCoord);
+        createMapBuy(x,y,zoom);
+    }
+}
+
+
+
+let numberOfChanges = 0;
+
+ifHaveDots();
+
+function createMapBuy(x,y,zoom) {
+    function createNewMap() {
+        let divMap = document.createElement('div');
+        divMap.id = 'mapid';
+        document.querySelector('.map-container').appendChild(divMap);
+    }
+    // console.log(addressCoord);
+    let mapDiv = document.querySelector('#mapid');
+
+    if (!mapDiv) {
+        createNewMap();
+    } else {
+        mapDiv.remove();
+        createNewMap();
+    }
+
+    var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Points &copy 2012 LINZ'
+        }),
+
+        latlng = L.latLng(x,y );
+
+    var map = L.map('mapid', {center: latlng, zoom: zoom, layers: [tiles]});
+
+
+    var greenIcon = L.icon({
+        iconUrl: './img/leaf-green.svg',
+        shadowUrl: './img/leaf-shadow.svg',
+
+        iconSize:     [35, 50], // size of the icon
+        shadowSize:   [0, 0], // size of the shadow
+        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+        shadowAnchor: [4, 62],  // the same for the shadow
+        popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    });
+
+    var markers = L.markerClusterGroup();
+    let markersPos = [];
+
+    for (var i = 0; i < addressCoord.length; i++) {
+        var a = addressCoord[i];
+        var title = a[2];
+        var marker = L.marker(new L.LatLng(a[0], a[1]), { title: title, icon: greenIcon });
+        marker.bindPopup(title);
+        markers.addLayer(marker);
+        markersPos.push(marker);
+    }
+
+    map.addLayer(markers);
+    allMapsDots = [...document.querySelectorAll('.contacts-maps__single')];
+    allMapsDots.forEach((ot, i) => {
+
+        ot.addEventListener('click', (e) => {
+            e.preventDefault();
+            $('html,body').animate({ scrollTop: $('#mapid').offset().top - 200 }, 600);
+
+
+            allMapsDots.forEach((rk) => {
+                rk.classList.remove('active');
+            });
+            ot.classList.add('active');
+            // let idMap = document.getElementById('mapid').getBoundingClientRect().top;
+
+
+            // e.preventDefault();
+            let xCoord1 = Number(ot.dataset.locationX);
+            let yCoord1 = Number(ot.dataset.locationY);
+
+            map.setView([xCoord1, yCoord1], 18);
+            map.panTo(new L.LatLng(xCoord1, yCoord1));
+            markersPos[i].openPopup();
+        })
+    })
+}
+$('.contacts-maps__select .select-wrap select').niceSelect();
+
+let moveOnMapCity = [...document.querySelectorAll('.contacts-maps__select .nice-select .list li')];
+
+function moveOnMapSelect() {
+    if (moveOnMapCity.length) {
+        console.log(moveOnMapCity);
+        let allBigCities = [...document.querySelectorAll('.contacts-maps__city')];
+
+        moveOnMapCity.forEach((btn, k) => {
+            btn.addEventListener('click', (e) => {
+
+
+                let opt =  [...document.querySelectorAll('.contacts-maps__select select option')][k];
+
+                let zoom = 10;
+
+                let xCoord1 = Number(opt.dataset.locationX);
+                let yCoord1 = Number(opt.dataset.locationY);
+
+                createMapBuy(xCoord1,yCoord1,zoom);
+
+                allBigCities.forEach((btn2) => {
+                    btn2.classList.remove('visible');
+                });
+
+                allBigCities[k].classList.add('visible');
+
             })
         })
     }
 }
 
-controlOrdersOpen();
-
-//open cabinet menu
+moveOnMapSelect();
+//map mag

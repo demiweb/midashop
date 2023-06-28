@@ -28,8 +28,447 @@
   }
   //
 
-
   //
+  .contacts-maps__right {
+    width: 100%;
+  }
+  .map-container {
+    height: 90.6667vw;
+  }
+  .contacts-maps__single {
+    padding-bottom: 4.0000vw;
+    margin-bottom: 4.0000vw;
+    > span {
+      font-size: 3.7333vw;
+      line-height: 1.2;
+      margin-bottom: 3.2000vw;
+    }
+    .txt {
+      span, p {
+        font-size: 3.2000vw;
+        line-height: 1.2;
+      }
+    }
+    .img {
+      width: 24.0000vw;
+      height: 16.8000vw;
+    }
+  }
+  .contacts-maps__wrapper {
+    width: 100%;
+    margin-top: 5.3333vw;
+  }
+  .contacts-maps {
+    margin-top: 9.3333vw;
+  }
+  .contacts-maps__left {
+    width: 100%;
+    margin-bottom: 8.0000vw;
+  }
+  .contacts-maps__cont {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 8.0000vw 4.0000vw;
+  }
+  .contacts-list {
+    width: 100%;
+    margin-top: 4.0000vw;
+    gap: 3.2000vw;
+    flex-wrap: wrap;
+    .sg-contacts {
+      width: calc(50% - 1.6000vw);
+
+      p, a {
+        font-size: 3.7333vw;
+        line-height: 1.2;
+        margin-bottom: 1.6000vw;
+      }
+      span {
+        font-size: 3.2000vw;
+        line-height: 1.2;
+      }
+    }
+  }
+
+
+  .checkout-page {
+    .container:not(.container-foot) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      flex-grow: 1;
+    }
+  }
+  .checkout-done .title {
+    margin-bottom: 4.2667vw;
+  }
+  body .checkout-done .btn {
+    padding: 3.2000vw 5.3333vw;
+  }
+  .checkout-done p {
+    font-size: 3.7333vw;
+    line-height: 1.2;
+    margin-bottom: 5.3333vw;
+  }
+  .checkout-done {
+    padding: 13.3333vw 0;
+  }
+  .checkout-promo {
+    padding: 4.0000vw 0;
+
+    > p {
+      font-size: 3.2000vw;
+      line-height: 1.2;
+      margin-bottom: 2.1333vw;
+    }
+  }
+  .select-wrap {
+    margin-bottom: 3.7333vw;
+  }
+  .checkout-bottom {
+    padding-top: 3.7333vw;
+    gap: 3.7333vw;
+
+    > p {
+      font-size: 3.2000vw;
+      line-height: 1.2;
+      max-width: 80.0000vw;
+    }
+  }
+  .checkout-total ul li {
+    padding: 3.4667vw 0;
+
+    p, span {
+      font-size: 3.7333vw;
+      line-height: 1.2;
+    }
+
+    &:nth-child(2) {
+      p, span {
+        font-size: 3.7333vw;
+        line-height: 1.2;
+      }
+    }
+
+    &:nth-child(3) {
+      p, span {
+        font-size: 4.8000vw;
+        line-height: 1.2;
+      }
+    }
+  }
+  .checkout-right {
+    width: 100%;
+    margin: 0;
+    padding: 4.0000vw 2.6667vw;
+  }
+  .checkout-list {
+    margin: 4.0000vw 0;
+  }
+  .checkout-footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+  }
+  .single-checkout-part:first-child .single-checkout-wrap .form form .input-wrap {
+    width: 100%;
+  }
+  .single-checkout-wrap {
+    padding: 4.0000vw 2.6667vw;
+  }
+  .single-checkout-head {
+    padding: 4.0000vw 2.6667vw;
+
+    a {
+      font-size: 3.2000vw;
+      line-height: 1.2;
+    }
+
+    &::after {
+      height: 4.8000vw;
+      width: 1.6000vw;
+    }
+  }
+  .checkout-title {
+    font-size: 4.2667vw;
+    line-height: 1.2;
+  }
+  .checkout-cont {
+    padding: 2.6667vw 0;
+  }
+  .checkout-cont .title {
+    margin-bottom: 4.0000vw;
+  }
+  .checkout-block {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8.0000vw;
+  }
+  .checkout-page {
+    padding: 5.3333vw 0;
+  }
+  .checkout-header {
+    padding: 4.0000vw 0;
+    flex-direction: row-reverse;
+
+    .logo {
+      width: 35vw;
+    }
+
+    .header-phones {
+      display: none;
+    }
+
+    .back-link {
+      font-size: 3.2000vw;
+      line-height: 1.2;
+      margin-right: 0;
+      margin-left: auto;
+
+      &::before {
+        width: 1.8667vw;
+        height: 1.8667vw;
+        margin-right: 1.3333vw;
+      }
+    }
+  }
+
+
+  .pay-parts-section {
+    padding-top: 4.0000vw;
+    gap: 3.7333vw;
+  }
+
+  .pay-parts-row {
+    padding: 8.0000vw 4.2667vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3.7333vw;
+
+    .left, .center {
+      width: 100%;
+
+      .img {
+        width: 8.0000vw;
+        height: 8.0000vw;
+        margin-right: 4.0000vw;
+      }
+
+      p {
+        font-size: 4.2667vw;
+        line-height: 1.2;
+      }
+
+      select {
+        padding: 3.2000vw 5.3333vw;
+        font-size: 14px;
+        line-height: 1.2;
+      }
+
+      span {
+        margin-left: 4.0000vw;
+        font-size: 3.7333vw;
+        line-height: 1.2;
+
+        strong {
+          font-size: 4.2667vw;
+          line-height: 1.2;
+        }
+      }
+    }
+
+    .right {
+      width: 60%;
+    }
+  }
+
+  .nice-select {
+    > span {
+      padding: 3.2000vw 5.3333vw;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+    .list {
+      li {
+        padding: 3.2000vw 5.3333vw;
+        font-size: 14px;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .modal-window.modal-cart .modal-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 10.6667vw 4.0000vw;
+  }
+  .modal-cont {
+    .title-head, .product-slider__cont {
+      display: none;
+    }
+  }
+
+  .modal-cart-head {
+    .img {
+      display: none;
+    }
+
+    > span {
+      font-size: 5.8667vw;
+      line-height: 1.2;
+    }
+  }
+  .modal-head > span {
+    font-size: 3.2000vw;
+    line-height: 1.2;
+    margin-top: 2.1333vw;
+  }
+  .modal-cart__cont {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+  .modal-cart__right {
+    width: 100%;
+    padding: 5.3333vw 4.0000vw;
+  }
+  .modal-cart__head {
+    display: none;
+  }
+  .single-modal-item {
+    padding: 2.6667vw 0;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+  }
+  .modal-cart__item {
+    position: static;
+
+    &:nth-child(1) {
+      width: 100%;
+    }
+
+    &:nth-child(2), &:nth-child(3) {
+      width: calc((100% - 27.2000vw) / 2);
+    }
+
+    &:nth-child(2) {
+      width: calc(((100% - 27.2000vw) / 2) + 27.2000vw);
+      padding-left: 27.2000vw;
+    }
+
+    &:last-child {
+      > span {
+        font-size: 3.7333vw;
+        line-height: 1.2;
+      }
+    }
+  }
+  .modal-window {
+    padding: 2.6667vw;
+  }
+  .modal-cart__item > span {
+    font-size: 3.2000vw;
+    line-height: 1.2;
+  }
+  .btn-remove-cart {
+    font-size: 3.2000vw;
+    line-height: 1.2;
+    bottom: 2.1333vw;
+
+    img {
+      width: 2.6667vw;
+      height: 2.6667vw;
+      margin-right: 1.3333vw;
+    }
+  }
+  .cart-item {
+    padding-bottom: 3.2000vw;
+
+    .img {
+      width: 24.0000vw;
+      height: 17.6000vw;
+      margin-right: 3.2000vw;
+    }
+
+    .txt {
+      > span {
+        font-size: 3.2000vw;
+        line-height: 1.2;
+        margin-bottom: 2.1333vw;
+      }
+
+      > a {
+        font-size: 3.7333vw;
+        line-height: 1.2;
+      }
+    }
+  }
+  .quantity-field {
+    margin-top: 3.2000vw;
+    width: 24.0000vw;
+    height: 8.0000vw;
+  }
+  .cart-item .txt .quantity-field {
+    margin-top: 3.2000vw;
+  }
+  .quantity__button {
+    width: 8.0000vw;
+
+    button {
+      font-size: 3.7333vw;
+      line-height: 1.2;
+    }
+  }
+  .quantity {
+    width: 8.0000vw;
+
+    input {
+      font-size: 3.7333vw;
+      line-height: 1.2;
+    }
+  }
+  .modal-cart__btns a:not(.btn) {
+    font-size: 3.7333vw;
+    line-height: 1.2;
+    margin-top: 2.1333vw;
+  }
+  .cart-line {
+    margin-bottom: 2.6667vw;
+
+    p {
+      font-size: 3.7333vw;
+      line-height: 1.2;
+    }
+
+    span {
+      font-size: 3.7333vw;
+      line-height: 1.2;
+    }
+
+    &:nth-child(3) {
+      p {
+        font-size: 4.2667vw;
+        line-height: 1.2;
+      }
+
+      span {
+        font-size: 5.3333vw;
+        line-height: 1.2;
+      }
+    }
+  }
+  .modal-cart__left {
+    width: 100%;
+    margin-bottom: 5.3333vw;
+  }
+
 
   .added-cont {
     width: 100%;
@@ -171,6 +610,7 @@
   }
   .product-parts {
     margin: 5.3333vw 0;
+    padding: 5.3333vw 1.4vw;
 
     .img {
       width: 8.0000vw;
@@ -967,6 +1407,18 @@
 
     textarea {
       min-height: 40vw;
+    }
+  }
+  .select-wrap {
+    select {
+      font-size: 3.7333vw;
+      line-height: 1.2;
+      padding: 2.6667vw 3.2000vw;
+
+      &::placeholder {
+        font-size: 3.7333vw;
+        line-height: 1.2;
+      }
     }
   }
   .authorization-right {
@@ -2569,4 +3021,12 @@
   }
 
 
+}
+
+@media screen and (max-width: 500px) {
+  .pay-parts-row {
+    .right {
+      width: 100%;
+    }
+  }
 }
