@@ -28,6 +28,37 @@
   }
   //
 
+  .header-controls .search-block {
+    position: static;
+  }
+  .search-wrapper {
+    right: 0;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translate(0, -34.6667vw);
+  }
+  .search-block.open .search-wrapper {
+    width: 100%;
+    transform: translate(0, 0);
+  }
+  .srch-input {
+    padding: 2.6667vw 4.0000vw;
+    input {
+      padding: 2.9vw 3.7333vw;
+      font-size: 3.7333vw;
+      line-height: 1.2;
+      &::placeholder {
+        font-size: 3.7333vw;
+        line-height: 1.2;
+      }
+    }
+    .btn {
+      padding: 1.0667vw 5.3333vw;
+    }
+  }
+
+
   //
   .contacts-maps__right {
     width: 100%;
@@ -3020,7 +3051,9 @@
     margin-right: 2.5vw;
   }
 
-
+  .modal-cont .form .btn {
+    padding: 4vw;
+  }
 }
 
 @media screen and (max-width: 500px) {

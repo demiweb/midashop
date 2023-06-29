@@ -409,6 +409,30 @@ startProductSlidersCart();
 
 //seo control
 
+//search control
+
+var srchIc = [...document.querySelectorAll('.search-block .ic')];
+
+
+
+function searchControl() {
+    if (srchIc.length) {
+        srchIc.forEach((btn) => {
+
+            btn.addEventListener('click', () => {
+                btn.closest('.search-block').classList.toggle('open');
+
+
+            })
+        })
+    }
+}
+
+searchControl();
+
+
+//search control
+
 let seoBlock = [...document.querySelectorAll('.seo-block')];
 
 function seoControl() {
@@ -442,7 +466,7 @@ seoControl();
 
 
 // scroll animations
-var anim = document.querySelectorAll('.anim')
+var anim = document.querySelectorAll('.anim');
 
 function scrollAnimations() {
     if (anim.length) {
