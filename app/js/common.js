@@ -707,6 +707,28 @@ controlFaq();
 
 //faq
 
+
+
+//personalopener
+let historyItems = [...document.querySelectorAll('.personal-opener')];
+
+function controlHistory() {
+    if (historyItems.length) {
+        historyItems.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                btn.closest('.personal-single').classList.toggle('open');
+            })
+        })
+    }
+}
+
+controlHistory();
+
+
+//personalopener
+
 //add-cart
 
 let addCartBtn = [...document.querySelectorAll('.add-cart')];
