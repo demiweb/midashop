@@ -1,3 +1,6 @@
+
+
+
 function helloConsole() {
     var staticText = 'Made with ❤️ by Demiweb';
     var staticUrl = '> https://demiweb-studio.com.ua/';
@@ -54,6 +57,7 @@ function allLozadImg() {
 }
 
 allLozadImg();
+
 
 
 let headerMenu = [...document.querySelectorAll('.header-menu > ul > li')];
@@ -822,7 +826,7 @@ controlModal();
 let indexNumber = '+38';
 
 function getNewIndexNumber() {
-    console.log(document.documentElement.lang);
+    // console.log(document.documentElement.lang);
     if (document.documentElement.lang === 'ro-RO') {
         indexNumber = '+40';
     } else {
@@ -940,7 +944,7 @@ function ifHaveDots(x = cordsSelected[1] , y = cordsSelected[0],zoom= 10) {
         addressCoord = [];
 
         addressCoord=addressCoord2;
-        console.log(addressCoord);
+        // console.log(addressCoord);
         createMapBuy(x,y,zoom);
     }
 }
@@ -1032,7 +1036,7 @@ let moveOnMapCity = [...document.querySelectorAll('.contacts-maps__select .nice-
 
 function moveOnMapSelect() {
     if (moveOnMapCity.length) {
-        console.log(moveOnMapCity);
+        // console.log(moveOnMapCity);
         let allBigCities = [...document.querySelectorAll('.contacts-maps__city')];
 
         moveOnMapCity.forEach((btn, k) => {
@@ -1058,6 +1062,8 @@ function moveOnMapSelect() {
         })
     }
 }
+
+
 
 moveOnMapSelect();
 //map mag
