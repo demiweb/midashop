@@ -1354,7 +1354,7 @@
                             <div class="item-tab active">
                                 <div class="tab-text">
                                     <div class="faq-list">
-                                        <div class="single-faq" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                        <div class="single-faq open" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                                             <div class="faq-head">
                                                 <p itemprop="name">Как вернуть или заменить товар?</p>
                                             </div>
@@ -1367,7 +1367,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="single-faq" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                        <div class="single-faq open" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                                             <div class="faq-head">
                                                 <p itemprop="name">Как вернуть или заменить товар?</p>
                                             </div>
@@ -4012,13 +4012,13 @@
 </div>
 
 
-<div class="modal-window" data-modal="comment">
+<div class="modal-window visible" data-modal="comment">
     <div class="backplate">
 
     </div>
     <div class="modal-container">
         <div class="modal-head">
-            <p>Оставьте свой комментарии</p>
+            <p>Оставьте отзыв о товаре</p>
             <div class="modal-close">
                 <span></span>
                 <span></span>
@@ -4057,8 +4057,15 @@
                     <div class="input-wrap">
                         <input type="text" placeholder="Ваше имя" required>
                     </div>
+                    <div class="input-wrap input-tel">
+                        <input type="text" placeholder="Телефон" required>
+                    </div>
                     <div class="input-wrap">
-                        <textarea name="" placeholder="Ваш коментарии"></textarea>
+                        <input type="email" placeholder="Email">
+                    </div>
+
+                    <div class="input-wrap">
+                        <textarea name="" placeholder="Ваш отзыв"></textarea>
                     </div>
                     <div class="input-hidden rating-input">
                         <!--               тут в value идет оценка -->

@@ -78,7 +78,7 @@
                             <div class="single-checkout-part ">
                                 <div class="single-checkout-head">
                                     <p class="checkout-title">Контактные данные</p>
-                                    <a href="">Есть аккаунт?</a>
+                                    <a href="" class="btn-mod" data-mod="login">Есть аккаунт?</a>
 
                                 </div>
                                 <div class="single-checkout-cont">
@@ -327,7 +327,41 @@
 
 
 </main>
+<div class="modal-window " data-modal="login">
+    <div class="backplate">
 
+    </div>
+    <div class="modal-container">
+        <div class="modal-head">
+            <p>Авторизация</p>
+            <span>Если у вас уже есть учетная запись, войдите с помощью почты и пароля</span>
+            <div class="modal-close">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="modal-cont">
+            <div class="form">
+                <form action="">
+
+                    <div class="input-wrap">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="password" placeholder="Пароль" required>
+                    </div>
+
+
+
+                    <button class="btn btn--fill">Войти</button>
+                    <a href="">Забыли пароль?</a>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 <script src="catalog/view/bootstrap/bootstrap.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
