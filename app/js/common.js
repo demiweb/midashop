@@ -778,12 +778,16 @@ function controlModal() {
 
         closeModal.forEach((btn) => {
             btn.addEventListener('click', () => {
-                btn.closest('.modal-window').classList.remove('visible');
-                document.body.classList.remove('no-scroll');
-                if (btn.closest('.modal-window').classList.contains('video')) {
-                    btn.closest('.modal-window').querySelector('.video-cont').classList.remove('playing');
+                if (btn.closest('.added-cart')) {
+                    btn.closest('.added-cart').classList.remove('visible');
+                } else {
+                    btn.closest('.modal-window').classList.remove('visible');
+                    document.body.classList.remove('no-scroll');
+                    if (btn.closest('.modal-window').classList.contains('video')) {
+                        btn.closest('.modal-window').querySelector('.video-cont').classList.remove('playing');
 
-                    btn.closest('.modal-window').querySelector('.video-cont').innerHTML = '';
+                        btn.closest('.modal-window').querySelector('.video-cont').innerHTML = '';
+                    }
                 }
             })
         });
