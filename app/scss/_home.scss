@@ -4759,6 +4759,22 @@ form.code-form {
       transition: opacity 0.3s ease-in-out, border 0.3s ease-in-out;
       border: 1px solid #DDD;
 
+      &.video {
+        position: relative;
+        cursor: pointer;
+        &::after {
+          width: 2.1042vw;
+          height: 1.9583vw;
+          display: inline-block;
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: url("../img/yt-watch.svg") no-repeat center / 100%;
+        }
+      }
+
       img {
         width: 100%;
         height: 100%;
@@ -4773,6 +4789,9 @@ form.code-form {
       }
     }
   }
+}
+input::-webkit-credentials-auto-fill-button {
+  visibility: hidden !important;
 }
 
 .fancybox__thumbs .carousel__slide .fancybox__thumb::after {
@@ -4866,6 +4885,21 @@ form.code-form {
     height: 100%;
     overflow: hidden;
     cursor: pointer;
+    &.video {
+      position: relative;
+      cursor: pointer;
+      &::after {
+        width: 5.1042vw;
+        height: 3.9583vw;
+        display: inline-block;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url("../img/yt-watch.svg") no-repeat center / 100%;
+      }
+    }
 
     img {
       width: 100%;
@@ -4895,8 +4929,15 @@ form.code-form {
     margin: 0;
   }
 }
-
-
+.fancybox__thumbs .carousel__slide .fancybox__thumb::after {
+  border-width: 2px !important;
+}
+.fancybox__thumb {
+  border-radius: 0 !important;
+}
+.fancybox__thumbs .carousel__slide .fancybox__thumb::after {
+  border-radius: 0 !important;
+}
 .btn {
   outline: none !important;
 }
@@ -6742,6 +6783,147 @@ form.code-form {
 
 
 //
+.product-mob {
+  display: none;
+}
+.double-parts {
+  display: none;
+}
+.modal-sizes {
+  .modal-container {
+    max-width: 44vw;
+  }
+}
+.modal-sizes__cont {
+  width: 100%;
+  .txt {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.1979vw;
 
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      tr {
+        width: 100%;
+        background: rgba(255, 255, 255, 0);
+
+        th, td {
+          padding: 0.5208vw 0.8333vw;
+          font-size: 0.8333vw;
+          line-height: 1.2;
+
+        }
+
+        &:nth-child(odd) {
+          padding: 0;
+          background: #F4F4F4;
+
+          th, td {
+            padding: 0.3646vw 0.8333vw;
+          }
+        }
+
+      }
+    }
+
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .img {
+      width: auto;
+      display: flex;
+      margin-bottom: 1.1979vw;
+      max-width: 32.5521vw;
+
+      img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 0.8333vw;
+      line-height: 1.5;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #000000;
+      margin-bottom: 1.1979vw;
+
+      strong {
+        font-weight: 600;
+        text-transform: initial;
+        color: $main-color;
+      }
+
+      small {
+
+        font-weight: 300;
+        text-transform: initial;
+        font-size: inherit;
+        letter-spacing: 0.03em;
+        color: #000000;
+
+        strong {
+          color: #000;
+
+        }
+      }
+    }
+
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-bottom: 0.9375vw;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      li {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 0.8333vw;
+        line-height: 150%;
+        letter-spacing: 0.03em;
+        color: #000000;
+        padding-left: 1.3021vw;
+        margin-bottom: 0.9375vw;
+        position: relative;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          width: 0.2604vw;
+          height: 0.2604vw;
+          border-radius: 50%;
+          background: #000;
+          display: inline-block;
+          content: '';
+          position: absolute;
+          top: 0.4688vw;
+          left: 0.5208vw;
+        }
+      }
+    }
+  }
+}
 
 //

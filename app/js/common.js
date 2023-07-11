@@ -1,6 +1,3 @@
-
-
-
 function helloConsole() {
     var staticText = 'Made with ❤️ by Demiweb';
     var staticUrl = '> https://demiweb-studio.com.ua/';
@@ -59,7 +56,6 @@ function allLozadImg() {
 allLozadImg();
 
 
-
 let headerMenu = [...document.querySelectorAll('.header-menu > ul > li')];
 let backDrop = document.querySelector('.backdrop');
 
@@ -107,7 +103,6 @@ function startProductSlider() {
                 centeredSlides: false,
                 loop: false,
                 draggable: true,
-
 
 
                 touchRatio: 1,
@@ -401,8 +396,6 @@ function startProductSlidersCart() {
         }
 
 
-
-
     }
 }
 
@@ -416,7 +409,6 @@ startProductSlidersCart();
 //search control
 
 var srchIc = [...document.querySelectorAll('.search-block .ic')];
-
 
 
 function searchControl() {
@@ -708,7 +700,6 @@ controlFaq();
 //faq
 
 
-
 //personalopener
 let historyItems = [...document.querySelectorAll('.personal-opener')];
 
@@ -868,7 +859,7 @@ function getMaskPhone2() {
     if (maskPhone2.length) {
         [].forEach.call(document.querySelectorAll('.input-tel input'), function (input) {
             // console.log(input);
-
+            // input.autocomplete = 'off';
             let keyCode;
 
             function mask(event) {
@@ -899,7 +890,10 @@ function getMaskPhone2() {
 
             input.addEventListener("input", mask, false);
             input.addEventListener("focus", mask, false);
-            input.addEventListener("blur", mask, false);
+            input.addEventListener("blur", (e) => {
+                e.stopPropagation();
+                e.preventDefault();
+            }, false);
             input.addEventListener("keydown", mask, false);
 
 
@@ -907,10 +901,27 @@ function getMaskPhone2() {
     }
 }
 
-getMaskPhone2();
+if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+    // console.log("This is an iOS device.");
+} else {
 
+    // console.log("This is not an iOS device!");
+}
+// getMaskPhone2();
+// $(".input-tel input").mask("+38(999) 999-9999");
 //telephones
+let zero = '0';
+let tls = [...document.querySelectorAll(".input-tel input")];
 
+var maskOptions = {
+    mask: `{+38}(000)000-00-00`,
+};
+
+
+tls.forEach((tl) => {
+    var mask = IMask(tl, maskOptions);
+});
+// $(".input-tel input").mask("+38(999) 999-9999");
 //open cabinet menu
 
 let btnCabOpen = [...document.querySelectorAll('.acc-h-btn')];
@@ -931,20 +942,18 @@ controlCabinetOpen();
 //open orders list
 
 $(document).on('click', '.quantity__button--minus', function (e) {
-    var t=$(this).next().find('input').val();t>1&&$(this).next().find('input').val(+t-1);
+    var t = $(this).next().find('input').val();
+    t > 1 && $(this).next().find('input').val(+t - 1);
 
 
     return false;
 });
 $(document).on('click', '.quantity__button--plus', function (e) {
-    var t=$(this).prev().find('input').val();
-    $(this).prev().find('input').val(+t+1);
+    var t = $(this).prev().find('input').val();
+    $(this).prev().find('input').val(+t + 1);
 
     return false;
 });
-
-
-
 
 
 //map mag contacts-maps__single
@@ -961,32 +970,33 @@ function goSelCoords() {
         cordsSelected[1] = selectedCity.dataset.locationX;
     }
 }
+
 goSelCoords();
 
-function ifHaveDots(x = cordsSelected[1] , y = cordsSelected[0],zoom= 10) {
+function ifHaveDots(x = cordsSelected[1], y = cordsSelected[0], zoom = 10) {
     if (!allMapsDots.length) {
 
     } else {
         addressCoord = [];
 
-        addressCoord=addressCoord2;
+        addressCoord = addressCoord2;
         // console.log(addressCoord);
-        createMapBuy(x,y,zoom);
+        createMapBuy(x, y, zoom);
     }
 }
-
 
 
 let numberOfChanges = 0;
 
 ifHaveDots();
 
-function createMapBuy(x,y,zoom) {
+function createMapBuy(x, y, zoom) {
     function createNewMap() {
         let divMap = document.createElement('div');
         divMap.id = 'mapid';
         document.querySelector('.map-container').appendChild(divMap);
     }
+
     // console.log(addressCoord);
     let mapDiv = document.querySelector('#mapid');
 
@@ -1002,7 +1012,7 @@ function createMapBuy(x,y,zoom) {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Points &copy 2012 LINZ'
         }),
 
-        latlng = L.latLng(x,y );
+        latlng = L.latLng(x, y);
 
     var map = L.map('mapid', {center: latlng, zoom: zoom, layers: [tiles]});
 
@@ -1011,11 +1021,11 @@ function createMapBuy(x,y,zoom) {
         iconUrl: './img/leaf-green.svg',
         shadowUrl: './img/leaf-shadow.svg',
 
-        iconSize:     [35, 50], // size of the icon
-        shadowSize:   [0, 0], // size of the shadow
-        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+        iconSize: [35, 50], // size of the icon
+        shadowSize: [0, 0], // size of the shadow
+        iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
         shadowAnchor: [4, 62],  // the same for the shadow
-        popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+        popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
     });
 
     var markers = L.markerClusterGroup();
@@ -1024,7 +1034,7 @@ function createMapBuy(x,y,zoom) {
     for (var i = 0; i < addressCoord.length; i++) {
         var a = addressCoord[i];
         var title = a[2];
-        var marker = L.marker(new L.LatLng(a[0], a[1]), { title: title, icon: greenIcon });
+        var marker = L.marker(new L.LatLng(a[0], a[1]), {title: title, icon: greenIcon});
         marker.bindPopup(title);
         markers.addLayer(marker);
         markersPos.push(marker);
@@ -1036,7 +1046,7 @@ function createMapBuy(x,y,zoom) {
 
         ot.addEventListener('click', (e) => {
             e.preventDefault();
-            $('html,body').animate({ scrollTop: $('#mapid').offset().top - 200 }, 600);
+            $('html,body').animate({scrollTop: $('#mapid').offset().top - 200}, 600);
 
 
             allMapsDots.forEach((rk) => {
@@ -1056,6 +1066,7 @@ function createMapBuy(x,y,zoom) {
         })
     })
 }
+
 $('.contacts-maps__select .select-wrap select').niceSelect();
 
 let moveOnMapCity = [...document.querySelectorAll('.contacts-maps__select .nice-select .list li')];
@@ -1069,14 +1080,14 @@ function moveOnMapSelect() {
             btn.addEventListener('click', (e) => {
 
 
-                let opt =  [...document.querySelectorAll('.contacts-maps__select select option')][k];
+                let opt = [...document.querySelectorAll('.contacts-maps__select select option')][k];
 
                 let zoom = 10;
 
                 let xCoord1 = Number(opt.dataset.locationX);
                 let yCoord1 = Number(opt.dataset.locationY);
 
-                createMapBuy(xCoord1,yCoord1,zoom);
+                createMapBuy(xCoord1, yCoord1, zoom);
 
                 allBigCities.forEach((btn2) => {
                     btn2.classList.remove('visible');
@@ -1088,7 +1099,6 @@ function moveOnMapSelect() {
         })
     }
 }
-
 
 
 moveOnMapSelect();
