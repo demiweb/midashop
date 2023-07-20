@@ -38,20 +38,7 @@
   .main-product-slider {
     height: 65vw;
   }
-  .fancybox__toolbar {
-    background: #fff !important;
-    text-shadow: none !important;
-    color: #000 !important;
-  }
-  body:not(.is-using-mouse) .fancybox__container :focus {
-    box-shadow: 0 0 0 1px #fff, 0 0 0 2px var(--fancybox-accent-color, rgba(231, 0, 0, 0.41)) !important;
-  }
-  .fancybox__backdrop {
-    background: #fff !important;
-  }
-  .fancybox__nav .carousel__button {
-    display: none;
-  }
+
   //
   .product-parts {
     display: none;
@@ -638,33 +625,8 @@
   }
 
 
-  .faq-head {
-    padding: 4.0000vw 0;
 
-    p {
-      font-size: 4.8000vw;
-      line-height: 1.2;
-      padding-right: 7.4667vw;
-    }
 
-    &::before, &::after {
-      width: 6.4000vw;
-
-    }
-  }
-  .faq-text {
-
-    .text {
-      max-width: 100%;
-      padding: 4.0000vw 0;
-
-      p, a {
-        font-size: 3.7333vw;
-        line-height: 1.2;
-        margin-bottom: 3.7333vw;
-      }
-    }
-  }
   .thumb-product-slider {
     height: 21.3333vw;
   }
@@ -2282,6 +2244,7 @@
   }
   .footer-column {
     .wrp {
+
       > a.tel {
         font-size: 3.7333vw;
         line-height: 1.2;
@@ -2305,6 +2268,18 @@
 
     &:first-child {
       margin-top: 0;
+    }
+    &.no-wrp {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0;
+      > span {
+        width: auto;
+      }
+      .playmarket {
+        width: 36vw;
+      }
     }
 
     &:nth-child(1) {
@@ -2613,7 +2588,7 @@
     justify-content: flex-start;
 
     .img {
-      width: 64.0000vw;
+      width: 34.0000vw;
       height: auto;
       display: flex;
       margin-right: 0;
@@ -2692,7 +2667,9 @@
     width: 4.5333vw;
   }
   .promo-text .img {
-    display: none;
+    display: flex;
+    margin-bottom: 3vw;
+    margin-right: auto;
   }
   .single-card .textual > p strong {
     font-size: 3.7333vw;

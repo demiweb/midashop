@@ -88,53 +88,17 @@ function startProductSlider() {
 
         productSlider.forEach((sld) => {
             let sldCont = sld.querySelector('.main-product-slider .swiper');
-            let pagin = sld.querySelector('.progress-bar');
+            let pagin = sld.querySelector('.dots');
             let sldNext = sld.querySelector('.slider-btn--next');
             let sldPrev = sld.querySelector('.slider-btn--prev');
-            let sldThumb = sld.querySelector('.thumb-product-slider .swiper');
 
-
-            var swiperThumb = new Swiper(sldThumb, {
-                spaceBetween: 8,
-                slidesPerView: 3,
-                freeMode: false,
-                watchSlidesProgress: true,
-                direction: 'horizontal',
-                centeredSlides: false,
-                loop: false,
-                draggable: true,
-
-
-                touchRatio: 1,
-                touchAngle: 180,
-                simulateTouch: true,
-
-                followFinger: true,
-                allowTouchMove: true,
-                threshold: true,
-                touchMoveStopPropagation: true,
-                touchStartPreventDefault: true,
-                touchStartForcePreventDefault: true,
-                touchReleaseOnEdges: true,
-
-                resistance: true,
-                resistanceRatio: 0.3,
-
-                breakpoints: {
-
-                    767: {
-                        slidesPerView: 7,
-                        spaceBetween: 10,
-                    },
-                }
-
-            });
 
             const swiper2 = new Swiper(sldCont, {
                 // Optional parameters
 
-                slidesPerView: 1,
+                slidesPerView: 'auto',
                 slidesPerGroup: 1,
+
                 speed: 700,
                 centeredSlides: false,
                 touchRatio: 1,
@@ -157,43 +121,24 @@ function startProductSlider() {
                     nextEl: sldNext,
                     prevEl: sldPrev,
                 },
-                autoplay: {
-                    delay: 3700,
-                },
-                spaceBetween: 20,
+                autoplay: false,
+                spaceBetween: 0,
                 pagination: {
                     el: pagin,
-                    type: "progressbar",
+                    type: 'bullets',
+                    bulletActiveClass: 'active',
+                    bulletClass: 'single-dot',
+                    bulletElement: 'div',
+                    clickable: true,
+                    currentClass: 'current',
+                    spaceBetween: 2,
                 },
-                thumbs: {
-                    swiper: swiperThumb,
-                }
+
 
 
             });
 
-            // if (charsSingle.length) {
-            //     let dotPhotoSlider = [...document.querySelectorAll('.product-photos .single-dot')][0];
-            //     charsSingle.forEach((btn) => {
-            //         btn.addEventListener('mouseover', () => {
-            //             dotPhotoSlider.click();
-            //             swiper2.autoplay.stop();
-            //         });
-            //         btn.addEventListener('mouseout', () => {
-            //             swiper2.autoplay.start();
-            //         })
-            //     });
-            //
-            //     colorsSingle.forEach((btn) => {
-            //         btn.addEventListener('mouseover', () => {
-            //             dotPhotoSlider.click();
-            //             swiper2.autoplay.stop();
-            //         });
-            //         btn.addEventListener('mouseout', () => {
-            //             swiper2.autoplay.start();
-            //         })
-            //     })
-            // }
+
         })
 
     }
@@ -329,6 +274,72 @@ function startProductSliders() {
 }
 
 startProductSliders();
+
+
+let productsDopSlider = [...document.querySelectorAll('.product-dop-slider')];
+
+function startProductDopSliders() {
+    if (!productsDopSlider.length) {
+
+    } else {
+
+
+        productsDopSlider.forEach((sld) => {
+            let sldCont = sld.querySelector('.swiper');
+            let sldNext = sld.querySelector('.slider-btn--next');
+            let sldPrev = sld.querySelector('.slider-btn--prev');
+            let pagin = sld.querySelector('.dots');
+
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                effect: 'slide',
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                speed: 700,
+                centeredSlides: false,
+                touchRatio: 1,
+                touchAngle: 180,
+                simulateTouch: true,
+
+                followFinger: true,
+                allowTouchMove: true,
+                threshold: true,
+                touchMoveStopPropagation: true,
+                touchStartPreventDefault: true,
+                touchStartForcePreventDefault: true,
+                touchReleaseOnEdges: true,
+
+                resistance: true,
+                resistanceRatio: 0.3,
+                cssMode: true,
+
+
+                navigation: false,
+                autoplay: false,
+                spaceBetween: 15,
+
+                pagination: {
+                    el: pagin,
+                    type: 'bullets',
+                    bulletActiveClass: 'active',
+                    bulletClass: 'single-dot',
+                    bulletElement: 'div',
+                    clickable: true,
+                    currentClass: 'current',
+                    spaceBetween: 2,
+                },
+
+
+            });
+
+
+        })
+
+    }
+}
+
+startProductDopSliders();
 
 
 let productsSliderCart = [...document.querySelectorAll('.modal-cont .product-slider__cont')];
