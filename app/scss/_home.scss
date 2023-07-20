@@ -4449,7 +4449,7 @@ form.code-form {
         padding: 4%;
       }
       &:nth-child(4) {
-        width: 0;
+        width: 100%;
         padding: 0;
 
 
@@ -5055,8 +5055,15 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
   .fav {
     position: static;
-    width: 1.5625vw;
-    height: 1.5625vw;
+    width: auto;
+    height: auto;
+    padding: 0.7813vw;
+    background: #fff;
+    cursor: pointer;
+    img {
+      width: 1.5625vw;
+      height: 1.5625vw;
+    }
   }
 }
 
@@ -5246,7 +5253,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
   span {
     color: #000;
-    font-size: 14px;
+    font-size: 0.7292vw;
     line-height: 1.2;
     font-style: normal;
     font-weight: 600;

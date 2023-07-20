@@ -96,9 +96,9 @@ function startProductSlider() {
             const swiper2 = new Swiper(sldCont, {
                 // Optional parameters
 
-                slidesPerView: 'auto',
+                slidesPerView: 1,
 
-                slidesPerGroup: 2,
+                slidesPerGroup: 1,
 
                 speed: 700,
                 centeredSlides: false,
@@ -108,7 +108,7 @@ function startProductSlider() {
                 loop: false,
 
                 followFinger: true,
-                allowTouchMove: false,
+                allowTouchMove: true,
                 threshold: true,
                 touchMoveStopPropagation: true,
                 touchStartPreventDefault: true,
@@ -125,6 +125,7 @@ function startProductSlider() {
                 },
                 autoplay: false,
                 spaceBetween: 0,
+                direction: 'vertical',
                 pagination: {
                     el: pagin,
                     type: 'bullets',
@@ -135,6 +136,14 @@ function startProductSlider() {
                     currentClass: 'current',
                     spaceBetween: 2,
                 },
+                breakpoints: {
+                    768: {
+                        direction: 'horizontal',
+                        slidesPerView: 'auto',
+                        allowTouchMove: false,
+                        slidesPerGroup: 2,
+                    }
+                }
 
 
 
