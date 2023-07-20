@@ -97,23 +97,25 @@ function startProductSlider() {
                 // Optional parameters
 
                 slidesPerView: 'auto',
-                slidesPerGroup: 1,
+
+                slidesPerGroup: 2,
 
                 speed: 700,
                 centeredSlides: false,
                 touchRatio: 1,
                 touchAngle: 180,
-                simulateTouch: true,
+                simulateTouch: false,
                 loop: false,
 
                 followFinger: true,
-                allowTouchMove: true,
+                allowTouchMove: false,
                 threshold: true,
                 touchMoveStopPropagation: true,
                 touchStartPreventDefault: true,
                 touchStartForcePreventDefault: true,
                 touchReleaseOnEdges: true,
 
+                // draggable: false,
                 resistance: true,
                 resistanceRatio: 0.3,
                 cssMode: true,
@@ -696,10 +698,16 @@ let faqItems = [...document.querySelectorAll('.single-faq .faq-head')];
 
 function controlFaq() {
     if (faqItems.length) {
-        faqItems.forEach((btn) => {
+        faqItems.forEach((btn, k) => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
+                faqItems.forEach((btn2, l) => {
+                    if (l !== k) {
+                        btn2.closest('.single-faq').classList.remove('open');
+                    }
+
+                });
                 btn.closest('.single-faq').classList.toggle('open');
             })
         })
@@ -1114,3 +1122,30 @@ function moveOnMapSelect() {
 
 moveOnMapSelect();
 //map mag
+
+
+let rateBlk = [...document.querySelectorAll('.rate-blk')];
+
+function scrollRateBlk() {
+    if (rateBlk.length) {
+        rateBlk.forEach((btn) => {
+            btn.querySelector('a').addEventListener('click', (e) => {
+
+                e.stopPropagation();
+                e.preventDefault;
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $(".product__comments").offset().top -  170
+                }, 600);
+            });
+
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                e.preventDefault;
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $(".product__comments").offset().top  - 170
+                }, 600);
+            })
+        })
+    }
+}
+scrollRateBlk();
