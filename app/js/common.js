@@ -399,7 +399,7 @@ function startProductSlidersCart() {
                     spaceBetween: 15,
                     breakpoints: {
                         767: {
-                            slidesPerView: 3,
+                            slidesPerView: 4,
                             spaceBetween: 30,
                         }
                     },
