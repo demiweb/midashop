@@ -1,3 +1,8 @@
+@media screen and (min-width: 2300px) {
+  body {
+    zoom: 0.7;
+  }
+}
 @media screen and (max-width: 767px) {
   .product-slider .container>.btn {
     display: none !important;

@@ -139,7 +139,7 @@ function startProductSlider() {
                 breakpoints: {
                     768: {
                         direction: 'horizontal',
-                        slidesPerView: 1,
+                        slidesPerView: 2,
                         allowTouchMove: false,
                         slidesPerGroup: 1,
                     }
