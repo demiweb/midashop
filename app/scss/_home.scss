@@ -5115,6 +5115,18 @@ body:not(.is-using-mouse) .fancybox__container :focus {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    padding-right: 2.8646vw;
+    position: relative;
+    small {
+      padding: 1px 0.2083vw;
+      background: $main-color;
+      font-size: 0.7em;
+      font-weight: 400;
+      color: #fff;
+      position: absolute;
+      bottom: 0.1563vw;
+      right: 0;
+    }
 
     color: #000;
     font-size: 1.2500vw;
@@ -5262,6 +5274,9 @@ body:not(.is-using-mouse) .fancybox__container :focus {
     line-height: 1.2;
     font-style: normal;
     font-weight: 600;
+    strong {
+      font-weight: 700;
+    }
 
   }
 
