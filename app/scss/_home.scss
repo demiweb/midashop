@@ -5273,7 +5273,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
     font-size: 0.7292vw;
     line-height: 1.2;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 300;
     strong {
       font-weight: 700;
     }
@@ -5708,8 +5708,8 @@ input::-webkit-credentials-auto-fill-button {
 }
 .product-tabs__cont {
   width: 100%;
-  margin-top: 1.6042vw;
-  margin-bottom: 1.9042vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
 
 
   .item-tab {
