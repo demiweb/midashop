@@ -939,16 +939,16 @@ if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
 // $(".input-tel input").mask("+38(999) 999-9999");
 //telephones
 let zero = '0';
-let tls = [...document.querySelectorAll(".input-tel input")];
+    let tls = [...document.querySelectorAll(".input-tel input")];
 
-var maskOptions = {
-    mask: `{+38}(000)000-00-00`,
-};
+    var maskOptions = {
+        mask: `{+38}(000)000-00-00`,
+    };
 
 
-tls.forEach((tl) => {
-    var mask = IMask(tl, maskOptions);
-});
+    tls.forEach((tl) => {
+        var mask = IMask(tl, maskOptions);
+    });
 // $(".input-tel input").mask("+38(999) 999-9999");
 //open cabinet menu
 

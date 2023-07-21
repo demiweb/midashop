@@ -6016,12 +6016,15 @@ input::-webkit-credentials-auto-fill-button {
   top: 6.2500vw;
   z-index: 102;
   right: 0;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0;
   pointer-events: none;
-  transform: translate(0, -150%);
-  transition: transform 0.7s ease-in-out;
 
   &.visible {
-    transform: translate(0, 0);
+    opacity: 1;
+    .added-cont {
+      pointer-events: auto;
+    }
   }
 
   .container {
@@ -6041,7 +6044,7 @@ input::-webkit-credentials-auto-fill-button {
   align-items: flex-start;
   justify-content: flex-start;
   padding: 1.1458vw 1.4583vw;
-  pointer-events: auto;
+  pointer-events: none;
   position: relative;
 }
 

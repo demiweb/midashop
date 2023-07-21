@@ -1,5 +1,7 @@
 @media screen and (max-width: 767px) {
-
+  .product-slider .container>.btn {
+    display: none !important;
+  }
   .thumb-product-slider .swiper-slide .img.video::after {
     width: 7.1042vw;
     height: 5.9583vw;
@@ -872,7 +874,7 @@
   .comment-text {
     p {
       font-size: 3.8647vw;
-      line-height: 1.2;
+      line-height: 1.5;
     }
   }
   .single-comment {
@@ -906,7 +908,7 @@
 
     p {
       font-size: 3.3816vw;
-      line-height: 1.2;
+      line-height: 1.5;
       margin-bottom: 4.0000vw;
     }
 
@@ -991,8 +993,8 @@
     gap: 2.4155vw;
 
     a {
-      width: 12.0773vw;
-      height: 12.0773vw;
+      width: 10.0773vw;
+      height: 10.0773vw;
 
       span {
         font-size: 2.8986vw;
@@ -1178,6 +1180,7 @@
 
   .product-comments__head .btn-mod {
     font-size: 3.3816vw;
+    white-space: nowrap;
 
     img {
       height: 6.0386vw;
@@ -1358,7 +1361,7 @@
       top: 0;
       right: 0;
 
-      img {
+      img,svg  {
         width: 7.2464vw;
         height: 7.2464vw;
       }
@@ -2920,20 +2923,23 @@
     .btn {
       width: 100%;
       margin-top: 3.2000vw;
+      justify-content: space-between;
+      padding: 3.3816vw 5.5556vw;
     }
   }
   .promo-text {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: flex-start;
 
     .img {
-      width: 34.0000vw;
+      width: 25.8454vw;
       height: auto;
       display: flex;
-      margin-right: 0;
+      flex-shrink: 0;
+      margin-right: 4.5894vw;
       margin-bottom: 2.1333vw;
     }
 
@@ -2948,10 +2954,11 @@
         line-height: 1.2;
         margin-bottom: 2.0667vw;
         max-width: 100%;
+        font-weight: 500;
       }
 
       p {
-        font-size: 3.7333vw;
+        font-size: 3.1401vw;
         line-height: 1.2;
         text-align: left;
       }
@@ -3002,8 +3009,9 @@
   }
   .single-card .textual > p {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: auto;
+    flex-wrap: wrap;
   }
   .single-card .textual .ic {
     width: 4.5333vw;
@@ -3011,7 +3019,7 @@
   .promo-text .img {
     display: flex;
     margin-bottom: 3vw;
-    margin-right: auto;
+    margin-right:  4.5894vw;
   }
   .single-card .textual > p strong {
     font-size: 3.7333vw;
