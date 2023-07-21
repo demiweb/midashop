@@ -1243,7 +1243,7 @@
 
 .product-slider {
   width: 100%;
-  padding: 2.0063vw 0 0;
+  padding: 2.0063vw 0 0.5vw;
   .progress-bar {
     margin-bottom: 0;
   }
@@ -7434,6 +7434,10 @@ input::-webkit-credentials-auto-fill-button {
   body {
     zoom: 0.9;
   }
+}
+
+.progress-bar {
+  display: none !important;
 }
 
 //
