@@ -1,7 +1,7 @@
 @import "fonts";
 @import "animations";
 
-$main-font: 'Manrope', sans-serif;
+$main-font: 'Montserrat', sans-serif;
 $second-font: 'Montserrat', sans-serif;
 $main-color: #E70000;
 $blue: #B2CFF0;
@@ -121,7 +121,7 @@ img.lazyload, video.lazyload {
 
 
 * {
-  letter-spacing: 0.3px !important;
+  letter-spacing: 0;
   //font-family: $main-font;
   box-sizing: border-box;
   text-decoration: none;

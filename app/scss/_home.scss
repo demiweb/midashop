@@ -460,12 +460,12 @@
       padding: 1.5104vw 0;
 
       > a {
-        padding: 0.5208vw 0.5208vw;
+        padding: 0.5208vw 0.4208vw;
         transition: color 0.3s ease, background-color 0.3s ease-in-out;
 
         font-style: normal;
         font-weight: 600;
-        font-size: 0.8333vw;
+        font-size: 0.7813vw;
         line-height: 1.1458vw;
         letter-spacing: 0.03em;
         color: #000000;
@@ -1201,7 +1201,7 @@
   justify-content: flex-start;
 
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 0.8333vw;
   line-height: 1.1458vw;
   letter-spacing: 0.03em;
@@ -1321,7 +1321,7 @@
 
     span {
       font-style: normal;
-      font-weight: 800;
+      font-weight: 700;
       font-size: 0.8333vw;
       line-height: 0.8333vw;
       letter-spacing: 0.03em;
@@ -2027,7 +2027,7 @@ main {
 
   > span {
     font-style: normal;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 0.8333vw;
     line-height: 1.1458vw;
     letter-spacing: 0.03em;
@@ -2502,7 +2502,7 @@ main {
     .ocf-filter-name {
       font-style: normal;
       font-weight: 600;
-      font-size: 1.0417vw;
+      font-size: 0.9375vw;
       line-height: 1.4063vw;
       letter-spacing: 0.03em;
       color: #000000;
@@ -2897,7 +2897,7 @@ body {
 
     span {
       font-style: normal;
-      font-weight: 800;
+      font-weight: 700;
       font-size: 0.8333vw;
       line-height: 0.8333vw;
       letter-spacing: 0.03em;
@@ -3003,7 +3003,7 @@ body {
 
     p {
       font-style: normal;
-      font-weight: 800;
+      font-weight: 700;
       font-size: 0.8333vw;
       line-height: 1.5;
       letter-spacing: 0.03em;
@@ -5051,7 +5051,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 0 0.7813vw;
+  margin: 0.5vw 0 0.7813vw;
 
   .btn {
     padding: 0.4167vw 3.1250vw;
@@ -5241,6 +5241,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   align-items: flex-start;
   justify-content: flex-start;
   margin-bottom: 0.7813vw;
+  margin-top: 0.5vw;
 
   > p {
     margin-top: 0.5208vw;
@@ -7132,7 +7133,7 @@ input::-webkit-credentials-auto-fill-button {
     width: 100%;
     color: #000;
     font-size: 0.8333vw;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.2;
     text-transform: uppercase;
     display: inline-block;
@@ -7341,7 +7342,7 @@ input::-webkit-credentials-auto-fill-button {
 
     p {
       font-style: normal;
-      font-weight: 800;
+      font-weight: 700;
       font-size: 0.8333vw;
       line-height: 1.5;
       letter-spacing: 0.03em;

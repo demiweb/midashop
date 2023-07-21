@@ -1026,6 +1026,10 @@
     p {
       font-size: 5.3140vw;
       line-height: 1.2;
+      padding-right: 12.0000vw;
+      small {
+        bottom: 0.8000vw;
+      }
 
       strong {
         font-size: 3.3816vw;
@@ -3016,6 +3020,7 @@
         font-size: 3.7333vw;
         line-height: 1.2;
         margin-bottom: 1.3333vw;
+        font-weight: 500;
       }
 
       p {
@@ -3182,6 +3187,7 @@
 
     font-size: 3.7333vw;
     line-height: 1.2;
+    font-weight: 400;
   }
 
   .dots {
