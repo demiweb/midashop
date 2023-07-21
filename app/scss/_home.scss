@@ -7421,8 +7421,11 @@ input::-webkit-credentials-auto-fill-button {
   margin-bottom: 0.5vw;
   padding-bottom: 0.5vw;
   border: none;
+  cursor: default;
+  margin-top: 0;
+  padding-top: 0;
 
-  border-bottom: 1px solid  #d9d9d9;
+  border-bottom: 1px solid  #d9d9d9 !important;
 }
 
 //
