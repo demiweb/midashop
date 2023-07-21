@@ -7430,5 +7430,10 @@ input::-webkit-credentials-auto-fill-button {
 .single-card .textual .sizes ~ .btn {
   display: none !important;
 }
+@media screen and (max-width: 1920px) and (min-width: 1600px){
+  body {
+    zoom: 0.9;
+  }
+}
 
 //
