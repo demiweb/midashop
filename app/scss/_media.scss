@@ -412,9 +412,16 @@
     width: 100%;
     padding: 10.6667vw 4.0000vw;
   }
+  .modal-cont .product-slider__cont .slider-btn {
+    display: none;
+  }
   .modal-cont {
     .title-head, .product-slider__cont {
-      display: none;
+      //display: none;
+      margin-top: 4.0000vw;
+    }
+    .title-head {
+      margin-top:6.6667vw;
     }
   }
 

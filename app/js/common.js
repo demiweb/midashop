@@ -139,9 +139,9 @@ function startProductSlider() {
                 breakpoints: {
                     768: {
                         direction: 'horizontal',
-                        slidesPerView: 'auto',
+                        slidesPerView: 1,
                         allowTouchMove: false,
-                        slidesPerGroup: 2,
+                        slidesPerGroup: 1,
                     }
                 }
 
@@ -359,9 +359,7 @@ function startProductSlidersCart() {
     if (!productsSliderCart.length) {
 
     } else {
-        if (window.innerWidth < 768) {
 
-        } else {
             productsSliderCart.forEach((sld) => {
                 let sldCont = sld.querySelector('.swiper');
                 let sldNext = sld.querySelector('.slider-btn--next');
@@ -415,7 +413,7 @@ function startProductSlidersCart() {
 
 
             })
-        }
+
 
 
     }
