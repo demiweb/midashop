@@ -92,7 +92,7 @@ function startProductSlider() {
             let sldNext = sld.querySelector('.slider-btn--next');
             let sldPrev = sld.querySelector('.slider-btn--prev');
 
-
+            let amountOfSlideS = sld.dataset.amount;
             const swiper2 = new Swiper(sldCont, {
                 // Optional parameters
 
@@ -142,13 +142,36 @@ function startProductSlider() {
                         slidesPerView: 2,
                         allowTouchMove: false,
                         slidesPerGroup: 1,
+                        loop: false,
                     }
-                }
+                },
+
 
 
 
             });
 
+
+            var changed = false;
+            var changed2 = true;
+            $(sldNext).on('click', function () {
+                if (changed === true) {
+                    changed = false;
+                    swiper2.slideTo(0);
+                    changed2 = true;
+                }
+                if (swiper2.isEnd) changed = true;
+            });
+
+
+            $(sldPrev).on('click', function () {
+                if (changed2 === true) {
+                    changed2 = false;
+                    swiper2.slideTo(amountOfSlideS);
+                    changed = true;
+                }
+                if (swiper2.isBeginning) changed2 = true;
+            })
 
         })
 
