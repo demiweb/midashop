@@ -266,6 +266,10 @@ function startProductSliders() {
                 spaceBetween: 15,
                 breakpoints: {
                     767: {
+                        slidesPerView: 4,
+                        spaceBetween:30,
+                    },
+                    1600: {
                         slidesPerView: 5,
                         spaceBetween:35,
                     }
