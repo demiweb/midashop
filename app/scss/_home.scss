@@ -5082,6 +5082,12 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   justify-content: space-between;
   margin-bottom:0.7813vw;
 }
+.show-more-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .rate-blk {
   display: flex;
