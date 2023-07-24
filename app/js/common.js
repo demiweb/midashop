@@ -1128,3 +1128,33 @@ function scrollRateBlk() {
     }
 }
 scrollRateBlk();
+var winNav = window.navigator;
+var isChromium =  winNav.userAgent.match("CriOS");
+
+
+
+console.log(isChromium);
+var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+console.log(isSafari);
+function productPageAddMorePadding() {
+    if (document.querySelector('.product-main-frame')) {
+        if (isChromium) {
+            if (window.innerWidth < 767) {
+                let pmf = document.querySelector('.product-main-frame');
+                let style = pmf.currentStyle || window.getComputedStyle(pmf);
+                let mt = style.marginTop.match(/\d+/)[0];
+
+                let newMarginTop = Number(mt) + 35;
+
+
+                pmf.style.marginTop = `-${newMarginTop}px`;
+                document.querySelector('.product-main-frame > p').innerHTML = newMarginTop;
+                console.log(mt.match(/\d+/)[0]);
+            }
+        }
+
+
+    }
+}
+
+productPageAddMorePadding();
