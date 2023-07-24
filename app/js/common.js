@@ -86,93 +86,38 @@ function startProductSlider() {
         let charsSingle = [...document.querySelectorAll('.single-char')];
         let colorsSingle = [...document.querySelectorAll('.single-color')];
 
+
+
+
         productSlider.forEach((sld) => {
             let sldCont = sld.querySelector('.main-product-slider .swiper');
             let pagin = sld.querySelector('.dots');
             let sldNext = sld.querySelector('.slider-btn--next');
             let sldPrev = sld.querySelector('.slider-btn--prev');
-
-            let amountOfSlideS = sld.dataset.amount;
-            const swiper2 = new Swiper(sldCont, {
-                // Optional parameters
-
-                slidesPerView: 1,
-
-                slidesPerGroup: 1,
-
-                speed: 700,
-                centeredSlides: false,
-                touchRatio: 1,
-                touchAngle: 180,
-                simulateTouch: false,
-                loop: false,
-
-                followFinger: true,
-                allowTouchMove: true,
-                threshold: true,
-                touchMoveStopPropagation: true,
-                touchStartPreventDefault: true,
-                touchStartForcePreventDefault: true,
-                touchReleaseOnEdges: true,
-
-                // draggable: false,
-                resistance: true,
-                resistanceRatio: 0.3,
-                cssMode: true,
-                navigation: {
-                    nextEl: sldNext,
-                    prevEl: sldPrev,
-                },
-                autoplay: false,
-                spaceBetween: 0,
-                direction: 'vertical',
-                pagination: {
-                    el: pagin,
-                    type: 'bullets',
-                    bulletActiveClass: 'active',
-                    bulletClass: 'single-dot',
-                    bulletElement: 'div',
-                    clickable: true,
-                    currentClass: 'current',
-                    spaceBetween: 2,
-                },
-                breakpoints: {
-                    768: {
-                        direction: 'horizontal',
-                        slidesPerView: 2,
-                        allowTouchMove: false,
-                        slidesPerGroup: 1,
-                        loop: false,
-                    }
-                },
-
-
-
-
+            $(sldCont).slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                prevArrow: sldPrev,
+                nextArrow: sldNext,
+                lazyLoad: 'progressive',
+                dots: true,
+                dotsClass: 'dots',
+                vertical: false,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true,
+                            vertical: true,
+                            verticalSwiping: true,
+                        }
+                    },
+                ]
             });
-
-
-            var changed = false;
-            var changed2 = true;
-            $(sldNext).on('click', function () {
-                if (changed === true) {
-                    changed = false;
-                    swiper2.slideTo(0);
-                    changed2 = true;
-                }
-                if (swiper2.isEnd) changed = true;
-            });
-
-
-            $(sldPrev).on('click', function () {
-                if (changed2 === true) {
-                    changed2 = false;
-                    swiper2.slideTo(amountOfSlideS);
-                    changed = true;
-                }
-                if (swiper2.isBeginning) changed2 = true;
-            })
-
         })
 
     }
