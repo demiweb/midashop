@@ -1,11 +1,167 @@
 @media screen and (min-width: 2300px) {
 
 }
+
+
+@media screen and (min-width: 1600px) {
+  .breadcrumbs ul li:not(:last-child)::after {
+    top: 43%;
+  }
+  .footer-bottom__cont .logo {
+    width: 8vw;
+  }
+  .menu-block__menu > span {
+    margin-bottom: 1.2vw;
+  }
+  .menu-block__menu {
+    margin-right: 5vw;
+  }
+  .menu-block__items > .img {
+    width: 17.3333vw;
+    height: 21.0833vw;
+  }
+  .menu-block__menu > .sub-links a, .footer-column>span {
+    font-size: 0.8vw;
+    line-height: 1.3;
+  }
+  .menu-block__menu ul li a {
+    font-size: 0.6vw;
+    line-height: 1.7;
+  }
+  body .btn {
+    &.btn--fill, &.btn--white, &.btn--black {
+      font-size: 0.8vw;
+      line-height: 1.2;
+    }
+
+
+  }
+  .modal-window.modal-cart .modal-container {
+    max-width: 54vw;
+  }
+  .modal-head {
+    margin-bottom: 2vw;
+  }
+  .cart-line p, .modal-cart__btns a:not(.btn), .comment-rate p {
+    font-size: 0.6vw;
+    line-height: 1.4;
+  }
+  .comment-rate .sg-rate {
+    width: 1.3vw;
+  }
+  .input-wrap textarea {
+    min-height: 6vw;
+  }
+  .input-wrap {
+    margin-bottom: 0.7vw;
+  }
+  .cart-line span, .modal-head p {
+    font-size: 0.8vw;
+    line-height: 1.4;
+  }
+  .input-wrap input, .input-wrap textarea {
+    padding: 0.5vw 1vw;
+    font-size: 0.8vw;
+
+    &::placeholder {
+      font-size: 0.8vw;
+    }
+  }
+  .modal-cart__right {
+    padding: 1vw 1.7vw;
+  }
+  .main-product-slider .tags .tag {
+    font-size: 0.6vw;
+  }
+  .product-price p {
+    font-size: 1.2vw;
+  }
+  .single-modal-item {
+    padding: 0.4vw;
+  }
+  .cart-item .txt .quantity-field {
+    margin-top: 0.45vw;
+  }
+  .cart-line:nth-child(3) p {
+    font-size: 0.8vw;
+  }
+  .cart-line:nth-child(3) span {
+    font-size: 1vw;
+  }
+  .quantity-field {
+    width: 6.0125vw;
+    height: 2.0042vw;
+  }
+  .quantity__button, .quantity {
+    width: calc(100% / 3);
+  }
+  .modal-window.modal-cart .modal-container {
+    padding: 2vw 2.7vw;
+  }
+  .cart-item .img {
+    width: 5.1667vw;
+    height: 3.8229vw;
+    margin-right: 1.2vw;
+  }
+  .modal-cart-head .img {
+    width: 8vw;
+  }
+  .product-det-single {
+    margin-bottom: 1.2vw;
+  }
+  .header-phones > span, .cart-item .txt > span, .cart-item .txt > a, .size-select a span, .modal-head > span, .product-det-cont ul li p, .product-det-cont ul li span, .product-det-cont > p, .product-det-cont > span, .about-brand__txt p, .single-status .txt p, .subscribe-form > p, .promo-text .txt p, .product-comment__cont .empty-comment, .comment-text p, .tab-text p, .product-det-head .txt p, .pc-head span, .pc-head a, .header-top__menu > span, .header-menu > ul > li > a, .header-lang a, .header-lang span, .breadcrumbs ul li a, .breadcrumbs ul li span, .product-parts p, .product-right .code, .rate-blk a {
+    font-size: 0.6vw;
+    line-height: 1.3;
+  }
+  .footer-column > ul li a, .modal-cart__item > span, .btn-remove-cart, .footer-column > ul li p, .footer-links a, .copyr p, .single-card .textual > a, .single-card .tags .tag {
+    font-size: 0.6vw;
+    line-height: 1.6;
+  }
+  .footer-column .wrp > a.lnk {
+    margin-bottom: 0.3vw;
+  }
+  .comment-head p, .modal-cart__item > p, .product-dop-slider .title, .title, .modal-cart-head span, .product-comments__head p, .product-comments__head .rating-start__blk span, .product-comments__head .btn-mod, .single-status .txt span, .footer-column .wrp > a.tel, .footer-column .wrp > a.lnk, .subscribe-form form input, .subscribe-form form input::placeholder {
+    font-size: 0.8vw;
+    line-height: 1.3;
+  }
+  .product-right h1, .product-tabs__head .tab-btn {
+    font-size: 0.8vw;
+    line-height: 1.3;
+  }
+  .promo-text .txt span {
+    font-size: 1.08vw;
+    line-height: 1.3;
+  }
+  .header-bot__cont {
+    .logo {
+      width: 8vw;
+    }
+  }
+  .header-menu {
+    > ul {
+      > li {
+        padding: 0.5vw 0;
+      }
+    }
+  }
+  .header-controls .search-block, .header-controls > a {
+    width: 2vw;
+    height: 2vw;
+    padding: .4208vw;
+  }
+  .header-controls .search-block span, .header-controls > a span {
+    right: 0;
+    top: 0;
+  }
+  //  все обычные текста 0.6vw
+  //  все тайтлы по  0.8vw
+}
+
 @media screen and (max-width: 767px) {
   body {
 
   }
-  .product-slider .container>.btn {
+  .product-slider .container > .btn {
     display: none !important;
   }
   .thumb-product-slider .swiper-slide .img.video::after {
@@ -50,6 +206,7 @@
   //
   .main-product-slider .swiper .swiper-slide {
     padding: 8vh 1vw;
+
     .img {
       img {
         object-fit: contain;
@@ -426,8 +583,9 @@
       //display: none;
       margin-top: 4.0000vw;
     }
+
     .title-head {
-      margin-top:6.6667vw;
+      margin-top: 6.6667vw;
     }
   }
 
@@ -1005,6 +1163,7 @@
     &.hov {
       opacity: 0;
     }
+
     &.unhov {
       opacity: 1;
     }
@@ -1032,6 +1191,7 @@
       font-size: 5.3140vw;
       line-height: 1.2;
       padding-right: 12.0000vw;
+
       small {
         bottom: 0.8000vw;
       }
@@ -1387,7 +1547,7 @@
       top: 0;
       right: 0;
 
-      img,svg  {
+      img, svg {
         width: 7.2464vw;
         height: 7.2464vw;
       }
@@ -3046,7 +3206,7 @@
   .promo-text .img {
     display: flex;
     margin-bottom: 3vw;
-    margin-right:  4.5894vw;
+    margin-right: 4.5894vw;
   }
   .single-card .textual > p strong {
     font-size: 3.2333vw;
