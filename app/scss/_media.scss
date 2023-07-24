@@ -63,6 +63,17 @@
     font-size: 0.8vw;
     line-height: 1.4;
   }
+  .header-bot__cont .logo {
+    margin-right: 9.4vw;
+  }
+  .srch-input input {
+    font-size: 0.6vw;
+    line-height: 1.4;
+    &::placeholder {
+      font-size: 0.6vw;
+      line-height: 1.4;
+    }
+  }
   .input-wrap input, .input-wrap textarea {
     padding: 0.5vw 1vw;
     font-size: 0.8vw;
