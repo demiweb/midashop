@@ -29,10 +29,13 @@
     font-size: 0.68vw;
     line-height: 1.3;
   }
-  .single-delivery .txt table tr td, .checkout-header .back-link, .checkout-total ul li p, .checkout-total ul li.discount p, .checkout-total ul li.discount span, .checkout-total ul li span, .club-program .txt ul li p, .single-checkout-head a, .single-order .txt a, .single-order .txt p, .single-order .txt p span, .club-program .txt ul li span, .single-order .txt a, .single-order .txt p span, .orders-details ul li p, .personal-empty p, .orders-details ul li span, .personal-sec .status, .single-delivery .txt table tr th, .authorization-right ul li, .form form > a, .personal-account__left ul li a, .personal-account__left ul li span, .form form > p, .form form > p a, .radio-block label > span, .form .forgot-pass, .personal-info .left > p {
+
+  .single-delivery .txt table tr td, .checkout-promo > p, .checkout-header .back-link, .checkout-total ul li p, .checkout-total ul li.discount p, .checkout-total ul li.discount span, .checkout-total ul li span, .club-program .txt ul li p, .single-checkout-head a, .single-order .txt a, .single-order .txt p, .single-order .txt p span, .club-program .txt ul li span, .single-order .txt a, .single-order .txt p span, .orders-details ul li p, .personal-empty p, .orders-details ul li span, .personal-sec .status, .single-delivery .txt table tr th, .authorization-right ul li, .form form > a, .personal-account__left ul li a, .personal-account__left ul li span, .form form > p, .form form > p a, .radio-block label > span, .form .forgot-pass, .personal-info .left > p {
     font-size: 0.68vw;
     line-height: 1.5;
   }
+
+
   .seo-text li, .seo-text p {
     margin-bottom: 0.8vw;
   }
@@ -97,6 +100,7 @@
     font-size: 0.5vw;
     line-height: 1.3;
   }
+
   .catalog-head__left p {
     font-size: 1vw;
     line-height: 1.3;
@@ -152,7 +156,11 @@
       line-height: 1.4;
     }
   }
-  .input-wrap input, .input-wrap textarea {
+  .seo-text h1 {
+    font-size: 1vw;
+    line-height: 1.3;
+  }
+  .input-wrap input, .input-wrap textarea, .select-wrap select {
     padding: 0.5vw 1vw;
     font-size: 0.8vw;
 
@@ -160,12 +168,17 @@
       font-size: 0.8vw;
     }
   }
-  .header-phones__block a, .header-phones__block span, .header-phones__block p {
+  .header-phones__block a, .header-phones__block span, .header-phones__block p, .contacts-maps__single > span {
     font-size: 0.68vw;
     line-height: 1.3;
   }
   .header-phones__block p {
     margin-bottom: 0.5vw;
+  }
+  .nice-select>span {
+    font-size:  0.68vw;
+    line-height: 1.5;
+    padding: 0.5vw 1vw;
   }
   .header-top__menu .header-top__menu-block {
     width: 10vw;
@@ -229,6 +242,19 @@
     font-size: 0.68vw;
     line-height: 1.6;
   }
+  .contacts-list .sg-contacts span, .contacts-maps__single .txt p, .contacts-maps__single .txt span {
+    font-size: 0.68vw;
+    line-height: 1.5;
+  }
+  .checkout-header {
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+  }
+  .header-bot__cont {
+    .checkout-header .logo {
+      margin-right: 0;
+    }
+  }
   .footer-column .wrp > a.lnk {
     margin-bottom: 0.3vw;
   }
@@ -236,7 +262,20 @@
     font-size: 0.8vw;
     line-height: 1.3;
   }
-
+  .subscribe-form form input::placeholder, .subscribe-form form input {
+    font-size: 0.68vw;
+    line-height: 1.2;
+  }
+  .checkout-promo {
+    padding-bottom: 1vw;
+  }
+  .checkout-cont .title {
+    font-size: 1vw;
+  }
+  .subscribe-form form input {
+    padding-top: 0.6vw;
+    padding-bottom: 0.6vw;
+  }
   .product-right h1 {
     font-size: 1vw;
     line-height: 1.3;
@@ -246,7 +285,7 @@
   }
   .product-det-head .txt span, .section-item, .seo-text li, .seo-text p, .single-blog-list .rght span, .single-blog-list .lft p, .blog-block .title-head a, .single-card .textual .sizes ul li, .single-card .textual .sizes span, .modal-sizes__cont .txt p, .modal-sizes__cont .txt ul li, .modal-sizes__cont .txt table tr td, .modal-sizes__cont .txt table tr th {
     font-size: 0.68vw;
-    line-height: 1.3;
+    line-height: 1.5;
   }
   .product-tabs__head .tab-btn {
     font-size: 0.8vw;
@@ -254,6 +293,14 @@
   }
   .promo-bonus {
     padding: 1vw 0;
+  }
+  .control-seo {
+    font-size: 0.68vw;
+    line-height: 1.5;
+  }
+  .seo-text h2, .seo-text h3 {
+    font-size: 0.8vw;
+    line-height: 1.4;
   }
   .promo-text .txt span {
     font-size: 1.00vw;
