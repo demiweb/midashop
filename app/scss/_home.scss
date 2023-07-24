@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  //position: sticky;
+  position: sticky;
   top: 0;
   z-index: 100;
 }
@@ -6726,13 +6726,13 @@ input::-webkit-credentials-auto-fill-button {
 
       }
 
-      &:nth-child(2) {
+      &.discount {
         p, span {
           color: $main-color;
         }
       }
 
-      &:nth-child(2) {
+      &.discount {
         p, span {
           font-size: 1.0417vw;
           line-height: 1.2;

@@ -4,6 +4,11 @@
 
 
 @media screen and (min-width: 1600px) {
+  .fav-list {
+    .single-card {
+      width: calc((100% / 4) - ((1.5625vw * 3) / 4));
+    }
+  }
   .catalog-filter #column-left .ocf-input-group .ocf-form-control, .catalog-filter #column-left .ocf-input-group-addon, .catalog-filter #column-left .ocf-value-name {
     font-size: 0.68vw;
     line-height: 1.4;
@@ -16,9 +21,17 @@
   .catalog-filter #column-left .ocf-filter-header {
     margin-bottom: 0.8vw;
   }
-  .single-category p {
+  .personal-sec > p, .order-title, .club-program .txt ul li span small, .checkout-title, .single-order .txt>span, .checkout-title {
+    font-size: 0.8vw;
+    line-height: 1.5;
+  }
+  .single-category p, .main-advantage .txt p {
     font-size: 0.68vw;
     line-height: 1.3;
+  }
+  .single-delivery .txt table tr td,.checkout-total ul li p, .checkout-total ul li.discount p, .checkout-total ul li.discount span, .checkout-total ul li span,  .club-program .txt ul li p, .single-checkout-head a, .single-order .txt a, .single-order .txt p, .single-order .txt p span, .club-program .txt ul li span, .single-order .txt a, .single-order .txt p span, .orders-details ul li p, .personal-empty p, .orders-details ul li span, .personal-sec .status, .single-delivery .txt table tr th, .authorization-right ul li, .form form > a, .personal-account__left ul li a, .personal-account__left ul li span, .form form > p, .form form > p a, .radio-block label > span, .form .forgot-pass, .personal-info .left > p {
+    font-size: 0.68vw;
+    line-height: 1.5;
   }
   .seo-text li, .seo-text p {
     margin-bottom: 0.8vw;
@@ -28,7 +41,7 @@
     margin-bottom: 2vw;
     padding-left: 17.5625vw;
   }
-  .catalog-no-results p, .about-left ul li a, .about-left ul li span, .single-shop-bonus .txt p, .main-logo .txt p, .single-delivery .txt ul li, .pagination>li>a, .pagination>li>span {
+  .catalog-no-results p, .about-left ul li a, .about-left ul li span, .single-shop-bonus .txt p, .main-logo .txt p, .single-delivery .txt ul li, .pagination > li > a, .pagination > li > span {
     font-size: 0.68vw;
     line-height: 1.5;
   }
@@ -41,7 +54,7 @@
   .catalog-products {
     justify-content: flex-start;
   }
-  .catalog-products>.btn {
+  .catalog-products > .btn {
 
   }
   .catalog-products .single-card {
@@ -76,8 +89,12 @@
     width: 17.3333vw;
     height: 21.0833vw;
   }
-  .menu-block__menu > .sub-links a, .footer-column > span, .sort-type, .catalog-filter #column-left .ocf-filter-name {
+  .menu-block__menu > .sub-links a, .footer-column > span, .catalog-filter #column-left .ocf-filter-name {
     font-size: 0.8vw;
+    line-height: 1.3;
+  }
+  .sort-type {
+    font-size: 0.5vw;
     line-height: 1.3;
   }
   .catalog-head__left p {
@@ -227,7 +244,7 @@
   .modal-sizes__cont .txt ul li::before {
     top: 0.2vw;
   }
-  .product-det-head .txt span, .section-item, .seo-text li, .seo-text p, .single-blog-list .rght span, .single-blog-list .lft p, .blog-block .title-head a,  .single-card .textual .sizes ul li, .single-card .textual .sizes span, .modal-sizes__cont .txt p, .modal-sizes__cont .txt ul li, .modal-sizes__cont .txt table tr td, .modal-sizes__cont .txt table tr th {
+  .product-det-head .txt span, .section-item, .seo-text li, .seo-text p, .single-blog-list .rght span, .single-blog-list .lft p, .blog-block .title-head a, .single-card .textual .sizes ul li, .single-card .textual .sizes span, .modal-sizes__cont .txt p, .modal-sizes__cont .txt ul li, .modal-sizes__cont .txt table tr td, .modal-sizes__cont .txt table tr th {
     font-size: 0.68vw;
     line-height: 1.3;
   }
@@ -267,6 +284,21 @@
   }
   //  все обычные текста 0.6vw
   //  все тайтлы по  0.8vw
+
+  .tag {
+    font-size: .5vw !important;
+  }
+  .categories-list {
+    margin: 1.6vw 0;
+  }
+  .single-card .fav {
+    width: 1.2vw;
+    height: 1.2vw;
+  }
+  .promo-bonus__cont > .img {
+    height: 5vw;
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -525,14 +557,14 @@
       line-height: 1.2;
     }
 
-    &:nth-child(2) {
+    &.discount {
       p, span {
         font-size: 3.7333vw;
         line-height: 1.2;
       }
     }
 
-    &:nth-child(3) {
+    &:last-child {
       p, span {
         font-size: 4.8000vw;
         line-height: 1.2;
