@@ -7463,4 +7463,12 @@ input::-webkit-credentials-auto-fill-button {
 a:focus, a:hover {
   color: inherit;
 }
+.btns-contr .btn {
+  width: 100%;
+}
+.btns-contr .fav {
+  margin-left: auto;
+  margin-right: auto;
+  flex-shrink: 0;
+}
 //

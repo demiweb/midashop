@@ -9,6 +9,9 @@
       width: calc((100% / 4) - ((1.5625vw * 3) / 4));
     }
   }
+  .product-right {
+    width: calc(100% - 62.3854vw);
+  }
   .catalog-filter #column-left .ocf-input-group .ocf-form-control, .catalog-filter #column-left .ocf-input-group-addon, .catalog-filter #column-left .ocf-value-name {
     font-size: 0.68vw;
     line-height: 1.4;
@@ -286,6 +289,20 @@
   .product-det-head .txt span, .section-item, .seo-text li, .seo-text p, .single-blog-list .rght span, .single-blog-list .lft p, .blog-block .title-head a, .single-card .textual .sizes ul li, .single-card .textual .sizes span, .modal-sizes__cont .txt p, .modal-sizes__cont .txt ul li, .modal-sizes__cont .txt table tr td, .modal-sizes__cont .txt table tr th {
     font-size: 0.68vw;
     line-height: 1.5;
+  }
+  .single-status .img {
+    width: 2vw;
+    height: 2vw;
+  }
+  .single-status .txt span {
+    margin-bottom: 0.2vw;
+  }
+  .check-cont span {
+    font-size: 0.68vw;
+    line-height: 1.5;
+  }
+  .main-product-slider .yt-watch {
+    height: 1.2vw;
   }
   .product-tabs__head .tab-btn {
     font-size: 0.8vw;
