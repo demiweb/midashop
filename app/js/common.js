@@ -1133,9 +1133,9 @@ var isChromium =  winNav.userAgent.match("CriOS");
 
 
 
-console.log(isChromium);
+// console.log(isChromium);
 var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-console.log(isSafari);
+// console.log(isSafari);
 function productPageAddMorePadding() {
     if (document.querySelector('.product-main-frame')) {
         if (isChromium) {
@@ -1149,7 +1149,7 @@ function productPageAddMorePadding() {
 
                 pmf.style.marginTop = `-${newMarginTop}px`;
                 document.querySelector('.product-main-frame > p').innerHTML = newMarginTop;
-                console.log(mt.match(/\d+/)[0]);
+                // console.log(mt.match(/\d+/)[0]);
             }
         }
 
