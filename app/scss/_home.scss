@@ -6739,6 +6739,12 @@ input::-webkit-credentials-auto-fill-button {
         }
 
       }
+      &:last-child {
+        p, span {
+          font-size: 1vw;
+          line-height: 1.2;
+        }
+      }
     }
   }
 }
