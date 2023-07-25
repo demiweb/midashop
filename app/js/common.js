@@ -298,7 +298,10 @@ function startProductDopSliders() {
                 cssMode: true,
 
 
-                navigation: false,
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
                 autoplay: false,
                 spaceBetween: 15,
 
