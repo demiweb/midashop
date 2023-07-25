@@ -7539,26 +7539,33 @@ a:focus, a:hover {
     .single-card .img {
       padding-top: 150%;
     }
-  }
 
-  .product-dop-slider {
-    .bot {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 1.1979vw;
+    .product-dop-slider {
+      .bot {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1.1979vw;
 
-      .slider-btn {
-        position: static;
-        transform: none;
+        .slider-btn {
+          position: static;
+          transform: none;
+        }
+
+        .dots {
+          margin: 0;
+        }
       }
-
-      .dots {
-        margin: 0;
+    }
+    .color-select {
+      a {
+        height: 4.0208vw;
       }
     }
   }
+
+
 }
 
 @media screen and (max-width: 767px) {
@@ -7566,6 +7573,11 @@ a:focus, a:hover {
     &.product-page-page--custom {
       .main-product-slider .swiper .swiper-slide {
         padding: 0;
+      }
+      .color-select {
+        a {
+          height:16.5266vw;
+        }
       }
     }
   }
