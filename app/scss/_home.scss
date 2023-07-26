@@ -7535,9 +7535,22 @@ a:focus, a:hover {
     .main-product-slider .swiper .slick-list {
       padding: 0;
     }
+    .slick-slide {
+      .img {
+        border-right: 1px solid #fff;
+        background: #ececec;
+        img {
+
+        }
+      }
+    }
 
     .single-card .img {
       padding-top: 150%;
+      background: #ececec;
+      img {
+
+      }
     }
 
     .product-dop-slider {

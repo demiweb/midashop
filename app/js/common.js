@@ -104,6 +104,7 @@ function startProductSlider() {
                 dots: true,
                 dotsClass: 'dots',
                 vertical: false,
+                spaceBetween: 1,
                 responsive: [
                     {
                         breakpoint: 768,
@@ -114,6 +115,7 @@ function startProductSlider() {
                             dots: true,
                             vertical: true,
                             verticalSwiping: true,
+                            spaceBetween: 0,
                         }
                     },
                 ]
