@@ -7805,7 +7805,7 @@ a:focus, a:hover {
 
   .checkbox-input {
     width: 50%;
-    padding-right:0.5208vw;
+    padding-right: 0.5208vw;
   }
 }
 
@@ -7912,6 +7912,12 @@ a:focus, a:hover {
       height: 0.7813vw;
       margin-right: 0.2604vw;
     }
+  }
+}
+
+body {
+  .fancybox__thumb {
+    padding-top: 140%;
   }
 }
 
