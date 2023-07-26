@@ -487,6 +487,11 @@
       margin-bottom: 3.7333vw;
     }
   }
+  .product-like {
+    .btn.mob-only {
+      display: none !important;
+    }
+  }
   .subscribe-left {
     width: 100%;
     margin-bottom: 1.3vw;
@@ -500,6 +505,12 @@
       font-size: 3.2vw;
       line-height: 1.2;
     }
+  }
+  .product-like {
+    margin-top: 4.5vw;
+  }
+  body .fancybox__slide {
+    padding: 10px;
   }
   .product-det-cont .video::after {
     width: 16vw;
