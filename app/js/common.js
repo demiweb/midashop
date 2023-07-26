@@ -104,7 +104,7 @@ function startProductSlider() {
                 dots: true,
                 dotsClass: 'dots',
                 vertical: false,
-                spaceBetween: 1,
+                spaceBetween: 10,
                 responsive: [
                     {
                         breakpoint: 768,
@@ -115,7 +115,7 @@ function startProductSlider() {
                             dots: true,
                             vertical: true,
                             verticalSwiping: true,
-                            spaceBetween: 0,
+                            spaceBetween: 10,
                         }
                     },
                 ]
@@ -259,6 +259,78 @@ function startProductSliders() {
 }
 
 startProductSliders();
+
+
+let productsLikes = [...document.querySelectorAll('.product-like .product-slider__cont')];
+
+function startProductLikesSliders() {
+    if (!productsLikes.length) {
+
+    } else {
+
+
+        productsLikes.forEach((sld) => {
+            let sldCont = sld.querySelector('.swiper');
+            let sldNext = sld.querySelector('.slider-btn--next');
+            let sldPrev = sld.querySelector('.slider-btn--prev');
+            let pagin = sld.querySelector('.progress-bar');
+
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                effect: 'slide',
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+                speed: 700,
+                centeredSlides: false,
+                touchRatio: 1,
+                touchAngle: 180,
+                simulateTouch: true,
+
+                followFinger: true,
+                allowTouchMove: true,
+                threshold: true,
+                touchMoveStopPropagation: true,
+                touchStartPreventDefault: true,
+                touchStartForcePreventDefault: true,
+                touchReleaseOnEdges: true,
+
+                resistance: true,
+                resistanceRatio: 0.3,
+                cssMode: true,
+
+
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                autoplay: false,
+                spaceBetween: 15,
+                breakpoints: {
+                    767: {
+                        slidesPerView: 3,
+                        spaceBetween:30,
+                    },
+                    1600: {
+                        slidesPerView: 4,
+                        spaceBetween:35,
+                    }
+                },
+                pagination: {
+                    el: pagin,
+                    type: "progressbar",
+                },
+
+
+            });
+
+
+        })
+
+    }
+}
+
+startProductLikesSliders();
 
 
 let productsDopSlider = [...document.querySelectorAll('.product-dop-slider')];

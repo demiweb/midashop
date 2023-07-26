@@ -4,12 +4,32 @@
 
 
 @media screen and (min-width: 1600px) {
+  .subscribe-form-sec {
+    max-width: 44.0625vw;
+  }
+  .checkbox-input span {
+    font-size: 0.68vw;
+  }
+  .subscribe-form-sec .form form .title {
+    font-size: 1.4vw;
+  }
+  .subscribe-left p {
+    font-size: 0.68vw;
+  }
+  .product-dop-slider {
+
+    .swiper {
+      margin-left: auto;
+      margin-right: auto;
+      width: calc(((79.6875vw - .7813vw - .7813vw) / 5) - ((35px * 4) / 5));
+    }
+  }
   .fav-list {
     .single-card {
       width: calc((100% / 4) - ((1.5625vw * 3) / 4));
     }
   }
-  .added-cart__top>span, .added-bonuses>p, .added-bonuses .left p, .added-total p, .added-total span {
+  .added-cart__top > span, .added-bonuses > p, .added-bonuses .left p, .added-total p, .added-total span {
     font-size: 0.8vw;
     line-height: 1.5;
   }
@@ -26,7 +46,7 @@
   .added-total {
     padding: 0.4vw 0;
   }
-  .single-order .txt>span strong, .added-cart__bot a:not(.btn) {
+  .single-order .txt > span strong, .added-cart__bot a:not(.btn) {
     font-size: 0.68vw;
     line-height: 1.5;
   }
@@ -114,7 +134,7 @@
     margin-bottom: 1.2vw;
   }
   .menu-block__menu {
-    margin-right: 5vw;
+    margin-right: 4vw;
   }
   .menu-block__items > .img {
     width: 17.3333vw;
@@ -203,8 +223,8 @@
   .header-phones__block p {
     margin-bottom: 0.5vw;
   }
-  .nice-select>span {
-    font-size:  0.68vw;
+  .nice-select > span {
+    font-size: 0.68vw;
     line-height: 1.5;
     padding: 0.5vw 1vw;
   }
@@ -227,7 +247,12 @@
     font-size: 0.68vw;
   }
   .product-price p {
-    font-size: 1.2vw;
+    font-size: 1.4vw;
+    padding-right: 3vw;
+
+    strong {
+      font-size: 1vw;
+    }
   }
   .single-modal-item {
     padding: 0.4vw;
@@ -335,6 +360,7 @@
   }
   .promo-bonus {
     padding: 1vw 0;
+
   }
   .control-seo {
     font-size: 0.68vw;
@@ -391,6 +417,103 @@
 }
 
 @media screen and (max-width: 767px) {
+  //
+
+  .subscribe-form-sec {
+    max-width: 100%;
+
+    .form {
+      form {
+        flex-direction: column;
+        align-items: flex-start;
+        .title {
+          font-size: 4.2667vw;
+          line-height: 1.2;
+          margin-bottom: 1vw;
+        }
+      }
+    }
+  }
+  .subscribe-line {
+    margin-bottom: 3.7333vw;
+  }
+  .subscribe-block {
+    padding: 0;
+  }
+  .telegram-news {
+    align-items: center;
+    justify-content: center;
+
+    font-size: 3.2vw;
+    line-height: 1.2;
+    margin-top: 2.5vw;
+    a {
+      font-size: 3.2vw;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 1.4493vw;
+      svg {
+        width: 4.1063vw;
+        height: 3.6232vw;
+
+        margin-right: 1.4493vw;
+      }
+    }
+  }
+  .checkbox-input {
+    span {
+      font-size: 3.2vw;
+      padding-left: 5vw;
+      &::before {
+        width: 4vw;
+        height: 4vw;
+      }
+      &::after {
+        width: 3vw;
+        left: 0.5vw;
+        height: 3vw;
+      }
+    }
+  }
+  .subscribe-right {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 1.3vw;
+    p {
+      font-size: 3.2vw;
+      line-height: 1.2;
+      margin-bottom: 3.7333vw;
+    }
+  }
+  .subscribe-left {
+    width: 100%;
+    margin-bottom: 1.3vw;
+    padding-right: 0;
+    span {
+      font-size: 4.2667vw;
+      line-height: 1.2;
+      margin-bottom: 1vw;
+    }
+    p {
+      font-size: 3.2vw;
+      line-height: 1.2;
+    }
+  }
+  .product-det-cont .video::after {
+    width: 16vw;
+    height: 12vw;
+  }
+  //
+  .product-dop-slider {
+
+    .swiper {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  }
   .rate-blk p {
     font-size: 3.3vw;
   }
@@ -1054,20 +1177,20 @@
     height: 9.0667vw;
 
     img {
-      width: 8.0000vw;
+      width: 3.0000vw;
     }
   }
   .main-product-slider .yt-watch {
     height: 6.0667vw;
-    top: 1.0667vw;
-    right: 1.0667vw;
+    top: 4vw;
+    right: 4vw;
   }
 
   .product-page {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    margin-top: 5.3333vw;
+    margin-top: 0;
   }
   .product-colors {
     margin-bottom: 4.8309vw;
@@ -1450,12 +1573,26 @@
     align-items: flex-start;
     justify-content: flex-start;
   }
+  .product-slider-main {
+    width: calc(100% + 8vw);
+    margin-left: calc(-4vw);
+    margin-right: calc(-4vw);
+    overflow: hidden;
+
+  }
   .main-product-slider {
-    width: 100%;
+    overflow: hidden;
+    width: calc(100% + 2px);
+    margin-left: -1px;
+    margin-right: -1px;
     height: calc(100vh - 18.5990vw);
     padding-bottom: 50.6667vw;
 
     .swiper {
+      .slick-slide {
+        padding: 0;
+      }
+
       .swiper-slide {
         width: 100%;
       }
@@ -1492,7 +1629,7 @@
     gap: 1.3333vw;
     bottom: auto;
     height: 100%;
-    right: 2.6667vw;
+    right: 4vw;
     left: auto;
     top: 0;
 
@@ -1776,7 +1913,7 @@
       line-height: 1.2;
       padding-right: 0;
       margin-bottom: 0.9662vw;
-      text-transform: uppercase;
+      //text-transform: uppercase;
       //display: none;
     }
 
@@ -1800,8 +1937,8 @@
   }
   .main-product-slider {
     .tags {
-      top: 0;
-      left: 0;
+      top: 4vw;
+      left: 4vw;
       gap: 1.3333vw;
 
       .tag {
@@ -1810,11 +1947,14 @@
         padding: 0.8000vw 1.3333vw;
       }
     }
+
     .swiper {
       position: relative;
     }
+
     .slick-list {
       height: calc(100vh - 18.599vw - 50.6667vw) !important;
+
       .slick-track {
         flex-direction: column;
         align-items: flex-start;
@@ -3405,6 +3545,7 @@
 
   .promo-bonus {
     padding: 8.0000vw 0;
+    margin-top: 6.5vw;
   }
   .bonus-statuses {
     padding: 8.0000vw 0;
@@ -3446,11 +3587,23 @@
       }
     }
   }
+  .product-like .slider-btn {
+    display: none;
+  }
   .single-card .textual > p {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     margin-top: auto;
     flex-wrap: wrap;
+    position: relative;
+    em {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0, -50%);
+    }
   }
   .single-card .textual .ic {
     width: 4.5333vw;
