@@ -1235,3 +1235,28 @@ function productPageAddMorePadding() {
 }
 
 productPageAddMorePadding();
+
+let ellHeight = document.querySelector('.product-page');
+
+function checkHeightOfElement() {
+    if (ellHeight) {
+        if (window.innerWidth > 767) {
+            let prodRight = document.querySelector('.product-right');
+            let h = ellHeight.offsetHeight;
+            // console.log(h);
+
+            prodRight.style.height = `${h}px`;
+            window.addEventListener('resize', () => {
+                h = ellHeight.offsetHeight;
+                prodRight.style.height = `${h}px`;
+            });
+            window.onresize = () => {
+                prodRight.style.height = `auto`;
+                h = ellHeight.offsetHeight;
+                prodRight.style.height = `${h}px`;
+            }
+        }
+
+    }
+}
+checkHeightOfElement();
