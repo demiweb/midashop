@@ -6243,7 +6243,7 @@ input::-webkit-credentials-auto-fill-button {
 .added-cart {
   width: 100%;
   position: fixed;
-  top: 6.2500vw;
+  top: 1vw;
   z-index: 102;
   right: 0;
   transition: opacity 0.4s ease-in-out;
@@ -7652,8 +7652,8 @@ a:focus, a:hover {
   flex-shrink: 0;
 }
 
-.product-page-page {
-  &.product-page-page--custom {
+body {
+
     .main-product-slider .swiper .slick-list {
       padding: 0;
     }
@@ -7711,7 +7711,7 @@ a:focus, a:hover {
         height: 4.0208vw;
       }
     }
-  }
+
 
 
 }
@@ -7731,8 +7731,8 @@ a:focus, a:hover {
 }
 
 @media screen and (max-width: 767px) {
-  .product-page-page {
-    &.product-page-page--custom {
+  body {
+
       .main-product-slider .swiper .swiper-slide {
         padding: 0;
       }
@@ -7742,7 +7742,7 @@ a:focus, a:hover {
           height: 16.5266vw;
         }
       }
-    }
+
   }
 }
 
