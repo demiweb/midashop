@@ -1761,7 +1761,7 @@
 
         <div class="modal-cont">
             <div class="form">
-                <form action="">
+                <form action="" id="form-comments">
                     <div class="comment-rate">
                         <p>Оценка:</p>
                         <div class="rate">
@@ -1805,6 +1805,17 @@
                         <!--               тут в value идет оценка -->
                         <input type="text">
 
+                    </div>
+
+                    <div class="input-add-photos">
+                        <div class="multiple-uploader" id="multiple-uploader">
+                            <div class="mup-msg">
+                                <span class="mup-main-msg">Нажмите для загрузки изображений</span>
+
+                                <span class="mup-msg" id="max-upload-number">Максимальное количество 10</span>
+
+                            </div>
+                        </div>
                     </div>
 
                     <button class="btn btn--fill">Оставить отзыв</button>
@@ -1965,6 +1976,7 @@
 <script  type="text/javascript"  src="./libs/jquery.nice-select.min.js"></script>
 <script  type="text/javascript"   src="./libs/jquery.raty.js"></script>
 <script  type="text/javascript"  src="./libs/jq.maskedinput.js"></script>
+<script  type="text/javascript"  src="./libs/multiple-uploader.js"></script>
 <script  type="text/javascript" src="https://unpkg.com/imask"></script>
 <!--<script type="text/javascript"  src="./libs/maskinput.js"></script>-->
 <script type="text/javascript" src="./libs/slick.js"></script>

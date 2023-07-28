@@ -1261,8 +1261,11 @@ function checkHeightOfElement() {
 }
 checkHeightOfElement();
 
-Fancybox.bind("[data-fancybox]", {
-    playSpeed: 900,
-    speed: 900,
-
+let multipleUploader = new MultipleUploader('#multiple-uploader').init({
+    // input name sent to backend
+    filesInpName:'images',
+    // form selector
+    formSelector: '#form-comments',
+    maxSize: 10,
 });
+
