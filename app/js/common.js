@@ -1260,3 +1260,9 @@ function checkHeightOfElement() {
     }
 }
 checkHeightOfElement();
+
+Fancybox.bind("[data-fancybox]", {
+    playSpeed: 900,
+    speed: 900,
+
+});
