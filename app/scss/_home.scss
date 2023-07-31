@@ -1040,7 +1040,7 @@
       margin-top: auto;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       width: 100%;
 
       small {
@@ -1060,6 +1060,7 @@
         font-weight: 500;
         color: $main-color;
         font-size: inherit;
+        margin-right: auto;
 
       }
 
@@ -6069,7 +6070,7 @@ input::-webkit-credentials-auto-fill-button {
     line-height: 150%;
     font-style: normal;
     strong {
-      font-weight: 600;
+      font-weight: 400;
       color: #979797;
       margin-left: 0.5vw;
     }
