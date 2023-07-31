@@ -1213,25 +1213,51 @@ var isChromium =  winNav.userAgent.match("CriOS");
 // console.log(isChromium);
 var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 // console.log(isSafari);
+// document.querySelector('.product-main-frame > p').innerHTML = winNav.userAgent;
+
 function productPageAddMorePadding() {
     if (document.querySelector('.product-main-frame')) {
-        if (isChromium) {
+        // if (isChromium) {
             if (window.innerWidth < 767) {
                 let pmf = document.querySelector('.product-main-frame');
+                let sldrPl = document.querySelector('.main-product-slider');
+                let headerHeight = header.offsetHeight;
+                let windowHeight = window.innerHeight;
+
+                let pmf2 = document.querySelector('.wrap-mob-blk');
+                let pmf2Height = pmf2.offsetHeight;
+
+                let prrPad = document.querySelector('.product-right');
+                let st = prrPad.currentStyle || window.getComputedStyle(prrPad);
+                let ptPr = st.paddingTop.match(/\d+/)[0];
+
                 let style = pmf.currentStyle || window.getComputedStyle(pmf);
                 let mt = style.marginTop.match(/\d+/)[0];
 
+
                 let newMarginTop = Number(mt) + 35;
+                console.log(windowHeight);
+                console.log(mt);
+                let mtTopNew = windowHeight - headerHeight - pmf2Height - ptPr - 5;
+                let pbTopNew = Number(pmf2Height) + 5 + Number(ptPr);
+                console.log(pmf2Height);
+                console.log(ptPr);
 
+                console.log(pbTopNew + ' =')
+                console.log(mtTopNew);
+                pmf.style.marginTop = `${mtTopNew}px`;
+                console.log(ptPr);
+                sldrPl.style.paddingBottom = `${pbTopNew}px`;
 
-                pmf.style.marginTop = `-${newMarginTop}px`;
-                document.querySelector('.product-main-frame > p').innerHTML = newMarginTop;
+                console.log('allo')
+                // pmf.style.marginTop = `-${newMarginTop}px`;
+                // document.querySelector('.product-main-frame > p').innerHTML = newMarginTop;
                 // console.log(mt.match(/\d+/)[0]);
             }
         }
 
 
-    }
+    // }
 }
 
 productPageAddMorePadding();
