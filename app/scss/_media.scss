@@ -1826,7 +1826,8 @@
     //margin-top: calc(-42.6667vw - 55px);
     background: #fff;
     //border-top: env(safe-area-inset-bottom) solid red;
-    margin-top: 60vh;
+    //margin-top: 60vh;
+    transition: margin 0.4s ease-in-out;
   }
   .main-product-slider .slider-btn {
     display: none !important;
