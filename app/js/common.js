@@ -78,7 +78,7 @@ hoverHeaderMenu();
 //swipers
 
 let productSlider = [...document.querySelectorAll('.product-slider-main')];
-
+let slcSlider2 = ''
 function startProductSlider() {
     if (!productSlider.length) {
 
@@ -91,6 +91,7 @@ function startProductSlider() {
 
         productSlider.forEach((sld) => {
             let sldCont = sld.querySelector('.main-product-slider .swiper');
+            slcSlider2 = sldCont;
             let pagin = sld.querySelector('.dots');
             let sldNext = sld.querySelector('.slider-btn--next');
             let sldPrev = sld.querySelector('.slider-btn--prev');
@@ -1253,6 +1254,8 @@ function productPageAddMorePadding() {
                 // pmf.style.marginTop = `-${newMarginTop}px`;
                 // document.querySelector('.product-main-frame > p').innerHTML = `${windowHeight} | ${headerHeight} | ${pmf2Height} | ${ptPr}`;
                 // console.log(mt.match(/\d+/)[0]);
+
+                $(slcSlider2).slick('slickGoTo', '0');
             }
         }
 
