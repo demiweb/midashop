@@ -1263,9 +1263,9 @@ function productPageAddMorePadding() {
     // }
 }
 
-setTimeout(() => {
+
     productPageAddMorePadding();
-}, 300);
+
 
 let ellHeight = document.querySelector('.product-page');
 
