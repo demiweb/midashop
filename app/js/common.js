@@ -1260,7 +1260,9 @@ function productPageAddMorePadding() {
     // }
 }
 
-productPageAddMorePadding();
+setTimeout(() => {
+    productPageAddMorePadding();
+}, 400);
 
 let ellHeight = document.querySelector('.product-page');
 
