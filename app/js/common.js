@@ -1236,20 +1236,20 @@ function productPageAddMorePadding() {
 
 
                 let newMarginTop = Number(mt) + 35;
-                console.log(windowHeight);
-                console.log(mt);
+                // console.log(windowHeight);
+                // console.log(mt);
                 let mtTopNew = windowHeight - headerHeight - pmf2Height - ptPr - 5;
                 let pbTopNew = Number(pmf2Height) + 5 + Number(ptPr);
-                console.log(pmf2Height);
-                console.log(ptPr);
-
-                console.log(pbTopNew + ' =')
-                console.log(mtTopNew);
+                // console.log(pmf2Height);
+                // console.log(ptPr);
+                //
+                // console.log(pbTopNew + ' =')
+                // console.log(mtTopNew);
                 pmf.style.marginTop = `${mtTopNew}px`;
-                console.log(ptPr);
+                // console.log(ptPr);
                 sldrPl.style.paddingBottom = `${pbTopNew}px`;
 
-                console.log('allo')
+                // console.log('allo')
                 // pmf.style.marginTop = `-${newMarginTop}px`;
                 // document.querySelector('.product-main-frame > p').innerHTML = newMarginTop;
                 // console.log(mt.match(/\d+/)[0]);
