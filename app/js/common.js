@@ -1251,7 +1251,7 @@ function productPageAddMorePadding() {
 
                 // console.log('allo')
                 // pmf.style.marginTop = `-${newMarginTop}px`;
-                // document.querySelector('.product-main-frame > p').innerHTML = newMarginTop;
+                document.querySelector('.product-main-frame > p').innerHTML = `${windowHeight} | ${headerHeight} | ${pmf2Height} | ${ptPr}`;
                 // console.log(mt.match(/\d+/)[0]);
             }
         }
@@ -1262,7 +1262,7 @@ function productPageAddMorePadding() {
 
 setTimeout(() => {
     productPageAddMorePadding();
-}, 400);
+}, 500);
 
 let ellHeight = document.querySelector('.product-page');
 
