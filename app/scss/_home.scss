@@ -7063,7 +7063,9 @@ input::-webkit-credentials-auto-fill-button {
   justify-content: center;
   align-items: center;
   margin-top: 5.4688vw;
-
+  .copyr p, .footer-links a {
+    color: #000;
+  }
   .copyr {
     margin-left: 0;
   }
