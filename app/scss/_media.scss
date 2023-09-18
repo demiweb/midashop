@@ -4,6 +4,10 @@
 
 
 @media screen and (min-width: 1600px) {
+  .blog-date, .blog-tag {
+    font-size: .68vw;
+    line-height: 1.6;
+  }
   .articles-comments .form-log-other a {
     font-size: 0.68vw;
   }
@@ -466,6 +470,11 @@
 }
 
 @media screen and (max-width: 767px) {
+  .blog-date, .blog-tag {
+    font-size: 3.2vw;
+    line-height: 1.2;
+    margin-top: 2.6667vw;
+  }
   //
   .articles-comments .modal-cont {
     flex-direction: column-reverse;
