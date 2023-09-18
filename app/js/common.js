@@ -79,14 +79,13 @@ hoverHeaderMenu();
 
 let productSlider = [...document.querySelectorAll('.product-slider-main')];
 let slcSlider2 = ''
+
 function startProductSlider() {
     if (!productSlider.length) {
 
     } else {
         let charsSingle = [...document.querySelectorAll('.single-char')];
         let colorsSingle = [...document.querySelectorAll('.single-color')];
-
-
 
 
         productSlider.forEach((sld) => {
@@ -238,11 +237,11 @@ function startProductSliders() {
                 breakpoints: {
                     767: {
                         slidesPerView: 4,
-                        spaceBetween:30,
+                        spaceBetween: 30,
                     },
                     1600: {
                         slidesPerView: 5,
-                        spaceBetween:35,
+                        spaceBetween: 35,
                     }
                 },
                 pagination: {
@@ -310,11 +309,11 @@ function startProductLikesSliders() {
                 breakpoints: {
                     767: {
                         slidesPerView: 3,
-                        spaceBetween:30,
+                        spaceBetween: 30,
                     },
                     1600: {
                         slidesPerView: 4,
-                        spaceBetween:35,
+                        spaceBetween: 35,
                     }
                 },
                 pagination: {
@@ -410,60 +409,59 @@ function startProductSlidersCart() {
 
     } else {
 
-            productsSliderCart.forEach((sld) => {
-                let sldCont = sld.querySelector('.swiper');
-                let sldNext = sld.querySelector('.slider-btn--next');
-                let sldPrev = sld.querySelector('.slider-btn--prev');
-                let pagin = sld.querySelector('.progress-bar');
+        productsSliderCart.forEach((sld) => {
+            let sldCont = sld.querySelector('.swiper');
+            let sldNext = sld.querySelector('.slider-btn--next');
+            let sldPrev = sld.querySelector('.slider-btn--prev');
+            let pagin = sld.querySelector('.progress-bar');
 
-                const swiper2 = new Swiper(sldCont, {
-                    // Optional parameters
-                    loop: false,
-                    effect: 'slide',
-                    slidesPerView: 2,
-                    slidesPerGroup: 1,
-                    speed: 700,
-                    centeredSlides: false,
-                    touchRatio: 1,
-                    touchAngle: 180,
-                    simulateTouch: true,
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                effect: 'slide',
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+                speed: 700,
+                centeredSlides: false,
+                touchRatio: 1,
+                touchAngle: 180,
+                simulateTouch: true,
 
-                    followFinger: true,
-                    allowTouchMove: true,
-                    threshold: true,
-                    touchMoveStopPropagation: true,
-                    touchStartPreventDefault: true,
-                    touchStartForcePreventDefault: true,
-                    touchReleaseOnEdges: true,
+                followFinger: true,
+                allowTouchMove: true,
+                threshold: true,
+                touchMoveStopPropagation: true,
+                touchStartPreventDefault: true,
+                touchStartForcePreventDefault: true,
+                touchReleaseOnEdges: true,
 
-                    resistance: true,
-                    resistanceRatio: 0.3,
-                    cssMode: true,
-
-
-                    navigation: {
-                        nextEl: sldNext,
-                        prevEl: sldPrev,
-                    },
-                    autoplay: false,
-                    spaceBetween: 15,
-                    breakpoints: {
-                        767: {
-                            slidesPerView: 4,
-                            spaceBetween: 30,
-                        }
-                    },
-                    pagination: {
-                        el: pagin,
-                        type: "progressbar",
-                    },
+                resistance: true,
+                resistanceRatio: 0.3,
+                cssMode: true,
 
 
-                });
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                autoplay: false,
+                spaceBetween: 15,
+                breakpoints: {
+                    767: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                    }
+                },
+                pagination: {
+                    el: pagin,
+                    type: "progressbar",
+                },
 
 
-            })
+            });
 
+
+        })
 
 
     }
@@ -987,16 +985,16 @@ if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
 // $(".input-tel input").mask("+38(999) 999-9999");
 //telephones
 let zero = '0';
-    let tls = [...document.querySelectorAll(".input-tel input")];
+let tls = [...document.querySelectorAll(".input-tel input")];
 
-    var maskOptions = {
-        mask: `{+38}(000)000-00-00`,
-    };
+var maskOptions = {
+    mask: `{+38}(000)000-00-00`,
+};
 
 
-    tls.forEach((tl) => {
-        var mask = IMask(tl, maskOptions);
-    });
+tls.forEach((tl) => {
+    var mask = IMask(tl, maskOptions);
+});
 // $(".input-tel input").mask("+38(999) 999-9999");
 //open cabinet menu
 
@@ -1191,7 +1189,7 @@ function scrollRateBlk() {
                 e.stopPropagation();
                 e.preventDefault;
                 $([document.documentElement, document.body]).animate({
-                    scrollTop: $(".product__comments").offset().top -  170
+                    scrollTop: $(".product__comments").offset().top - 170
                 }, 600);
             });
 
@@ -1199,16 +1197,16 @@ function scrollRateBlk() {
                 e.stopPropagation();
                 e.preventDefault;
                 $([document.documentElement, document.body]).animate({
-                    scrollTop: $(".product__comments").offset().top  - 170
+                    scrollTop: $(".product__comments").offset().top - 170
                 }, 600);
             })
         })
     }
 }
+
 scrollRateBlk();
 var winNav = window.navigator;
-var isChromium =  winNav.userAgent.match("CriOS");
-
+var isChromium = winNav.userAgent.match("CriOS");
 
 
 // console.log(isChromium);
@@ -1219,45 +1217,45 @@ var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 function productPageAddMorePadding() {
     if (document.querySelector('.product-main-frame')) {
         // if (isChromium) {
-            if (window.innerWidth < 767) {
-                let pmf = document.querySelector('.product-main-frame');
-                let sldrPl = document.querySelector('.main-product-slider');
-                let headerHeight = header.offsetHeight;
-                let windowHeight = window.innerHeight;
+        if (window.innerWidth < 767) {
+            let pmf = document.querySelector('.product-main-frame');
+            let sldrPl = document.querySelector('.main-product-slider');
+            let headerHeight = header.offsetHeight;
+            let windowHeight = window.innerHeight;
 
-                let pmf2 = document.querySelector('.wrap-mob-blk');
-                let pmf2Height = pmf2.offsetHeight;
+            let pmf2 = document.querySelector('.wrap-mob-blk');
+            let pmf2Height = pmf2.offsetHeight;
 
-                let prrPad = document.querySelector('.product-right');
-                let st = prrPad.currentStyle || window.getComputedStyle(prrPad);
-                let ptPr = st.paddingTop.match(/\d+/)[0];
+            let prrPad = document.querySelector('.product-right');
+            let st = prrPad.currentStyle || window.getComputedStyle(prrPad);
+            let ptPr = st.paddingTop.match(/\d+/)[0];
 
-                let style = pmf.currentStyle || window.getComputedStyle(pmf);
-                let mt = style.marginTop.match(/\d+/)[0];
+            let style = pmf.currentStyle || window.getComputedStyle(pmf);
+            let mt = style.marginTop.match(/\d+/)[0];
 
 
-                let newMarginTop = Number(mt) + 35;
-                // console.log(windowHeight);
-                // console.log(mt);
-                let mtTopNew = windowHeight - headerHeight - pmf2Height - ptPr - 5;
-                let pbTopNew = Number(pmf2Height) + 5 + Number(ptPr);
-                // console.log(pmf2Height);
-                // console.log(ptPr);
-                //
-                // console.log(pbTopNew + ' =')
-                // console.log(mtTopNew);
-                pmf.style.marginTop = `${mtTopNew}px`;
-                // console.log(ptPr);
-                sldrPl.style.paddingBottom = `${pbTopNew}px`;
+            let newMarginTop = Number(mt) + 35;
+            // console.log(windowHeight);
+            // console.log(mt);
+            let mtTopNew = windowHeight - headerHeight - pmf2Height - ptPr - 5;
+            let pbTopNew = Number(pmf2Height) + 5 + Number(ptPr);
+            // console.log(pmf2Height);
+            // console.log(ptPr);
+            //
+            // console.log(pbTopNew + ' =')
+            // console.log(mtTopNew);
+            pmf.style.marginTop = `${mtTopNew}px`;
+            // console.log(ptPr);
+            sldrPl.style.paddingBottom = `${pbTopNew}px`;
 
-                // console.log('allo')
-                // pmf.style.marginTop = `-${newMarginTop}px`;
-                // document.querySelector('.product-main-frame > p').innerHTML = `${windowHeight} | ${headerHeight} | ${pmf2Height} | ${ptPr}`;
-                // console.log(mt.match(/\d+/)[0]);
+            // console.log('allo')
+            // pmf.style.marginTop = `-${newMarginTop}px`;
+            // document.querySelector('.product-main-frame > p').innerHTML = `${windowHeight} | ${headerHeight} | ${pmf2Height} | ${ptPr}`;
+            // console.log(mt.match(/\d+/)[0]);
 
-                $(slcSlider2).slick('slickGoTo', '0');
-            }
+            $(slcSlider2).slick('slickGoTo', '0');
         }
+    }
 
 
     // }
@@ -1290,11 +1288,12 @@ function checkHeightOfElement() {
 
     }
 }
+
 checkHeightOfElement();
 
 let multipleUploader = new MultipleUploader('#multiple-uploader').init({
     // input name sent to backend
-    filesInpName:'images',
+    filesInpName: 'images',
     // form selector
     formSelector: '#form-comments',
     maxSize: 10,

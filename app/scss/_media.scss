@@ -4,6 +4,38 @@
 
 
 @media screen and (min-width: 1600px) {
+  .articles-comments .form-log-other a {
+    font-size: 0.68vw;
+  }
+  .share-to a {
+    font-size: 0.68vw;
+  }
+  .articles-comments {
+
+    .modal-cont {
+
+    }
+
+    .form-log-other {
+      p {
+        font-size: .8vw;
+      }
+    }
+  }
+  .blog-list {
+    gap: 1.5625vw;
+  }
+  .single-blog {
+    width: calc(25% - (4.6875vw / 4));
+  }
+  .single-blog span {
+    font-size: .68vw;
+    line-height: 1.5;
+  }
+  .single-blog p {
+    font-size: .8vw;
+    line-height: 1.4;
+  }
   .subscribe-form-sec {
     //max-width: 44.0625vw;
   }
@@ -86,6 +118,11 @@
 
   .seo-text li, .seo-text p {
     margin-bottom: 0.8vw;
+  }
+  .single-article {
+    p, li {
+      margin-bottom: 0.8vw;
+    }
   }
   .catalog-bottom {
     margin-top: 2vw;
@@ -340,6 +377,12 @@
     font-size: 0.68vw;
     line-height: 1.5;
   }
+  .single-article {
+    p, li, a {
+      font-size: 0.68vw;
+      line-height: 1.5;
+    }
+  }
   .single-status .img {
     width: 2vw;
     height: 2vw;
@@ -369,6 +412,12 @@
   .seo-text h2, .seo-text h3 {
     font-size: 0.8vw;
     line-height: 1.4;
+  }
+  .single-article {
+    h2, h3 {
+      font-size: 0.8vw;
+      line-height: 1.4;
+    }
   }
   .promo-text .txt span {
     font-size: 1.00vw;
@@ -418,20 +467,82 @@
 
 @media screen and (max-width: 767px) {
   //
+  .articles-comments .modal-cont {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  .share-to {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  .articles-comments .form-log-other p {
+    font-size: 3.7333vw;
+    line-height: 1.2;
+  }
+  .articles-comments .form-log-other a {
+    font-size: 3.7333vw;
+    line-height: 1.2;
+  }
 
-  .single-comment-page__left .product__comments>.title {
+  .articles-comments .modal-cont .form {
+    width: 100%;
+  }
+  .articles-comments {
+    margin-top: 10px;
+  }
+  .articles-comments {
+    .comment-head {
+      p {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+      }
+    }
+  }
+  .share-to {
+    flex-wrap: wrap;
+
+    a {
+      font-size: 3.7333vw;
+      line-height: 1.2;
+    }
+  }
+
+  .blog-list {
+    gap: 30px;
+  }
+  .single-blog {
+    width: 100%;
+
+    span {
+      font-size: 3.2vw;
+      line-height: 1.2;
+      margin-bottom: 2.6667vw;
+    }
+
+    p {
+      font-size: 4.2vw;
+      line-height: 1.2;
+      margin-bottom: 2.1333vw;
+    }
+  }
+  .single-comment-page__left .product__comments > .title {
     margin-bottom: 15px;
     text-decoration: underline;
   }
-  body  .single-comment-page__left {
+  body .single-comment-page__left {
     .single-comment {
       > p {
         font-size: 3.876vw;
       }
     }
+
     width: 100%;
-   .product-comment__bot .btn {
-     width: 100%;
+
+    .product-comment__bot .btn {
+      width: 100%;
     }
 
   }
@@ -449,6 +560,7 @@
     justify-content: flex-start;
     flex-direction: column;
     gap: 0.7vw;
+
     strong {
       margin: 0;
     }
@@ -458,7 +570,7 @@
     margin-bottom: auto;
   }
   .single-comment-page__left {
-    padding:  4.8309vw;
+    padding: 4.8309vw;
   }
   .single-comment-page__right {
     width: 100%;
@@ -466,16 +578,19 @@
     border-top: 1px solid #DDDDDD;
     position: static;
     padding: 4.8309vw;
+
     .single-card {
       flex-direction: row;
       align-items: flex-start;
       justify-content: flex-start;
       gap: 3.6232vw;
+
       .img {
         flex-shrink: 0;
         width: 24%;
         padding-top: 34%;
       }
+
       .textual {
         flex-grow: 1;
       }
@@ -483,6 +598,7 @@
   }
   .single-comment-page {
     flex-direction: column;
+
     .product__comments {
       margin-top: 0;
     }
@@ -495,12 +611,15 @@
       padding: 2.4155vw 2.4155vw;
       border-radius: 10px;
       gap: 2.4155vw;
+
       .image-container {
         width: calc(25% - (7.2464vw / 4));
+
         .exceeded-size {
           font-size: 2.8986vw;
           line-height: 1.2;
         }
+
         &::before {
           width: 3.3816vw;
           height: 3.3816vw;
@@ -519,7 +638,7 @@
         }
 
         .mup-msg {
-          font-size:2.6570vw;
+          font-size: 2.6570vw;
           line-height: 1.2;
         }
       }
@@ -3628,6 +3747,31 @@
       font-size: 4.2667vw;
     }
   }
+  .single-article {
+    h1 {
+      font-size: 4.8000vw;
+      line-height: 1.2;
+      margin-bottom: 4.0000vw;
+    }
+
+    p, li {
+      font-size: 3.7333vw;
+      line-height: 1.2;
+    }
+
+    p {
+      margin-bottom: 2.6667vw;
+    }
+
+    a {
+      font-size: 3.7333vw;
+      line-height: 1.2;
+    }
+
+    h2, h3, h4, h5, h6 {
+      font-size: 4.2667vw;
+    }
+  }
   .seo-block {
     width: 100%;
     max-width: 100%;
@@ -3871,6 +4015,7 @@
       > p {
         font-size: 4.2000vw;
         line-height: 1.2;
+
         em {
           padding: 2px 3px;
         }
