@@ -2783,6 +2783,10 @@ body {
         &.active {
           font-weight: 500;
         }
+        strong {
+          font-weight: 500;
+          color: $main-color;
+        }
       }
 
       span {
