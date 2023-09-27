@@ -4016,12 +4016,18 @@ form.code-form {
       flex-shrink: 0;
       height: 3.8542vw;
       width: calc(25% - (1.5625vw / 4));
+      //width: auto;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ececec;
 
       img {
-        width: 100%;
+        width: auto;
         height: 100%;
         object-fit: cover;
+        mix-blend-mode: darken;
       }
     }
   }
@@ -7001,12 +7007,17 @@ input::-webkit-credentials-auto-fill-button {
   width: 100%;
   padding-top: 1.0417vw;
   border-top: 1px solid #ddd;
-  padding-bottom: 2.0313vw;
+  padding-bottom: 1.0313vw;
   border-bottom: 1px solid #ddd;
+
+  + .checkout-promo {
+    border-top: none;
+  }
+
   > span {
     color: #979797;
 
-    font-size: 0.8333vw;
+    font-size: 0.8vw;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -7016,6 +7027,7 @@ input::-webkit-credentials-auto-fill-button {
     width: 100%;
     text-align: center;
   }
+
   > p {
     width: 100%;
     display: flex;
@@ -7025,11 +7037,13 @@ input::-webkit-credentials-auto-fill-button {
     font-size: 0.8333vw;
     font-weight: 500;
     margin-bottom: 0.4167vw;
+
     img {
       width: auto;
       height: 1.5625vw;
       margin-right: 0.6771vw;
     }
+
     small {
       all: inherit;
       width: auto;
@@ -9100,7 +9114,7 @@ body .has-image[data-image-fit=contain] .fancybox__image {
     gap: 0.5208vw;
 
     a {
-      font-size:0.7813vw;
+      font-size: 0.7813vw;
       line-height: 1.2;
       text-decoration: underline;
       font-weight: 600;
@@ -9120,8 +9134,10 @@ body .has-image[data-image-fit=contain] .fancybox__image {
   align-items: flex-start;
   justify-content: flex-start;
   margin-top: 1.3021vw;
+
   div {
     width: 50%;
+
     > ul {
       width: 100%;
       display: flex;
@@ -9129,6 +9145,7 @@ body .has-image[data-image-fit=contain] .fancybox__image {
       align-items: flex-start;
       justify-content: flex-start;
       gap: 0.7292vw;
+
       > li {
         font-size: 0.9375vw;
         line-height: 1.2;
@@ -9142,6 +9159,7 @@ body .has-image[data-image-fit=contain] .fancybox__image {
           color: #000;
 
         }
+
         ul {
           margin-top: 0.4688vw;
           padding-left: 0.6771vw;
@@ -9149,6 +9167,7 @@ body .has-image[data-image-fit=contain] .fancybox__image {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
+
           li {
             a {
               font-size: 0.8333vw;
